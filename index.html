@@ -12,6 +12,7 @@
     :root {
       --bg: #191923;
       --surface: #22222f;
+      --surface2: #2a2a3a;
       --border: rgba(255,255,255,0.07);
       --text: #ede8df;
       --muted: #888;
@@ -43,153 +44,163 @@
     .nav-brand span { color: var(--accent); }
     .nav-meta { font-size: 13px; color: var(--muted); }
 
-    .hero {
-      padding: 56px 40px 32px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      font-size: 36px;
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 10px;
-    }
+    .hero { padding: 56px 40px 32px; max-width: 960px; margin: 0 auto; }
+    .hero h1 { font-size: 36px; font-weight: 900; line-height: 1.15; margin-bottom: 10px; }
     .hero h1 span { color: var(--accent); }
     .hero p { color: var(--muted); font-size: 15px; }
 
     .filters {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 40px 28px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
+      max-width: 960px; margin: 0 auto; padding: 0 40px 28px;
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
     }
     .filter-btn {
-      padding: 7px 16px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--muted);
-      font-family: 'Inter', sans-serif;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all 0.15s;
+      padding: 7px 16px; border-radius: 20px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted); font-family: 'Inter', sans-serif;
+      font-size: 13px; cursor: pointer; transition: all 0.15s;
     }
     .filter-btn:hover { border-color: var(--accent); color: var(--text); }
-    .filter-btn.active {
-      background: var(--accent-dim);
-      border-color: var(--accent);
-      color: var(--accent);
-      font-weight: 600;
-    }
+    .filter-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); font-weight: 600; }
     .count-badge { margin-left: auto; font-size: 13px; color: var(--muted); }
 
-    .content {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 40px 80px;
-    }
+    .content { max-width: 960px; margin: 0 auto; padding: 0 40px 80px; }
 
     .date-group { margin-bottom: 40px; }
     .date-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted);
+      text-transform: uppercase; margin-bottom: 12px; padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
     }
 
     .card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 16px 20px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--surface);
-      margin-bottom: 10px;
-      transition: border-color 0.15s;
+      display: flex; align-items: center; gap: 16px; padding: 16px 20px;
+      border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+      margin-bottom: 10px; transition: border-color 0.15s;
     }
     .card:hover { border-color: rgba(255,255,255,0.15); }
 
     .type-badge {
-      flex-shrink: 0;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 6px;
-      min-width: 72px;
-      text-align: center;
+      flex-shrink: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 6px;
+      min-width: 72px; text-align: center;
     }
-    .type-badge.carousel {
-      background: var(--accent-dim);
-      color: var(--accent);
-      border: 1px solid rgba(212,130,106,0.3);
-    }
-    .type-badge.post {
-      background: var(--green-dim);
-      color: var(--green);
-      border: 1px solid rgba(92,184,138,0.3);
-    }
+    .type-badge.carousel { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(212,130,106,0.3); }
+    .type-badge.post { background: var(--green-dim); color: var(--green); border: 1px solid rgba(92,184,138,0.3); }
 
     .card-title { flex: 1; font-size: 15px; font-weight: 600; }
-
     .card-actions { display: flex; gap: 8px; flex-shrink: 0; }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 14px;
-      border-radius: 7px;
-      font-family: 'Inter', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      border: none;
+      display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px;
+      border-radius: 7px; font-family: 'Inter', sans-serif; font-size: 13px;
+      font-weight: 600; cursor: pointer; text-decoration: none; border: none;
       transition: opacity 0.15s;
     }
     .btn:hover { opacity: 0.8; }
     .btn-pdf { background: var(--accent); color: #fff; }
     .btn-txt { background: var(--green); color: #fff; }
-    .btn-ghost {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid var(--border);
-    }
-    .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+    .btn-view { background: #3a3a52; color: var(--text); border: 1px solid rgba(255,255,255,0.12); }
+    .btn-view:hover { background: #44445e; opacity: 1; }
+    .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); opacity: 1; }
 
-    .empty {
-      text-align: center;
-      color: var(--muted);
-      padding: 60px 0;
-      font-size: 15px;
-    }
+    .empty { text-align: center; color: var(--muted); padding: 60px 0; font-size: 15px; }
 
     footer {
-      border-top: 1px solid var(--border);
-      text-align: center;
-      padding: 24px;
-      font-size: 12px;
-      color: var(--muted);
+      border-top: 1px solid var(--border); text-align: center; padding: 24px;
+      font-size: 12px; color: var(--muted);
     }
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    @media (max-width: 640px) {
+    /* ── VIEWER MODAL ─────────────────────────────── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 100;
+      background: rgba(0,0,0,0.85); backdrop-filter: blur(4px);
+      align-items: stretch;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      display: flex; flex-direction: column; width: 100%; height: 100%;
+      background: var(--bg);
+    }
+
+    .modal-header {
+      display: flex; align-items: center; gap: 16px;
+      padding: 14px 24px; border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .modal-title { font-size: 15px; font-weight: 700; flex: 1; }
+    .modal-title span { color: var(--accent); font-weight: 400; font-size: 13px; margin-left: 8px; }
+    .modal-close {
+      background: transparent; border: 1px solid var(--border); color: var(--muted);
+      border-radius: 6px; padding: 6px 12px; font-family: 'Inter', sans-serif;
+      font-size: 13px; cursor: pointer; transition: all 0.15s;
+    }
+    .modal-close:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+
+    .modal-tabs {
+      display: none; gap: 0; border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .modal-tab {
+      padding: 10px 24px; font-family: 'Inter', sans-serif; font-size: 13px;
+      font-weight: 600; cursor: pointer; background: transparent; border: none;
+      color: var(--muted); border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .modal-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .modal-body {
+      display: flex; flex: 1; overflow: hidden;
+    }
+
+    .modal-pane {
+      flex: 1; display: flex; flex-direction: column; overflow: hidden;
+    }
+    .modal-pane + .modal-pane { border-left: 1px solid var(--border); }
+
+    .pane-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 20px; border-bottom: 1px solid var(--border);
+      flex-shrink: 0; background: var(--surface);
+    }
+    .pane-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .pane-actions { display: flex; gap: 6px; }
+
+    .pdf-frame {
+      flex: 1; width: 100%; border: none;
+      background: #fff;
+    }
+
+    .post-body {
+      flex: 1; overflow-y: auto; padding: 28px 32px;
+    }
+    .post-text {
+      font-size: 14px; line-height: 1.8; color: var(--text);
+      white-space: pre-wrap; font-family: 'Inter', sans-serif;
+      max-width: 560px;
+    }
+    .post-text .hashtags { color: var(--accent); margin-top: 16px; display: block; }
+
+    .pane-empty {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 14px;
+    }
+
+    /* Mobile: stack vertically with tabs */
+    @media (max-width: 768px) {
       nav, .hero, .filters, .content { padding-left: 20px; padding-right: 20px; }
       .hero h1 { font-size: 26px; }
       .card { flex-wrap: wrap; }
       .card-actions { width: 100%; justify-content: flex-end; }
       .count-badge { margin-left: 0; }
+
+      .modal-tabs { display: flex; }
+      .modal-body { position: relative; }
+      .modal-pane { position: absolute; inset: 0; }
+      .modal-pane.hidden { display: none; }
+      .modal-pane + .modal-pane { border-left: none; }
     }
   </style>
 </head>
@@ -202,7 +213,7 @@
 
 <div class="hero">
   <h1>Carousels &amp; <span>LinkedIn Posts</span></h1>
-  <p>All content in one place. Download PDFs and post drafts directly.</p>
+  <p>All content in one place. View, download, and schedule.</p>
 </div>
 
 <div class="filters">
@@ -222,14 +233,70 @@
   &nbsp;·&nbsp; Turning Ideas into Reality
 </footer>
 
+<!-- VIEWER MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle">Title <span id="modalDate"></span></div>
+      <div style="display:flex;gap:8px;">
+        <a class="btn btn-pdf" id="modalDlPdf" href="#" download style="display:none">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PDF
+        </a>
+        <a class="btn btn-txt" id="modalDlTxt" href="#" download style="display:none">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Post
+        </a>
+        <button class="modal-close" id="modalCloseBtn">✕ Close</button>
+      </div>
+    </div>
+
+    <!-- Mobile tabs (shown only on small screens) -->
+    <div class="modal-tabs" id="modalTabs">
+      <button class="modal-tab active" data-tab="pdf">Carousel</button>
+      <button class="modal-tab" data-tab="post">LinkedIn Post</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- PDF pane -->
+      <div class="modal-pane" id="panePdf">
+        <div class="pane-header">
+          <span class="pane-label">Carousel PDF</span>
+        </div>
+        <iframe class="pdf-frame" id="pdfFrame" src="" title="Carousel PDF"></iframe>
+      </div>
+
+      <!-- Post pane -->
+      <div class="modal-pane" id="panePost">
+        <div class="pane-header">
+          <span class="pane-label">LinkedIn Post Draft</span>
+          <div class="pane-actions">
+            <button class="btn btn-ghost" id="copyPostBtn" style="font-size:12px;padding:5px 10px;">Copy</button>
+          </div>
+        </div>
+        <div class="post-body">
+          <div class="post-text" id="postText"><span style="color:var(--muted)">Loading...</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   const ICONS = {
     download: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`,
-    eye: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`
+    eye: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`,
+    expand: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>`
   };
 
   let allItems = [];
   let currentFilter = 'all';
+
+  // ── pair carousel + post by title+date ───────────────
+  function getPairedItem(item) {
+    const targetType = item.type === 'carousel' ? 'post' : 'carousel';
+    return allItems.find(i => i.date === item.date && i.title === item.title && i.type === targetType);
+  }
 
   function formatDate(d) {
     const [y, m, day] = d.split('-');
@@ -247,21 +314,28 @@
 
   function renderCard(item) {
     const typeLabel = item.type === 'carousel' ? 'Carousel' : 'Post';
+    const paired = getPairedItem(item);
+
+    // Determine what pdf/txt we can open in viewer
+    const viewPdf = item.pdf || (paired && paired.pdf) || null;
+    const viewTxt = item.txt || (paired && paired.txt) || null;
+    const hasView = viewPdf || viewTxt;
+
     const pdfBtn = item.pdf
       ? `<a class="btn btn-pdf" href="${item.pdf}" download>${ICONS.download} PDF</a>`
       : '';
     const txtBtn = item.txt
       ? `<a class="btn btn-txt" href="${item.txt}" download>${ICONS.download} Post</a>`
       : '';
-    const previewBtn = item.pdf
-      ? `<a class="btn btn-ghost" href="${item.pdf}" target="_blank" title="Preview in browser">${ICONS.eye}</a>`
+    const viewBtn = hasView
+      ? `<button class="btn btn-view" onclick='openViewer(${JSON.stringify(item)})'>${ICONS.eye} View</button>`
       : '';
 
     return `
       <div class="card">
         <span class="type-badge ${item.type}">${typeLabel}</span>
         <span class="card-title">${item.title}</span>
-        <div class="card-actions">${pdfBtn}${txtBtn}${previewBtn}</div>
+        <div class="card-actions">${viewBtn}${pdfBtn}${txtBtn}</div>
       </div>`;
   }
 
@@ -274,8 +348,7 @@
       `${items.length} item${items.length !== 1 ? 's' : ''}`;
 
     if (items.length === 0) {
-      document.getElementById('contentArea').innerHTML =
-        '<div class="empty">No content found.</div>';
+      document.getElementById('contentArea').innerHTML = '<div class="empty">No content found.</div>';
       return;
     }
 
@@ -286,6 +359,92 @@
       </div>`).join('');
   }
 
+  // ── VIEWER ────────────────────────────────────────────
+  function openViewer(item) {
+    const paired = getPairedItem(item);
+    const pdf  = item.pdf  || (paired && paired.pdf)  || null;
+    const txt  = item.txt  || (paired && paired.txt)  || null;
+
+    // Header
+    document.getElementById('modalTitle').textContent = item.title;
+    document.getElementById('modalDate').textContent  = formatDate(item.date);
+
+    // Download links in header
+    const dlPdf = document.getElementById('modalDlPdf');
+    const dlTxt = document.getElementById('modalDlTxt');
+    if (pdf) { dlPdf.href = pdf; dlPdf.style.display = 'inline-flex'; }
+    else { dlPdf.style.display = 'none'; }
+    if (txt) { dlTxt.href = txt; dlTxt.style.display = 'inline-flex'; }
+    else { dlTxt.style.display = 'none'; }
+
+    // PDF pane
+    const panePdf = document.getElementById('panePdf');
+    if (pdf) {
+      document.getElementById('pdfFrame').src = pdf;
+      panePdf.style.display = 'flex';
+    } else {
+      panePdf.style.display = 'none';
+    }
+
+    // Post pane
+    const panePost = document.getElementById('panePost');
+    const postText = document.getElementById('postText');
+    if (txt) {
+      panePost.style.display = 'flex';
+      postText.textContent = 'Loading...';
+      fetch(txt)
+        .then(r => r.text())
+        .then(raw => {
+          // Strip image prompt section from display
+          const clean = raw.split('\n---\nIMAGE PROMPT:')[0].trimEnd();
+          postText.textContent = clean;
+        })
+        .catch(() => { postText.textContent = 'Could not load post text.'; });
+    } else {
+      panePost.style.display = 'none';
+    }
+
+    // Mobile tabs — reset to pdf tab
+    setMobileTab('pdf');
+
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeViewer() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.getElementById('pdfFrame').src = '';
+    document.body.style.overflow = '';
+  }
+
+  // Mobile tab switching
+  function setMobileTab(tab) {
+    document.querySelectorAll('.modal-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+    document.getElementById('panePdf').classList.toggle('hidden', tab !== 'pdf');
+    document.getElementById('panePost').classList.toggle('hidden', tab !== 'post');
+  }
+
+  document.getElementById('modalCloseBtn').addEventListener('click', closeViewer);
+  document.getElementById('modalOverlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('modalOverlay')) closeViewer();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeViewer(); });
+
+  document.querySelectorAll('.modal-tab').forEach(tab => {
+    tab.addEventListener('click', () => setMobileTab(tab.dataset.tab));
+  });
+
+  // Copy post text
+  document.getElementById('copyPostBtn').addEventListener('click', () => {
+    const text = document.getElementById('postText').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyPostBtn');
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+    });
+  });
+
+  // Filters
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -295,12 +454,13 @@
     });
   });
 
+  // Load manifest
   fetch('content-manifest.json')
     .then(r => r.json())
     .then(data => { allItems = data; render(currentFilter); })
     .catch(() => {
       document.getElementById('contentArea').innerHTML =
-        '<div class="empty">Could not load content. Make sure content-manifest.json is in the repo.</div>';
+        '<div class="empty">Could not load content manifest.</div>';
     });
 </script>
 </body>
