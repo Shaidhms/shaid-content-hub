@@ -313,11 +313,10 @@
     }, {});
   }
 
-  function renderCard(item) {
+  function renderCard(item, index) {
     const typeLabel = item.type === 'carousel' ? 'Carousel' : 'Post';
     const paired = getPairedItem(item);
 
-    // Determine what pdf/txt we can open in viewer
     const viewPdf = item.pdf || (paired && paired.pdf) || null;
     const viewTxt = item.txt || (paired && paired.txt) || null;
     const hasView = viewPdf || viewTxt;
@@ -329,7 +328,7 @@
       ? `<a class="btn btn-txt" href="${item.txt}" download>${ICONS.download} Post</a>`
       : '';
     const viewBtn = hasView
-      ? `<button class="btn btn-view" onclick='openViewer(${JSON.stringify(item)})'>${ICONS.eye} View</button>`
+      ? `<button class="btn btn-view view-btn" data-index="${index}">${ICONS.eye} View</button>`
       : '';
 
     return `
@@ -356,7 +355,7 @@
     document.getElementById('contentArea').innerHTML = dates.map(date => `
       <div class="date-group">
         <div class="date-label">${formatDate(date)}</div>
-        ${groups[date].map(renderCard).join('')}
+        ${groups[date].map((item) => renderCard(item, allItems.indexOf(item))).join('')}
       </div>`).join('');
   }
 
@@ -443,6 +442,14 @@
       btn.textContent = 'Copied!';
       setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
     });
+  });
+
+  // View button delegation
+  document.getElementById('contentArea').addEventListener('click', e => {
+    const btn = e.target.closest('.view-btn');
+    if (!btn) return;
+    const index = parseInt(btn.dataset.index, 10);
+    if (!isNaN(index) && allItems[index]) openViewer(allItems[index]);
   });
 
   // Filters
