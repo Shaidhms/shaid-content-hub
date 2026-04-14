@@ -104,6 +104,53 @@
     .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
     .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); opacity: 1; }
 
+    /* ── 100-DAY CHALLENGE BANNER ─────────────────────── */
+    .challenge-banner {
+      max-width: 960px; margin: 0 auto; padding: 0 40px 32px;
+    }
+    .challenge-card {
+      background: linear-gradient(135deg, #22222f 0%, #2a2236 100%);
+      border: 1px solid rgba(212,130,106,0.25);
+      border-radius: 14px; padding: 24px 28px;
+      display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+    }
+    .challenge-day {
+      flex-shrink: 0; text-align: center;
+      background: var(--accent-dim); border: 1px solid rgba(212,130,106,0.3);
+      border-radius: 12px; padding: 14px 20px; min-width: 90px;
+    }
+    .challenge-day .day-num {
+      font-size: 36px; font-weight: 900; color: var(--accent); line-height: 1;
+    }
+    .challenge-day .day-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin-top: 4px;
+    }
+    .challenge-info { flex: 1; min-width: 200px; }
+    .challenge-title {
+      font-size: 16px; font-weight: 700; margin-bottom: 4px;
+    }
+    .challenge-title span { color: var(--accent); }
+    .challenge-meta { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .progress-wrap { position: relative; }
+    .progress-track {
+      height: 6px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; background: linear-gradient(90deg, var(--accent), #e8a882);
+      border-radius: 99px; transition: width 0.6s ease;
+    }
+    .progress-labels {
+      display: flex; justify-content: space-between;
+      font-size: 11px; color: var(--muted); margin-top: 6px;
+    }
+    .challenge-stats {
+      display: flex; gap: 20px; flex-shrink: 0; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 22px; font-weight: 900; color: var(--text); }
+    .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
     .empty { text-align: center; color: var(--muted); padding: 60px 0; font-size: 15px; }
 
     footer {
@@ -191,7 +238,7 @@
 
     /* Mobile: stack vertically with tabs */
     @media (max-width: 768px) {
-      nav, .hero, .filters, .content { padding-left: 20px; padding-right: 20px; }
+      nav, .hero, .challenge-banner, .filters, .content { padding-left: 20px; padding-right: 20px; }
       .hero h1 { font-size: 26px; }
       .card { flex-wrap: wrap; }
       .card-actions { width: 100%; justify-content: flex-end; }
@@ -215,6 +262,39 @@
 <div class="hero">
   <h1>Carousels &amp; <span>LinkedIn Posts</span></h1>
   <p>All content in one place. View, download, and schedule.</p>
+</div>
+
+<div class="challenge-banner">
+  <div class="challenge-card">
+    <div class="challenge-day">
+      <div class="day-num" id="challengeDay">1</div>
+      <div class="day-label">of 100</div>
+    </div>
+    <div class="challenge-info">
+      <div class="challenge-title"><span>100-Day</span> LinkedIn Posting Challenge</div>
+      <div class="challenge-meta" id="challengeMeta">Apr 14, 2026 → Jul 23, 2026</div>
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="challengeProgress" style="width:1%"></div>
+        </div>
+        <div class="progress-labels">
+          <span>Day 1</span>
+          <span id="daysLeft">99 days to go</span>
+          <span>Day 100</span>
+        </div>
+      </div>
+    </div>
+    <div class="challenge-stats">
+      <div class="stat">
+        <div class="stat-num" id="statPosts">0</div>
+        <div class="stat-label">Posts</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" id="statCarousels">0</div>
+        <div class="stat-label">Carousels</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="filters">
@@ -462,10 +542,32 @@
     });
   });
 
+  // ── 100-DAY CHALLENGE ────────────────────────────────
+  function initChallenge(items) {
+    const START = new Date('2026-04-14T00:00:00');
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    const dayNum  = Math.min(Math.max(Math.floor((today - START) / 86400000) + 1, 1), 100);
+    const pct     = Math.round((dayNum / 100) * 100);
+    const daysLeft = 100 - dayNum;
+
+    document.getElementById('challengeDay').textContent     = dayNum;
+    document.getElementById('challengeProgress').style.width = pct + '%';
+    document.getElementById('daysLeft').textContent =
+      daysLeft > 0 ? `${daysLeft} day${daysLeft !== 1 ? 's' : ''} to go` : 'Challenge complete!';
+
+    // Count only items from Apr 14 onwards
+    const posts     = items.filter(i => i.type === 'post'     && i.date >= '2026-04-14').length;
+    const carousels = items.filter(i => i.type === 'carousel' && i.date >= '2026-04-14').length;
+    document.getElementById('statPosts').textContent     = posts;
+    document.getElementById('statCarousels').textContent = carousels;
+  }
+
   // Load manifest
   fetch('content-manifest.json')
     .then(r => r.json())
-    .then(data => { allItems = data; render(currentFilter); })
+    .then(data => { allItems = data; render(currentFilter); initChallenge(data); })
     .catch(() => {
       document.getElementById('contentArea').innerHTML =
         '<div class="empty">Could not load content manifest.</div>';
