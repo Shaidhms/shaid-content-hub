@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaid's Spark - Quote Cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    gap: 60px;
+  }
+
+  h2.label {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ======= STYLE 1: Clean White ======= */
+  .style-white {
+    background: linear-gradient(160deg, #ffffff 0%, #f8f9fc 50%, #f0f2f8 100%);
+  }
+
+  .style-white .glow-1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #2563eb;
+    top: -150px;
+    right: -100px;
+    opacity: 0.04;
+    filter: blur(140px);
+    z-index: 0;
+  }
+
+  .style-white .glow-2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #3b82f6;
+    bottom: 100px;
+    left: -100px;
+    opacity: 0.04;
+    filter: blur(140px);
+    z-index: 0;
+  }
+
+  .style-white .corner::before,
+  .style-white .corner::after { background: rgba(37, 99, 235, 0.12); }
+
+  .style-white .quote-mark { color: #2563eb; opacity: 0.1; }
+  .style-white .quote-text { color: #1a1a2e; }
+  .style-white .quote-text .hl { color: #2563eb; }
+  .style-white .source { color: rgba(26, 26, 46, 0.4); }
+
+  .style-white .bottom-bar {
+    background: rgba(37, 99, 235, 0.04);
+    border-top: 1px solid rgba(37, 99, 235, 0.1);
+  }
+
+  .style-white .bar-photo { border-color: #2563eb; }
+  .style-white .bar-name { color: #1a1a2e; }
+  .style-white .bar-title { color: rgba(26, 26, 46, 0.4); }
+  .style-white .bar-brand-icon { background: #2563eb; }
+  .style-white .bar-brand-text { color: #1a1a2e; opacity: 0.5; }
+
+  /* ======= STYLE 2: Deep Blue ======= */
+  .style-blue {
+    background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  }
+
+  .style-blue .glow-1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #3b82f6;
+    top: -150px;
+    right: -100px;
+    opacity: 0.1;
+    filter: blur(140px);
+    z-index: 0;
+  }
+
+  .style-blue .glow-2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #1d4ed8;
+    bottom: 100px;
+    left: -100px;
+    opacity: 0.08;
+    filter: blur(140px);
+    z-index: 0;
+  }
+
+  .style-blue .corner::before,
+  .style-blue .corner::after { background: rgba(59, 130, 246, 0.2); }
+
+  .style-blue .quote-mark { color: #3b82f6; opacity: 0.15; }
+  .style-blue .quote-text { color: #f1f5f9; }
+  .style-blue .quote-text .hl { color: #60a5fa; }
+  .style-blue .source { color: rgba(241, 245, 249, 0.35); }
+
+  .style-blue .bottom-bar {
+    background: rgba(59, 130, 246, 0.06);
+    border-top: 1px solid rgba(59, 130, 246, 0.12);
+  }
+
+  .style-blue .bar-photo { border-color: #3b82f6; }
+  .style-blue .bar-name { color: #f1f5f9; }
+  .style-blue .bar-title { color: rgba(241, 245, 249, 0.35); }
+  .style-blue .bar-brand-icon { background: #3b82f6; }
+  .style-blue .bar-brand-text { color: #f1f5f9; opacity: 0.5; }
+
+  /* ======= SHARED ELEMENTS ======= */
+  .top-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .quote-content {
+    text-align: center;
+    max-width: 850px;
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 140px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: -40px;
+    display: block;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .quote-text .hl { font-weight: 900; }
+
+  .source {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .bottom-bar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bar-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .bar-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bar-info { flex: 1; }
+
+  .bar-name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .bar-title {
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  .bar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .bar-brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  .bar-brand-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  .corner { position: absolute; width: 50px; height: 50px; z-index: 2; }
+  .corner::before, .corner::after { content: ''; position: absolute; }
+
+  .corner-tl { top: 35px; left: 35px; }
+  .corner-tl::before { width: 50px; height: 2px; top: 0; left: 0; }
+  .corner-tl::after { width: 2px; height: 50px; top: 0; left: 0; }
+
+  .corner-tr { top: 35px; right: 35px; }
+  .corner-tr::before { width: 50px; height: 2px; top: 0; right: 0; }
+  .corner-tr::after { width: 2px; height: 50px; top: 0; right: 0; }
+
+  /* ======= STOCK PHOTO BACKGROUNDS ======= */
+  .photo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 120px);
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .photo-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* White card overlay: light wash so dark text stays readable */
+  .style-white .photo-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, rgba(255,255,255,0.82) 0%, rgba(248,249,252,0.78) 50%, rgba(240,242,248,0.82) 100%);
+  }
+
+  /* Blue card overlay: dark wash so light text stays readable */
+  .style-blue .photo-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, rgba(15,23,42,0.78) 0%, rgba(30,41,59,0.75) 50%, rgba(15,23,42,0.80) 100%);
+  }
+</style>
+</head>
+<body>
+
+<!-- ======= QUOTE 1: Sapiens (White) ======= -->
+<h2 class="label">Quote 1: Sapiens</h2>
+<div class="card style-white" id="quote-1">
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="photo-bg"><img src="photo-farmer-field.jpg" alt=""></div>
+  <div class="top-section">
+    <div class="quote-content">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">
+        <span class="hl">History</span> is something that very few people have been doing while everyone else was <span class="hl">ploughing fields.</span>
+      </p>
+      <p class="source">Yuval Noah Harari, Sapiens</p>
+    </div>
+  </div>
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= QUOTE 2: Lean Startup (Blue) ======= -->
+<h2 class="label">Quote 2: Lean Startup</h2>
+<div class="card style-blue" id="quote-2">
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="photo-bg"><img src="photo-broken-rebuild.jpg" alt=""></div>
+  <div class="top-section">
+    <div class="quote-content">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">
+        If you <span class="hl">cannot fail</span>, you <span class="hl">cannot learn.</span>
+      </p>
+      <p class="source">Eric Ries, The Lean Startup</p>
+    </div>
+  </div>
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= QUOTE 3: Outliers (White) ======= -->
+<h2 class="label">Quote 3: Outliers</h2>
+<div class="card style-white" id="quote-3">
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="photo-bg"><img src="photo-coding-night.jpg" alt=""></div>
+  <div class="top-section">
+    <div class="quote-content">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">
+        <span class="hl">Practice</span> isn't the thing you do once you're good. It's the thing you do that <span class="hl">makes you good.</span>
+      </p>
+      <p class="source">Malcolm Gladwell, Outliers</p>
+    </div>
+  </div>
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= QUOTE 4: Good to Great (Blue) ======= -->
+<h2 class="label">Quote 4: Good to Great</h2>
+<div class="card style-blue" id="quote-4">
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="photo-bg"><img src="photo-chess-strategy.jpg" alt=""></div>
+  <div class="top-section">
+    <div class="quote-content">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">
+        <span class="hl">Greatness</span> is not a function of circumstance. Greatness is largely a matter of <span class="hl">conscious choice.</span>
+      </p>
+      <p class="source">Jim Collins, Good to Great</p>
+    </div>
+  </div>
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+{
+  "title": "Pixel Agents - Your AI Agents Got a Virtual Office",
+  "color_scheme": {
+    "background": "#F5F5FA",
+    "text": "#1E1E2E",
+    "accent": "#2563EB",
+    "secondary": "#64748B"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Your AI Agents\nNow Have a\nVirtual Office",
+      "body": "Meet Pixel Agents\nThe extension that turned\nAI coding into a spectator sport"
+    },
+    {
+      "type": "image",
+      "heading": "This Is the Office",
+      "body": "Your AI agents sit at desks, walk around,\nand work in a pixel art office in real time",
+      "image": "templates/pixel-agents-office.jpg"
+    },
+    {
+      "type": "content",
+      "heading": "The Problem",
+      "body": "You fire up Claude Code\nIt starts working in the background\n\nJust a blinking cursor\nand a wall of scrolling text\n\nZero visual feedback\non what your agent is doing"
+    },
+    {
+      "type": "quote",
+      "heading": "",
+      "body": "What if you could actually\nwatch your AI agents work?\n\nNot read logs.\nWatch them."
+    },
+    {
+      "type": "content",
+      "heading": "Enter Pixel Agents",
+      "body": "A free VS Code extension\nthat turns your AI coding agents\ninto animated pixel art characters\n\nThey walk, sit at desks, type code\nand react to what the agent\nis actually doing in real time"
+    },
+    {
+      "type": "image",
+      "heading": "Meet the Characters",
+      "body": "Six unique pixel art characters\nEach one represents a different coding agent",
+      "image": "templates/pixel-agents-characters-single.png"
+    },
+    {
+      "type": "code_snippet",
+      "heading": "Install in 30 Seconds",
+      "body": "Search \"Pixel Agents\" in VS Code Extensions\nor run this command:",
+      "file_label": "Terminal",
+      "code": "# Option 1: VS Code Marketplace\n# Open Extensions (Ctrl+Shift+X)\n# Search: \"Pixel Agents\"\n# Click Install\n\n# Option 2: Command Line\ncode --install-extension pablodelucca.pixel-agents\n\n# Then in VS Code:\n# Cmd+Shift+P > \"Pixel Agents: Open Office\"\n# Click \"+Agent\" to spawn a character"
+    },
+    {
+      "type": "feature_cards",
+      "heading": "How It Works",
+      "cards": [
+        {
+          "icon": "01",
+          "title": "Watches Transcripts",
+          "desc": "Reads Claude Code's JSONL files\nto track what each agent is doing"
+        },
+        {
+          "icon": "02",
+          "title": "Spawns Characters",
+          "desc": "Each terminal you open creates\na new pixel character in the office"
+        },
+        {
+          "icon": "03",
+          "title": "Animates Actions",
+          "desc": "Writing code? Character types\nSearching files? Character reads"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "Agents at Work",
+      "body": "Characters react in real time to what\nyour AI agent is doing behind the scenes",
+      "image": "templates/pixel-agents-screenshot.jpg"
+    },
+    {
+      "type": "content",
+      "heading": "What Gets Animated?",
+      "body": "- Writing code: character types at desk\n- Reading files: character reads documents\n- Running commands: character runs around\n- Waiting for input: speech bubble appears\n- Idle: character walks to break room"
+    },
+    {
+      "type": "feature_cards",
+      "heading": "Build Your Own Office",
+      "cards": [
+        {
+          "icon": "01",
+          "title": "64x64 Grid Editor",
+          "desc": "Design floors, walls, and rooms\nwith a built-in layout editor"
+        },
+        {
+          "icon": "02",
+          "title": "Furniture Catalog",
+          "desc": "Desks, chairs, bookshelves, plants\nAll included out of the box"
+        },
+        {
+          "icon": "03",
+          "title": "Multiple Rooms",
+          "desc": "Break room, meeting room, work area\nCustomize everything"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "heading": "",
+      "body": "It does nothing productive.\nBut developers can't stop watching it.\n\nThat's how you know\nit solves a real UX problem."
+    },
+    {
+      "type": "feature_cards",
+      "heading": "Why Developers Love It",
+      "cards": [
+        {
+          "icon": "01",
+          "title": "Visual Agent Feedback",
+          "desc": "See what your agent is doing\nwithout reading terminal logs"
+        },
+        {
+          "icon": "02",
+          "title": "Covered by Fast Company",
+          "desc": "Gone viral on dev Twitter\nTrending on GitHub"
+        },
+        {
+          "icon": "03",
+          "title": "Free & Open Source",
+          "desc": "Available on VS Code Marketplace\nFully open source on GitHub"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "The Bigger Picture",
+      "body": "AI agents are becoming teammates\nnot just tools\n\nVisualizing their work builds trust\nand gives you instant feedback\n\nThis is just the beginning of\nhow we'll interact with AI agents"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for more",
+      "body": "Shaid | GenAI Architect\n\n#AI #CodingAgents #PixelAgents\n#ClaudeCode #DevTools #VSCode"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "title": "AI On Your Phone. No Internet.",
+  "color_scheme": {
+    "background": "#F5F5FA",
+    "text": "#1E1E2E",
+    "accent": "#2563EB",
+    "secondary": "#64748B"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "AI On Your Phone\nNo Internet Needed",
+      "body": "How Qwen 3.5 lets you run\na real AI model offline\non any smartphone"
+    },
+    {
+      "type": "content",
+      "heading": "What is Qwen 3.5?",
+      "body": "Alibaba's Small Model Series\nBuilt for on-device use\n\n4 sizes:\n0.8B - Ultra light\n2B - Fast & capable\n4B - Sweet spot\n9B - Near cloud quality\n\nOpen source (Apache 2.0)\nFree on Hugging Face"
+    },
+    {
+      "type": "before_after",
+      "heading": "Cloud AI vs Offline AI",
+      "before": {
+        "title": "Cloud AI",
+        "items": ["Needs internet always", "Data leaves your device", "Monthly subscription", "Latency on every request", "Unusable offline"],
+        "note": "Dependent on connectivity"
+      },
+      "process": ["VS"],
+      "after": {
+        "title": "Offline AI",
+        "items": ["Download once, run forever", "Data stays on device", "Completely free", "Instant local response", "Works in airplane mode"],
+        "note": "Always available"
+      }
+    },
+    {
+      "type": "feature_cards",
+      "heading": "Not Just Text Chat",
+      "cards": [
+        {
+          "icon": "T",
+          "title": "Text Generation",
+          "desc": "Full conversations\nand content creation"
+        },
+        {
+          "icon": "V",
+          "title": "Vision AI",
+          "desc": "Analyze images\ndirectly on device"
+        },
+        {
+          "icon": "W",
+          "title": "Voice Transcription",
+          "desc": "Whisper-powered\nspeech to text"
+        },
+        {
+          "icon": "D",
+          "title": "Document Analysis",
+          "desc": "Read and understand\nPDFs and docs"
+        }
+      ]
+    },
+    {
+      "type": "side_by_side",
+      "heading": "How To Run It",
+      "left_panel": {
+        "title": "iPhone",
+        "color": "#d6eaf8",
+        "items": [
+          "App: Off Grid / PocketPal AI",
+          "Needs: iPhone 12+, iOS 17+",
+          "Best: iPhone 15 Pro (8GB)",
+          "Speed: 20-30 tokens/sec",
+          "Tip: Set KV cache to q4_0"
+        ]
+      },
+      "right_panel": {
+        "title": "Android",
+        "color": "#d4edda",
+        "items": [
+          "App: Off Grid (Play Store)",
+          "Needs: 6GB RAM, ARM64",
+          "Best: Snapdragon 8 Gen 2+",
+          "Speed: 10-30 tokens/sec",
+          "Works on $300 phones"
+        ]
+      },
+      "bottom_note": "Download model once over Wi-Fi. After that, no internet needed."
+    },
+    {
+      "type": "diagram",
+      "heading": "Pick Your Model",
+      "body": "Match model size to your device RAM",
+      "diagram": {
+        "type": "hierarchy",
+        "elements": [
+          "Your Phone RAM",
+          "4-6GB: Qwen 0.6B / SmolLM3",
+          "6-8GB: Qwen 1.5B / Phi-4 Mini",
+          "8GB+: Qwen 4B / Llama 3.2 3B",
+          "12GB+: Qwen 9B / Llama 7B"
+        ],
+        "connections": [[0,1], [0,2], [0,3], [0,4]]
+      }
+    },
+    {
+      "type": "content",
+      "heading": "Real Use Cases",
+      "body": "Developer debugging code on a flight\nwith no Wi-Fi\n\nStudent in a rural area learning\nfrom an AI tutor offline\n\nField worker getting instant answers\nwithout cell coverage\n\nPrivacy-first user who never wants\ndata leaving their device\n\nApps that work without\ninternet dependency"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Setup: iPhone (Off Grid)",
+      "body": "1. Open the App Store and search \"Off Grid\"\n2. Install the app (free, no account needed)\n3. Open Off Grid and tap the model browser\n4. Models are filtered by your device's RAM\n5. Tap a model (start with Qwen 3 0.6B or 1.5B)\n6. Download over Wi-Fi (80MB to 4GB)\n7. Once downloaded, start chatting instantly"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Setup: Android (Off Grid)",
+      "body": "1. Open Play Store and search \"Off Grid\"\n2. Install the app (free, open source, MIT license)\n3. Open Off Grid and browse recommended models\n4. Pick a model based on your RAM (6GB+ needed)\n5. Download over Wi-Fi (80MB to 4GB)\n6. Turn on airplane mode to verify it works\n7. Start chatting with zero internet"
+    },
+    {
+      "type": "content",
+      "heading": "Pro Tip: Speed Boost",
+      "body": "After your first chat, go to Settings\n\nFind \"KV Cache Quantization\"\n\nSwitch from f16 to q4_0\n\nThis roughly triples inference speed\nwith minimal quality loss\n\nAlso: First message is always slower\nas the model loads into memory\nSubsequent messages are much faster"
+    },
+    {
+      "type": "quote",
+      "heading": "",
+      "body": "AI that works without\nthe internet is not a feature.\n\nIt's the future."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for more",
+      "body": "Shaid | GenAI Architect\n\n#GenerativeAI #EdgeAI #OnDeviceAI"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaid's Spark - Experiment</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, #ffffff 0%, #f5f5f5 50%, #eef0f4 100%);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 0;
+  }
+
+  .glow-1 {
+    width: 500px;
+    height: 500px;
+    background: #e94560;
+    top: -150px;
+    right: -100px;
+    opacity: 0.06;
+  }
+
+  .glow-2 {
+    width: 400px;
+    height: 400px;
+    background: #667eea;
+    bottom: 100px;
+    left: -100px;
+    opacity: 0.05;
+  }
+
+  .top-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .series-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: rgba(233, 69, 96, 0.5);
+    margin-bottom: 16px;
+  }
+
+  .e-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    color: rgba(233, 69, 96, 0.08);
+    line-height: 1;
+    margin-bottom: -30px;
+  }
+
+  .quote-content {
+    text-align: center;
+    max-width: 850px;
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 160px;
+    font-weight: 900;
+    color: #e94560;
+    opacity: 0.12;
+    line-height: 1;
+    margin-bottom: -50px;
+    display: block;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.45;
+  }
+
+  .quote-text .hl {
+    color: #e94560;
+    font-weight: 900;
+  }
+
+  .sub-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: rgba(26, 26, 46, 0.45);
+    margin-top: 30px;
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  .bottom-bar {
+    height: 120px;
+    background: rgba(233, 69, 96, 0.05);
+    border-top: 1px solid rgba(233, 69, 96, 0.12);
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bar-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #e94560;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .bar-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bar-info { flex: 1; }
+
+  .bar-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+
+  .bar-title {
+    font-size: 13px;
+    color: rgba(26, 26, 46, 0.45);
+    margin-top: 3px;
+  }
+
+  .bar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .bar-brand-icon {
+    width: 36px;
+    height: 36px;
+    background: #e94560;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  .bar-brand-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: #1a1a2e;
+    letter-spacing: 3px;
+    opacity: 0.6;
+  }
+
+  .corner { position: absolute; width: 50px; height: 50px; z-index: 2; }
+  .corner::before, .corner::after { content: ''; position: absolute; background: rgba(233,69,96,0.15); }
+
+  .corner-tl { top: 35px; left: 35px; }
+  .corner-tl::before { width: 50px; height: 2px; top: 0; left: 0; }
+  .corner-tl::after { width: 2px; height: 50px; top: 0; left: 0; }
+
+  .corner-tr { top: 35px; right: 35px; }
+  .corner-tr::before { width: 50px; height: 2px; top: 0; right: 0; }
+  .corner-tr::after { width: 2px; height: 50px; top: 0; right: 0; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="top-section">
+    <div class="series-label">THE THREE Es &bull; 1 OF 3</div>
+    <div class="e-number">E1</div>
+    <div class="quote-content">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">
+        Don't plan for years.<br><span class="hl">Experiment</span> for weeks.
+      </p>
+      <p class="sub-text">Test ideas. Build small. Break things. The best clarity comes from action, not analysis.</p>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

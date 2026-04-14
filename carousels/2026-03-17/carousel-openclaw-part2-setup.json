@@ -1,0 +1,90 @@
+{
+  "title": "OpenClaw Part 2 - Setup Guide",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "OpenClaw Setup:",
+      "heading_accent": "Zero to Running"
+    },
+    {
+      "type": "intro",
+      "text": "Part 2 of the <accent>OpenClaw</accent> series.\n\nYou've seen what it can do.\nNow let's get it <accent>running</accent> on your machine.\n\n10 minutes. That's all it takes."
+    },
+    {
+      "type": "numbered_list",
+      "heading": "What You <accent>Need</accent>",
+      "items": ["Node.js 18+ installed on your system", "An API key (Claude, OpenAI, or DeepSeek)", "A messaging app (WhatsApp, Telegram, etc.)", "Terminal access (Mac, Linux, or WSL on Windows)"]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 1: <accent>Install</accent>",
+      "body": "One command to install globally.\nThis gives you the openclaw CLI.",
+      "terminal": [
+        {"class": "prompt", "text": "$ npm install -g openclaw@latest"},
+        {"class": "cmd", "text": "added 247 packages in 12s"},
+        {"class": "success", "text": "openclaw v2026.2.24 installed"}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 2: <accent>Onboard</accent>",
+      "body": "The onboard wizard walks you through\nAPI keys, messaging setup, and daemon config.",
+      "terminal": [
+        {"class": "prompt", "text": "$ openclaw onboard --install-daemon"},
+        {"class": "cmd", "text": "> Select your LLM provider: Claude"},
+        {"class": "cmd", "text": "> Enter API key: sk-ant-..."},
+        {"class": "cmd", "text": "> Select messaging: WhatsApp"},
+        {"class": "success", "text": "Onboarding complete. Daemon started."}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 3: <accent>Connect</accent> Messaging",
+      "body": "Scan a QR code or paste a token.\nOpenClaw now lives in your chat app.",
+      "terminal": [
+        {"class": "prompt", "text": "$ openclaw connect whatsapp"},
+        {"class": "cmd", "text": "> Scan this QR code with WhatsApp:"},
+        {"class": "cmd", "text": "> [QR Code displayed in terminal]"},
+        {"class": "success", "text": "Connected! Send a message to test."}
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "<accent>Docker</accent> vs NPM Install",
+      "before": ["NPM: Simple install, low resources", "Best for personal machines", "Easy debugging and iteration", "Quick start for experimentation"],
+      "after": ["Docker: Container isolation", "Best for VPS / always-on setups", "Consistent environment across machines", "Production-grade for serious use"]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 4: <accent>Test</accent> It",
+      "body": "Send your first message.\nWatch it think, plan, and execute.",
+      "terminal": [
+        {"class": "prompt", "text": "You (WhatsApp): What's the weather in Chennai?"},
+        {"class": "cmd", "text": "> OpenClaw: Checking weather API..."},
+        {"class": "success", "text": "> Chennai: 32C, Partly Cloudy, Humidity 78%"}
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "Pro Tips for <accent>Setup</accent>",
+      "body": "- Use Docker for always-on server deployments\n- Start with Claude as your LLM (best agent performance)\n- Connect multiple messaging apps simultaneously\n- Set up cron jobs for automated daily summaries"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "Part 3!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#OpenClaw #AI #Setup #DevTools #Automation"
+    }
+  ]
+}

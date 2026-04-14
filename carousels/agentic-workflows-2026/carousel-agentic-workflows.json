@@ -1,0 +1,74 @@
+{
+  "title": "Stop Learning n8n. Learn THIS Instead.",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Stop Learning",
+      "heading_accent": "n8n in 2026."
+    },
+    {
+      "type": "intro",
+      "text": "Drag-and-drop automation platforms like n8n, Make, and Zapier were <accent>game-changers</accent>. But a new wave has arrived. <accent>Agentic workflows</accent> let you build the same automations in minutes, just by describing what you want in plain English."
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>Market</accent> Has Spoken",
+      "caption": "Agentic AI market: $5.25B in 2024 -> $199B by 2034. A 38x increase.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/agentic-workflows-2026/market-growth-199b.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "3 <accent>Waves</accent> of AI Automation",
+      "caption": "Wave 1: ChatGPT chatbots. Wave 2: AI + n8n/Make workflows. Wave 3: Agentic tools (Claude Code, Trigger.dev).",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/agentic-workflows-2026/evolution-wave-3-labeled.jpg"
+    },
+    {
+      "type": "before_after",
+      "heading": "Old Way vs <accent>New Way</accent>",
+      "before": ["Drag nodes onto a canvas", "Configure each API call manually", "Map variables between nodes", "Debug errors yourself", "Wire everything together by hand"],
+      "after": ["Describe what you want in English", "Agent connects to your tools", "Agent writes the code", "Agent fixes its own errors", "You focus on the outcome"]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Why <accent>Agentic</accent> Workflows Win",
+      "items": ["Build in minutes, not days", "No manual node configuration", "Auto-deduplication and error handling", "Natural language is the interface", "Agent handles implementation end-to-end"]
+    },
+    {
+      "type": "diagram",
+      "heading": "How It <accent>Works</accent>",
+      "diagram_type": "flow",
+      "elements": ["Describe the Outcome", "Agent Plans the Build", "Agent Writes Code", "Agent Tests & Fixes", "Automation Goes Live"]
+    },
+    {
+      "type": "content",
+      "heading": "Watch Out <accent>For</accent>",
+      "body": "- Context drift: Agent forgets earlier instructions in long sessions\n- Hallucinations: It invents functions or APIs that don't exist\n- Over-engineering: Builds complex architecture for simple asks\n- Always test. Never just take its word for it."
+    },
+    {
+      "type": "quote",
+      "text": "Your n8n knowledge isn't wasted. It taught you triggers, data flow, error handling, and AI prompting. That's exactly what makes you better at directing agentic systems."
+    },
+    {
+      "type": "content",
+      "heading": "Key <accent>Takeaway</accent>",
+      "body": "- n8n isn't dead. It became the foundation.\n- Agentic workflows made everything faster.\n- You still need to understand how workflows work.\n- The skill is now directing, not configuring.\n- Start learning Claude Code or any agentic tool today."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#AI #AgenticAI #ClaudeCode #n8n #Automation"
+    }
+  ]
+}

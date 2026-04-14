@@ -1,0 +1,107 @@
+{
+  "title": "Claude Code Skill Creator",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "skill",
+      "heading_accent": "creator."
+    },
+    {
+      "type": "intro",
+      "text": "Claude Code can now <accent>build its own skills.</accent> Create, test, benchmark, and improve Agent Skills <accent>without writing code.</accent> Teach it once. <accent>Use it forever.</accent>"
+    },
+    {
+      "type": "image",
+      "heading": "What Are <accent>Skills?</accent>",
+      "caption": "Reusable muscle memory that makes Claude Code smarter. Code Review, Doc Generator, Test Writer and more.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide02-skills-visual.png"
+    },
+    {
+      "type": "before_after",
+      "heading": "Before vs <accent>With</accent> Skill Creator",
+      "before": [
+        "Write SKILL.md by hand",
+        "Guess if the description triggers",
+        "No way to test if it works",
+        "No way to measure improvement",
+        "Breaks silently after updates"
+      ],
+      "after": [
+        "Describe what you want in English",
+        "Auto-optimized trigger descriptions",
+        "Evals verify every change",
+        "Benchmarks track pass rate + tokens",
+        "Re-run after model updates"
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>4 Modes</accent>",
+      "caption": "Create, Eval, Benchmark, and Improve. A complete lifecycle for building skills.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide04-four-modes.png"
+    },
+    {
+      "type": "image",
+      "heading": "How It <accent>Works</accent>",
+      "caption": "Describe what you need. Skill Creator writes SKILL.md, generates eval cases, runs them, and verifies.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide05-how-it-works.png"
+    },
+    {
+      "type": "image",
+      "heading": "Continuous <accent>Improvement</accent> Loop",
+      "caption": "Create → Eval → Benchmark → Improve. A self-improving cycle that makes your skills better over time.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide06-lifecycle.png"
+    },
+    {
+      "type": "image",
+      "heading": "Multi-Agent <accent>Benchmarking</accent>",
+      "caption": "Skill Creator spawns parallel agents to run evals, aggregate results, and compare skill versions.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide07-multi-agent.png"
+    },
+    {
+      "type": "image",
+      "heading": "What Can You <accent>Build?</accent>",
+      "caption": "Security Reviewer, API Doc Generator, Commit Writer, Test Generator, Post Writer, PR Reviewer and more.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide08-use-cases.png"
+    },
+    {
+      "type": "visual",
+      "heading": "Get It in <accent>30 Seconds</accent>",
+      "body": "- Search 'skill-creator' in Extensions\n- Or copy from GitHub\n- Paste into .claude/skills/\n- Type /skill-creator to start",
+      "terminal": [
+        {"class": "comment", "text": "# Option A: VS Code Extensions"},
+        {"class": "prompt", "text": "> Extensions > Search 'skill-creator'"},
+        {"class": "success", "text": "✓ Installed"},
+        {"class": "output", "text": ""},
+        {"class": "comment", "text": "# Option B: GitHub"},
+        {"class": "prompt", "text": "$ cp -r skill-creator/"},
+        {"class": "cmd", "text": "  → .claude/skills/skill-creator/"},
+        {"class": "output", "text": ""},
+        {"class": "prompt", "text": "$ claude"},
+        {"class": "cmd", "text": "> /skill-creator"},
+        {"class": "success", "text": "✓ Skill Creator ready."}
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "The best AI tools don't just follow instructions. They learn to get better at following them. Skill Creator brings that loop to Claude Code."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #AI #Skills #SkillCreator #DevTools"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+I started 47 side projects last year. Finished 3.
+
+
+The 3 that made it? I knew what "done" looked like before I wrote the first line of code.
+
+The other 44? I just started building because the idea was exciting. No end state. No finish line. Just vibes and a new GitHub repo.
+
+"Let me just set up the boilerplate."
+"I'll figure out the scope later."
+"This is just a POC."
+
+Famous last words. Every single time.
+
+Covey says "Begin with the end in mind" and I used to think that was obvious. Like yeah, obviously. Who starts something without knowing where it's going?
+
+Me. I do that. Regularly.
+
+What changed: I started writing one sentence before every project.
+
+"This is done when ___."
+
+"This is done when the client can upload a PDF and get a summary."
+"This is done when I can screenshot it and post on LinkedIn."
+"This is done when someone pays me for it."
+
+That one sentence killed more scope creep than any project management tool I've ever paid for.
+
+. Starting is easy. Finishing is the actual skill.
+. If you can't describe "done" in one sentence, you're not ready to start.
+. A finished ugly thing beats ten perfect things in your head.
+
+"Begin with the end in mind." - Stephen Covey
+
+Simple advice. Took me 15 years and 44 abandoned repos to actually hear it.
+
+#Productivity #BuildInPublic #SoftwareEngineering #ProjectManagement #DeveloperLife

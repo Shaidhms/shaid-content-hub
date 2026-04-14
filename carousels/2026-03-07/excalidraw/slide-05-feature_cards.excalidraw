@@ -1,0 +1,456 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "ce8cc388",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 184.8,
+      "height": 39.199999999999996,
+      "text": "Key Features",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "9d52e687",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 192,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          192,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "5eba6041",
+      "type": "rectangle",
+      "x": 40,
+      "y": 85,
+      "width": 460,
+      "height": 90,
+      "strokeColor": "#82c991",
+      "backgroundColor": "#d4edda",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "786f3d83",
+      "type": "rectangle",
+      "x": 40,
+      "y": 85,
+      "width": 6,
+      "height": 90,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "ffb9b026",
+      "type": "ellipse",
+      "x": 58,
+      "y": 112.0,
+      "width": 36,
+      "height": 36,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "d1d64a2c",
+      "type": "text",
+      "x": 64,
+      "y": 118.0,
+      "width": 24,
+      "height": 22.4,
+      "text": "01",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "fa6a2840",
+      "type": "text",
+      "x": 105,
+      "y": 97,
+      "width": 198.00000000000003,
+      "height": 25.2,
+      "text": "Same Session Context",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "415ac9a0",
+      "type": "text",
+      "x": 105,
+      "y": 125,
+      "width": 508.20000000000005,
+      "height": 19.599999999999998,
+      "text": "Runs in your current session. Reads\nprevious context continuously.",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "aa4f78de",
+      "type": "rectangle",
+      "x": 40,
+      "y": 190,
+      "width": 460,
+      "height": 90,
+      "strokeColor": "#7fb3d8",
+      "backgroundColor": "#d6eaf8",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "972898bf",
+      "type": "rectangle",
+      "x": 40,
+      "y": 190,
+      "width": 6,
+      "height": 90,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "0348d1ef",
+      "type": "ellipse",
+      "x": 58,
+      "y": 217.0,
+      "width": 36,
+      "height": 36,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "3a6deebc",
+      "type": "text",
+      "x": 64,
+      "y": 223.0,
+      "width": 24,
+      "height": 22.4,
+      "text": "02",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "7aa7ec3d",
+      "type": "text",
+      "x": 105,
+      "y": 202,
+      "width": 138.60000000000002,
+      "height": 25.2,
+      "text": "Loop Any Skill",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "b785a43a",
+      "type": "text",
+      "x": 105,
+      "y": 230,
+      "width": 485.1,
+      "height": 19.599999999999998,
+      "text": "Chain with /review-pr, /commit, or\nany custom skill on a timer.",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "5fda2db1",
+      "type": "rectangle",
+      "x": 40,
+      "y": 295,
+      "width": 460,
+      "height": 90,
+      "strokeColor": "#e6c744",
+      "backgroundColor": "#fff3cd",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "cae95db6",
+      "type": "rectangle",
+      "x": 40,
+      "y": 295,
+      "width": 6,
+      "height": 90,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "a5696fe5",
+      "type": "ellipse",
+      "x": 58,
+      "y": 322.0,
+      "width": 36,
+      "height": 36,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "79f87e1e",
+      "type": "text",
+      "x": 64,
+      "y": 328.0,
+      "width": 24,
+      "height": 22.4,
+      "text": "03",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "4b3b54d3",
+      "type": "text",
+      "x": 105,
+      "y": 307,
+      "width": 158.4,
+      "height": 25.2,
+      "text": "Natural Language",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "a56bc9d0",
+      "type": "text",
+      "x": 105,
+      "y": 335,
+      "width": 369.6,
+      "height": 19.599999999999998,
+      "text": "No syntax to learn. Just describe\nwhat you want.",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "387cc6c5",
+      "type": "rectangle",
+      "x": 40,
+      "y": 400,
+      "width": 460,
+      "height": 90,
+      "strokeColor": "#e8965a",
+      "backgroundColor": "#ffe0cc",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "2d5b5670",
+      "type": "rectangle",
+      "x": 40,
+      "y": 400,
+      "width": 6,
+      "height": 90,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "026ffe75",
+      "type": "ellipse",
+      "x": 58,
+      "y": 427.0,
+      "width": 36,
+      "height": 36,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "954c439d",
+      "type": "text",
+      "x": 64,
+      "y": 433.0,
+      "width": 24,
+      "height": 22.4,
+      "text": "04",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "6bd61ab2",
+      "type": "text",
+      "x": 105,
+      "y": 412,
+      "width": 138.60000000000002,
+      "height": 25.2,
+      "text": "Cancel Anytime",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "118341a8",
+      "type": "text",
+      "x": 105,
+      "y": 440,
+      "width": 392.70000000000005,
+      "height": 19.599999999999998,
+      "text": "Just say 'stop the loop' or 'cancel\nthat reminder'.",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "5a1e24ee",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "05/10",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "451a0841",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "b8b2c748",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "2827a268",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

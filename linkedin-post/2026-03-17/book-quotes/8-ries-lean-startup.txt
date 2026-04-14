@@ -1,0 +1,32 @@
+My safest project was my worst project.
+
+
+I once spent three months building something "properly."
+Clean architecture. Unit tests. Documentation nobody asked for.
+I wanted it to be perfect before anyone saw it.
+
+By the time I showed it to someone, the market had moved on.
+Three months. Gone. Because I was too afraid to ship something ugly.
+
+"If you cannot fail, you cannot learn." - Eric Ries, The Lean Startup
+
+I used to think failure was the enemy.
+Now I think the real enemy is the version of you that never gets feedback.
+
+My first AI tool was embarrassing. The UI was rough. The responses were slow.
+But people used it. And their complaints taught me more than my "clean architecture" ever did.
+
+Here's what I've noticed about builders who actually grow:
+
+. They ship before they're comfortable
+. They treat criticism as free consulting
+. They'd rather have 10 users complain than 0 users exist
+
+The people who never fail aren't brave. They're just invisible.
+
+If your last three months feel "safe," that might be the problem.
+
+#LeanStartup #Failure #BuildInPublic #AI #StartupMindset #TechCareers #ShaidsSpark
+
+---
+Image: 8-ries-lean-startup.html (Vadivelu x Lean Startup - shocked face, "3 months wasted")

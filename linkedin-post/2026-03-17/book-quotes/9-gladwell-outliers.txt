@@ -1,0 +1,33 @@
+Nobody is born good at anything. Literally nobody.
+
+
+I used to watch people build AI demos on Twitter and think "they're just naturally good at this."
+
+Then I saw their GitHub histories.
+Hundreds of commits. Broken repos. Abandoned projects from two years ago.
+They weren't born good. They just started before me.
+
+"Practice isn't the thing you do once you're good. It's the thing you do that makes you good." - Malcolm Gladwell, Outliers
+
+I've been writing code for 15 years.
+But I only started building AI products six months ago.
+And the first few months? I was genuinely bad at it.
+
+My RAG pipeline returned nonsense. My embeddings were wrong. My UI looked like a government website from 2008.
+
+But each broken thing taught me something specific.
+Not theoretical. Specific. Like "oh, chunk size actually matters" specific.
+
+The gap between "I understand this" and "I can build this" is filled entirely by practice.
+Not tutorials. Not courses. Practice.
+
+Here's the uncomfortable part:
+You have to be bad at something for a while before you're good at it.
+And most people quit during the bad part.
+
+Don't be most people.
+
+#Outliers #Practice #Learning #AI #SoftwareEngineering #CareerGrowth #ShaidsSpark
+
+---
+Image: 9-gladwell-outliers.html (Vadivelu x Outliers - explaining to juniors, "practice pannu da")

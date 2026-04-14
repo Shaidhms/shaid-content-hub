@@ -1,0 +1,144 @@
+{
+  "title": "AI On Your Phone. No Internet.",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "offline",
+      "heading_accent": "AI."
+    },
+    {
+      "type": "intro",
+      "text": "Qwen 3.5 lets you run a <accent>real AI model</accent> on your phone. No internet. No subscription. No data leaving your device. <accent>Download once, use forever.</accent>"
+    },
+    {
+      "type": "content",
+      "heading": "What Is <accent>Qwen 3.5?</accent>",
+      "body": "- Alibaba's Small Model Series, built for on-device use\n- 4 sizes: 0.8B (ultra light), 2B (fast), 4B (sweet spot), 9B (near cloud quality)\n- Open source (Apache 2.0), free on Hugging Face"
+    },
+    {
+      "type": "before_after",
+      "heading": "Cloud AI vs <accent>Offline</accent> AI",
+      "before": [
+        "Needs internet always",
+        "Data leaves your device",
+        "Monthly subscription",
+        "Latency on every request",
+        "Unusable offline"
+      ],
+      "after": [
+        "Download once, run forever",
+        "Data stays on device",
+        "Completely free",
+        "Instant local response",
+        "Works in airplane mode"
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Not Just <accent>Text</accent> Chat",
+      "items": [
+        "Text Generation: Full conversations and content creation",
+        "Vision AI: Analyze images directly on device",
+        "Voice Transcription: Whisper-powered speech to text",
+        "Document Analysis: Read and understand PDFs and docs"
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "How To <accent>Run</accent> It",
+      "neutral": true,
+      "left_label": "iPHONE",
+      "right_label": "ANDROID",
+      "before": [
+        "App: Off Grid / PocketPal AI",
+        "Needs: iPhone 12+, iOS 17+",
+        "Best: iPhone 15 Pro (8GB)",
+        "Speed: 20-30 tokens/sec",
+        "Tip: Set KV cache to q4_0"
+      ],
+      "after": [
+        "App: Off Grid (Play Store)",
+        "Needs: 6GB RAM, ARM64",
+        "Best: Snapdragon 8 Gen 2+",
+        "Speed: 10-30 tokens/sec",
+        "Works on $300 phones"
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "Pick Your <accent>Model</accent>",
+      "diagram_type": "hierarchy",
+      "elements": [
+        "Your Phone RAM",
+        "4-6GB: Qwen 0.6B / SmolLM3",
+        "6-8GB: Qwen 1.5B / Phi-4 Mini",
+        "8GB+: Qwen 4B / Llama 3.2 3B",
+        "12GB+: Qwen 9B / Llama 7B"
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "Real <accent>Use Cases</accent>",
+      "body": "- Developer debugging code on a flight with no Wi-Fi\n- Student in a rural area learning from an AI tutor offline\n- Field worker getting instant answers without cell coverage\n- Privacy-first user who never wants data leaving their device\n- Apps that work without internet dependency"
+    },
+    {
+      "type": "visual",
+      "heading": "Setup: <accent>iPhone</accent>",
+      "body": "- App Store: 'Off Grid' or 'PocketPal AI'\n- Both free, no account needed\n- Tap model browser\n- Models filtered by your device RAM\n- Start with Qwen 3 0.6B or 1.5B",
+      "terminal": [
+        {"class": "prompt", "text": "App Store > Search 'Off Grid'"},
+        {"class": "success", "text": "✓ Installed (free)"},
+        {"class": "output", "text": ""},
+        {"class": "cmd", "text": "> Open Off Grid > Model Browser"},
+        {"class": "output", "text": "  Qwen 3 0.6B  ........  80MB"},
+        {"class": "output", "text": "  Qwen 3 1.5B  ........  640MB"},
+        {"class": "output", "text": "  Qwen 3 4B    ........  2.1GB"},
+        {"class": "output", "text": ""},
+        {"class": "cmd", "text": "> Download over Wi-Fi"},
+        {"class": "success", "text": "✓ Done. Start chatting instantly."}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Setup: <accent>Android</accent>",
+      "body": "- Open Play Store, search 'Off Grid'\n- Install (free, open source, MIT)\n- Browse recommended models\n- Pick based on your RAM (6GB+)\n- Turn on airplane mode to verify",
+      "terminal": [
+        {"class": "prompt", "text": "Play Store > Search 'Off Grid'"},
+        {"class": "success", "text": "✓ Installed (open source, MIT)"},
+        {"class": "output", "text": ""},
+        {"class": "cmd", "text": "> Browse recommended models"},
+        {"class": "output", "text": "  RAM: 6GB+ needed"},
+        {"class": "output", "text": "  Download: 80MB to 4GB"},
+        {"class": "output", "text": ""},
+        {"class": "cmd", "text": "> Airplane mode: ON"},
+        {"class": "success", "text": "✓ Still works. Zero internet."}
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "Pro Tip: <accent>Speed Boost</accent>",
+      "body": "- After your first chat, go to Settings\n- Find 'KV Cache Quantization'\n- Switch from f16 to q4_0\n- This roughly triples inference speed with minimal quality loss\n- First message is always slower (model loads into memory)\n- Subsequent messages are much faster"
+    },
+    {
+      "type": "quote",
+      "text": "AI that works without the internet is not a feature. It's the future."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#GenerativeAI #EdgeAI #OnDeviceAI #Qwen #OfflineAI"
+    }
+  ]
+}

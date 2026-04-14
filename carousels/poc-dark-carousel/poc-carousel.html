@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Skills Carousel - POC</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  /* ========== SLIDE BASE ========== */
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* Dark textured background - grainy paper feel */
+  .slide-bg {
+    position: absolute;
+    inset: 0;
+    background: #191923;
+  }
+  /* Grain overlay via SVG noise filter */
+  .slide-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 300px 300px;
+    opacity: 0.5;
+  }
+  /* Subtle warm vignette */
+  .slide-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.3) 100%);
+  }
+
+  .slide-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+  }
+
+  /* ========== COLORS ========== */
+  .text-white { color: #ede8df; }
+  .text-coral { color: #d4826a; }
+
+  /* ========== SLIDE 1: TITLE ========== */
+  .slide-title .slide-content {
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .slide-title .title-line {
+    font-size: 160px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -5px;
+    text-align: center;
+  }
+
+  /* ========== SLIDE 2: INTRO ========== */
+  .slide-intro .slide-content {
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 80px 70px 140px 70px;
+  }
+  .intro-text {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -1px;
+    color: #ede8df;
+    max-width: 960px;
+  }
+  .intro-text .accent {
+    color: #d4826a;
+  }
+
+  /* ========== SLIDE 3-7: SKILL CARD ========== */
+  .slide-skill .slide-content {
+    display: grid;
+    grid-template-columns: 52% 1fr;
+    gap: 24px;
+    padding: 44px;
+    align-content: stretch;
+  }
+
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .skill-header {
+    background: #d4826a;
+    border-radius: 20px;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+  }
+  .skill-label {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(25, 25, 35, 0.5);
+  }
+  .skill-name {
+    font-size: 68px;
+    font-weight: 900;
+    color: #191923;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-top: 16px;
+  }
+
+  .skill-screenshot {
+    background: #2a2a3a;
+    border-radius: 20px;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .screenshot-bar {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: #666;
+    background: #222233;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .screenshot-bar .dots {
+    display: flex;
+    gap: 6px;
+  }
+  .screenshot-bar .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #444;
+  }
+  .screenshot-content {
+    flex: 1;
+    overflow: hidden;
+  }
+  .screenshot-readme {
+    background: #ffffff;
+    margin: 16px;
+    border-radius: 12px;
+    padding: 28px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+    height: calc(100% - 32px);
+    overflow: hidden;
+  }
+  .screenshot-readme h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 14px;
+  }
+  .screenshot-readme .badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .screenshot-readme .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #e8e8e8;
+    color: #555;
+  }
+  .badge-green { background: #d4edda !important; color: #2d6a3f !important; }
+  .badge-blue { background: #d6eaf8 !important; color: #2563eb !important; }
+  .screenshot-readme p {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 16px;
+  }
+  .screenshot-readme ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .screenshot-readme li {
+    margin-bottom: 6px;
+    color: #444;
+    font-size: 15px;
+  }
+  .screenshot-readme .section-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #222;
+    margin: 16px 0 10px;
+  }
+
+  .right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .desc-card {
+    background: rgba(25, 25, 35, 0.7);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 36px 34px;
+    flex: 1;
+  }
+  .card-label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 22px;
+  }
+  .desc-card .card-text {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ddd8cf;
+  }
+
+  .info-card {
+    background: rgba(25, 25, 35, 0.7);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 36px 34px;
+  }
+  .info-card .card-link {
+    font-size: 22px;
+    color: #ddd8cf;
+    word-break: break-all;
+    line-height: 1.4;
+  }
+
+  /* ========== SLIDE 8: CTA ========== */
+  .slide-cta .slide-content {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .cta-line {
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -5px;
+    text-align: center;
+  }
+  .cta-brand {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .cta-brand-text {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .text-green { color: #7dff5c; }
+
+  /* ========== PRINT ========== */
+  @media print {
+    body { padding: 0; gap: 0; background: white; }
+    .slide { page-break-after: always; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== SLIDE 1: Title ===== -->
+<div class="slide slide-title" data-slide="1">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="title-line text-white">Claude</div>
+    <div class="title-line text-coral">skills.</div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 2: Intro ===== -->
+<div class="slide slide-intro" data-slide="2">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="intro-text">
+      <span class="text-white">Claude </span><span class="accent">skills</span><span class="text-white"> are reusable capabilities for AI agents, easily installed with a single command. They bundle slash commands, agents, hooks, and </span><span class="accent">MCP</span><span class="text-white"> servers into shareable packages that work across </span><span class="accent">Claude Code, Cowork &amp; Claude AI.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 3: context7 ===== -->
+<div class="slide slide-skill" data-slide="3">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="left-col">
+      <div class="skill-header">
+        <div class="skill-label">SKILL</div>
+        <div class="skill-name">context7</div>
+      </div>
+      <div class="skill-screenshot">
+        <div class="screenshot-bar">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <span>github.com/upstash/context7</span>
+        </div>
+        <div class="screenshot-content">
+          <div class="screenshot-readme">
+            <div class="badges">
+              <span class="badge">README</span>
+              <span class="badge">MIT license</span>
+              <span class="badge">Security</span>
+            </div>
+            <h3>Context7 MCP - Up-to-date Code Docs</h3>
+            <div class="badges">
+              <span class="badge badge-blue">context7.com</span>
+              <span class="badge badge-green">14.05k</span>
+              <span class="badge">npm v2.1.3</span>
+              <span class="badge">MIT</span>
+            </div>
+            <div class="section-title">Without Context7</div>
+            <ul>
+              <li>Code examples are outdated and based on year-old training data</li>
+              <li>Hallucinated APIs that don't even exist</li>
+              <li>Generic answers for old package versions</li>
+            </ul>
+            <div class="section-title">With Context7</div>
+            <p>Live, accurate API docs for any library</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="desc-card">
+        <div class="card-label">DESCRIPTION</div>
+        <div class="card-text">Context7 is an MCP server skill that pulls version-specific documentation directly from source repos into Claude's context. Instead of relying on outdated training data, Claude gets live, accurate API docs for any library you're working with.</div>
+      </div>
+      <div class="info-card">
+        <div class="card-label">MORE INFO</div>
+        <div class="card-link">https://github.com/upstash/context7</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 4: ralph-loop ===== -->
+<div class="slide slide-skill" data-slide="4">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="left-col">
+      <div class="skill-header">
+        <div class="skill-label">SKILL</div>
+        <div class="skill-name">ralph-loop</div>
+      </div>
+      <div class="skill-screenshot">
+        <div class="screenshot-bar">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <span>github.com/frankbria/ralph-claude-code</span>
+        </div>
+        <div class="screenshot-content">
+          <div class="screenshot-readme">
+            <div class="badges">
+              <span class="badge">README</span>
+              <span class="badge">Contributing</span>
+              <span class="badge">MIT license</span>
+            </div>
+            <h3>Ralph for Claude Code</h3>
+            <div class="badges">
+              <span class="badge badge-green">Test Suite: passing</span>
+              <span class="badge">MIT</span>
+              <span class="badge badge-blue">v0.11.5</span>
+              <span class="badge badge-green">556 passing</span>
+            </div>
+            <p>Autonomous AI development loop with intelligent exit detection</p>
+            <div class="section-title">What's Working Now</div>
+            <ul>
+              <li>Autonomous development loops with intelligent exit detection</li>
+              <li><strong>Dual-condition exit gate:</strong> Requires BOTH completion indicators</li>
+              <li>Rate limiting with hourly reset (100 calls/hour)</li>
+              <li>Circuit breaker with advanced error detection</li>
+              <li>Response analyzer with semantic understanding</li>
+              <li>Session continuity with <code>--resume</code> flag</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="desc-card">
+        <div class="card-label">DESCRIPTION</div>
+        <div class="card-text">Ralph Loop is an official Anthropic skill that turns Claude into a self-driving development agent. It implements a stop-hook pattern that enables long-running, multi-hour autonomous coding sessions by resetting Claude's context between tasks automatically.</div>
+      </div>
+      <div class="info-card">
+        <div class="card-label">MORE INFO</div>
+        <div class="card-link">https://github.com/anthropics/claude-plugins-official</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 5: claude-mem ===== -->
+<div class="slide slide-skill" data-slide="5">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="left-col">
+      <div class="skill-header">
+        <div class="skill-label">SKILL</div>
+        <div class="skill-name">claude-mem</div>
+      </div>
+      <div class="skill-screenshot">
+        <div class="screenshot-bar">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <span>github.com/anthropics/claude-mem</span>
+        </div>
+        <div class="screenshot-content">
+          <div class="screenshot-readme">
+            <div class="badges">
+              <span class="badge">README</span>
+              <span class="badge">AGPL 3.0</span>
+            </div>
+            <h3>claude-mem</h3>
+            <div class="badges">
+              <span class="badge">AGPL 3.0</span>
+              <span class="badge badge-blue">v6.5.0</span>
+              <span class="badge">node &gt;=18.0.0</span>
+              <span class="badge badge-green">awesome</span>
+            </div>
+            <p>Persistent memory compression system built for Claude Code.</p>
+            <div class="section-title">Features</div>
+            <ul>
+              <li>Long-term memory across sessions</li>
+              <li>Automatic context compression</li>
+              <li>No re-explaining your project setup</li>
+              <li>GitHub Trending #1 Repository</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="desc-card">
+        <div class="card-label">DESCRIPTION</div>
+        <div class="card-text">Adds long-term memory to Claude so it can carry context and preferences across coding sessions. No more re-explaining your project setup every time you start a new conversation.</div>
+      </div>
+      <div class="info-card">
+        <div class="card-label">MORE INFO</div>
+        <div class="card-link">https://github.com/anthropics/claude-mem</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 6: frontend-design ===== -->
+<div class="slide slide-skill" data-slide="6">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="left-col">
+      <div class="skill-header">
+        <div class="skill-label">SKILL</div>
+        <div class="skill-name" style="font-size: 52px;">frontend-design</div>
+      </div>
+      <div class="skill-screenshot">
+        <div class="screenshot-bar">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <span>anthropics/claude-code/tree/main/plugins/frontend-design</span>
+        </div>
+        <div class="screenshot-content">
+          <div class="screenshot-readme">
+            <div class="badges">
+              <span class="badge">README</span>
+            </div>
+            <h3>Frontend Design Plugin</h3>
+            <p>Generates distinctive, production-grade frontend interfaces that avoid generic defaults.</p>
+            <div class="section-title">What It Does</div>
+            <ul>
+              <li>Bold aesthetic choices</li>
+              <li>Distinctive typography and color palettes</li>
+              <li>High-impact animations and visual details</li>
+              <li>Context-aware implementation</li>
+            </ul>
+            <div class="section-title">Usage</div>
+            <p>"Create a dashboard for a music streaming app"</p>
+            <p>"Build a landing page for an AI security startup"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="desc-card">
+        <div class="card-label">DESCRIPTION</div>
+        <div class="card-text">The most popular Claude skill with 96K+ installs. It transforms Claude's UI output from generic defaults into distinctive, production-grade interfaces with bold typography, unique color palettes, and creative layouts.</div>
+      </div>
+      <div class="info-card">
+        <div class="card-label">MORE INFO</div>
+        <div class="card-link">https://claude.com/plugins</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 7: code-review-agents ===== -->
+<div class="slide slide-skill" data-slide="7">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="left-col">
+      <div class="skill-header">
+        <div class="skill-label">SKILL</div>
+        <div class="skill-name" style="font-size: 42px; line-height: 1.15;">code-review-agents</div>
+      </div>
+      <div class="skill-screenshot">
+        <div class="screenshot-bar">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <span>anthropics/claude-code/tree/main/skills</span>
+        </div>
+        <div class="screenshot-content">
+          <div class="screenshot-readme">
+            <h3>Code Review Plugin</h3>
+            <p>Automated code review for pull requests using multiple specialized agents.</p>
+            <div class="section-title">Overview</div>
+            <p>Automates PR review by launching multiple agents to examine changes from different perspectives.</p>
+            <div class="section-title">What /code-review does:</div>
+            <ul>
+              <li>Checks if review is needed</li>
+              <li>Gathers CLAUDE.md guideline files</li>
+              <li>Launches 4 parallel agents to review</li>
+              <li>Scores each issue 0-100 confidence</li>
+              <li>Filters out issues below 80 threshold</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="desc-card">
+        <div class="card-label">DESCRIPTION</div>
+        <div class="card-text">Automated PR code review using multiple specialized agents running in parallel. Includes dedicated agents for comment analysis, test coverage, silent failure detection, type design review, code quality, and code simplification, all with confidence-based scoring to filter false positives.</div>
+      </div>
+      <div class="info-card">
+        <div class="card-label">MORE INFO</div>
+        <div class="card-link">https://github.com/anthropics/claude-code/tree/main/skills</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 8: CTA ===== -->
+<div class="slide slide-cta" data-slide="8">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <div class="cta-line text-white">Follow for</div>
+    <div class="cta-line text-coral">More!</div>
+    <div class="cta-brand">
+      <span class="cta-brand-text text-white">SHAAI</span>
+      <span class="cta-brand-text text-green">Solutions</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

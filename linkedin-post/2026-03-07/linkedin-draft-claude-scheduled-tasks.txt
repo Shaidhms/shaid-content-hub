@@ -1,0 +1,56 @@
+Claude Code just became a 24/7 employee.
+And no, I'm not exaggerating.
+
+
+
+
+
+Anthropic shipped scheduled tasks natively in Claude Code.
+That means your AI agent can now run on a schedule.
+Daily. Weekly. Hourly. While you sleep.
+
+But here's what makes this different from a cron job.
+
+It's not a dumb script that breaks and waits for you to fix it.
+It's an agentic workflow.
+It reads your entire project. It uses all your tools.
+If it hits an error, it tries three other approaches on its own.
+
+Self-healing automation. That's the unlock.
+
+I've already set up a "Good Morning Shaid" task that runs at 6am every day.
+It checks my calendar, reviews my projects, and plans my day.
+All before I wake up.
+
+The self-improving part is what got me thinking though.
+Each run can fix its own code.
+Rewrite its own prompt.
+Update a status file so the next run has context.
+
+Your agent gets better every time it runs.
+Without you touching anything.
+
+I put together a detailed breakdown covering:
+
+. How to set it up (two ways, both take under a minute)
+. Why agentic beats deterministic for automation
+. The self-improving loop
+. Limitations you need to know
+. Pro tips for power users
+
+It's attached to this post. Save it for later.
+
+This is the kind of shift that changes how solo builders operate.
+Less manual work. More leverage.
+
+Build once. Let it run forever.
+
+#ClaudeCode #GenerativeAI #BuildInPublic
+
+---
+IMAGE PROMPT:
+Create an illustrative digital artwork showing a developer sleeping peacefully in bed at night, while above them floats a glowing AI agent (represented as a luminous, friendly robotic figure with Claude's orange accent color) actively working on multiple floating holographic screens showing code, calendars, and project dashboards. The scene has a dreamy, midnight blue palette with warm orange/amber glows from the AI agent's work. Stars visible through a window. The style should be modern illustration with soft gradients, not photorealistic. Blend Shaid's face (photorealistic accuracy) onto the sleeping developer figure. Text overlay in clean, bold sans-serif typography. Aspect ratio 16:9 for LinkedIn.
+
+QUOTE FOR IMAGE:
+"Build once. Let it run forever."
+---

@@ -1,0 +1,102 @@
+{
+  "title": "Pixel Agents",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "pixel",
+      "heading_accent": "agents."
+    },
+    {
+      "type": "intro",
+      "text": "Your AI agents now have a <accent>virtual office.</accent> A free VS Code extension that turns your coding agents into <accent>animated pixel art characters.</accent> They walk, sit at desks, and react to what your agent is <accent>actually doing.</accent>"
+    },
+    {
+      "type": "content",
+      "heading": "The <accent>Problem</accent>",
+      "body": "- You fire up Claude Code in the background\n- Just a blinking cursor and scrolling text\n- Zero visual feedback on what the agent is doing\n- No way to know if it's stuck or making progress\n- Reading terminal logs is painful"
+    },
+    {
+      "type": "quote",
+      "text": "What if you could actually watch your AI agents work? Not read logs. Watch them."
+    },
+    {
+      "type": "visual",
+      "heading": "Install in <accent>30 Seconds</accent>",
+      "body": "- Search 'Pixel Agents' in VS Code\n- Or install from command line\n- Open with Cmd+Shift+P\n- Click +Agent to spawn characters",
+      "terminal": [
+        {"class": "prompt", "text": "$ code --install-extension"},
+        {"class": "cmd", "text": "  pablodelucca.pixel-agents"},
+        {"class": "output", "text": ""},
+        {"class": "output", "text": "Installing extension..."},
+        {"class": "success", "text": "✓ Extension installed successfully"},
+        {"class": "output", "text": ""},
+        {"class": "comment", "text": "# In VS Code:"},
+        {"class": "cmd", "text": "Cmd+Shift+P > Pixel Agents: Open Office"},
+        {"class": "success", "text": "✓ Office opened. Click +Agent to spawn."}
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "Meet the <accent>Characters</accent>",
+      "caption": "Six unique pixel art characters, each representing a different coding agent",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/pixel-agents-characters-single.png"
+    },
+    {
+      "type": "before_after",
+      "heading": "What Gets <accent>Animated?</accent>",
+      "before": [
+        "Writing code: cursor blinking",
+        "Reading files: scrolling text",
+        "Running commands: no indicator",
+        "Waiting for input: looks frozen",
+        "Idle: no way to tell"
+      ],
+      "after": [
+        "Writing code: types at desk",
+        "Reading files: reads documents",
+        "Running commands: runs around",
+        "Waiting: speech bubble appears",
+        "Idle: walks to break room"
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "This Is the <accent>Office</accent>",
+      "caption": "Your AI agents sit at desks, walk around, and work in a pixel art office in real time",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/pixel-agents-office.jpg"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Why Devs <accent>Love</accent> It",
+      "items": [
+        "Visual feedback without reading terminal logs",
+        "Covered by Fast Company, trending on GitHub",
+        "Free and fully open source",
+        "Build custom offices with 64x64 grid editor",
+        "Six unique pixel art characters"
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "The <accent>Bigger</accent> Picture",
+      "body": "- AI agents are becoming teammates, not tools\n- Visualizing their work builds trust\n- Gives you instant feedback on agent state\n- This is just the beginning of human-AI interaction\n- The future of coding is spectator-friendly"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#AI #CodingAgents #PixelAgents #ClaudeCode #DevTools"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "title": "Claude Code Loop Skill",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code",
+      "heading_accent": "loop skill."
+    },
+    {
+      "type": "intro",
+      "text": "Your AI agent now works <accent>while you're not watching.</accent> Recurring tasks. Reminders. Monitoring. All inside <accent>one session.</accent> Invoke with /loop or just <accent>plain English.</accent>"
+    },
+    {
+      "type": "visual",
+      "heading": "How to <accent>Use</accent> It",
+      "body": "- Type /loop or natural language\n- Set interval (5m, 1h, etc.)\n- Loop any skill or command\n- Cancel anytime with 'stop'",
+      "terminal": [
+        {"class": "prompt", "text": "$ claude"},
+        {"class": "cmd", "text": "> /loop 5m check if deploy is healthy"},
+        {"class": "output", "text": ""},
+        {"class": "output", "text": "Creating recurring task..."},
+        {"class": "output", "text": "Interval: every 5 minutes"},
+        {"class": "output", "text": "Expires: 3 days from now"},
+        {"class": "output", "text": ""},
+        {"class": "success", "text": "✓ Loop created. Running first check now..."},
+        {"class": "output", "text": ""},
+        {"class": "prompt", "text": "$ claude"},
+        {"class": "cmd", "text": "> At 3 PM remind me to review the PR"},
+        {"class": "success", "text": "✓ One-time reminder set for 3:00 PM"}
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "Loop vs <accent>Scheduled</accent> Tasks",
+      "before": [
+        "3-day expiry, then auto-deletes",
+        "Runs in same session only",
+        "No catch-up if you miss a fire",
+        "Available in Terminal, VS Code, Desktop"
+      ],
+      "after": [
+        "Long-lived, no expiry",
+        "Persistent across sessions",
+        "Has catch-up for missed runs",
+        "Desktop app only (for now)"
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "How It <accent>Works</accent> Under the Hood",
+      "diagram_type": "flow",
+      "elements": ["You give a prompt", "cron create", "Cron fires", "Claude executes"]
+    },
+    {
+      "type": "quote",
+      "text": "Every 5 minutes, my loop checks the deploy. Every hour, it reviews open PRs. Every morning, it preps my standup. All while I'm doing real work."
+    },
+    {
+      "type": "numbered_list",
+      "heading": "<accent>6</accent> Ways to Use Loop",
+      "items": [
+        "Monitor urgent emails every 5 minutes",
+        "Check deploy status every hour",
+        "Track a 3-day sprint deadline",
+        "Watch logs during testing",
+        "Run review-pr skill on a schedule",
+        "Build your own executive assistant"
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "Know the <accent>Limits</accent>",
+      "body": "- 3-day max expiry, then auto-deletes\n- Close terminal = all loops gone\n- No catch-up if you miss a fire\n- Each tab has its own separate loops\n- For anything longer, use Scheduled Tasks"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #AI #Loop #DevTools #Automation"
+    }
+  ]
+}

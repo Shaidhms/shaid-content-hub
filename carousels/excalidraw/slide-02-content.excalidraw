@@ -1,0 +1,271 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "b0938f30",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 385.00000000000006,
+      "height": 39.199999999999996,
+      "text": "The Problem Every Dev Has",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "645d8505",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 350,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          350,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "363f999e",
+      "type": "ellipse",
+      "x": 390,
+      "y": 60,
+      "width": 10,
+      "height": 10,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "8eea8952",
+      "type": "text",
+      "x": 40,
+      "y": 90,
+      "width": 415.8,
+      "height": 25.2,
+      "text": "Every new Claude session starts from\nzero.",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "c8821b13",
+      "type": "ellipse",
+      "x": 45,
+      "y": 175,
+      "width": 10,
+      "height": 10,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "9c86c477",
+      "type": "text",
+      "x": 65,
+      "y": 169,
+      "width": 376.20000000000005,
+      "height": 25.2,
+      "text": "\"Follow our team's coding\nconventions\"",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "6704c336",
+      "type": "ellipse",
+      "x": 45,
+      "y": 239,
+      "width": 10,
+      "height": 10,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "5b5c3376",
+      "type": "text",
+      "x": 65,
+      "y": 233,
+      "width": 277.20000000000005,
+      "height": 25.2,
+      "text": "\"Use TypeScript strict mode\"",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "9e16cf28",
+      "type": "ellipse",
+      "x": 45,
+      "y": 275,
+      "width": 10,
+      "height": 10,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "49e89853",
+      "type": "text",
+      "x": 65,
+      "y": 269,
+      "width": 287.1,
+      "height": 25.2,
+      "text": "\"Run tests before committing\"",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "2a52aeaf",
+      "type": "ellipse",
+      "x": 45,
+      "y": 311,
+      "width": 10,
+      "height": 10,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "1ba278ac",
+      "type": "text",
+      "x": 65,
+      "y": 305,
+      "width": 366.3,
+      "height": 25.2,
+      "text": "\"Format the PR description like\nthis\"",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "ec90b671",
+      "type": "text",
+      "x": 40,
+      "y": 384,
+      "width": 435.6,
+      "height": 25.2,
+      "text": "You paste the same context. Again and\nagain.",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "8df8633c",
+      "type": "text",
+      "x": 40,
+      "y": 463,
+      "width": 287.1,
+      "height": 25.2,
+      "text": "Skills are the permanent fix.",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "417184a9",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "02/12",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "c492d9b9",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "02b73ae4",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "334a3108",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Claude Code Skill Creator",
+  "color_scheme": {
+    "background": "#F5F5FA",
+    "text": "#1E1E2E",
+    "accent": "#2563EB",
+    "secondary": "#64748B"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code Can Now\nBuild Its Own Skills",
+      "body": "The new Skill Creator lets you create,\ntest, benchmark, and improve\nAgent Skills without writing code"
+    },
+    {
+      "type": "image",
+      "heading": "",
+      "body": "",
+      "image": "templates/skill-creator-visuals/slide02-skills-visual.png"
+    },
+    {
+      "type": "image",
+      "heading": "",
+      "body": "",
+      "image": "templates/skill-creator-visuals/slide03-before-after.png"
+    },
+    {
+      "type": "image",
+      "heading": "",
+      "body": "",
+      "image": "templates/skill-creator-visuals/slide04-four-modes.png"
+    },
+    {
+      "type": "image",
+      "heading": "",
+      "body": "",
+      "image": "templates/skill-creator-visuals/slide05-how-it-works.png"
+    },
+    {
+      "type": "image",
+      "heading": "",
+      "body": "",
+      "image": "templates/skill-creator-visuals/slide06-lifecycle.png"
+    },
+    {
+      "type": "image",
+      "heading": "",
+      "body": "",
+      "image": "templates/skill-creator-visuals/slide07-multi-agent.png"
+    },
+    {
+      "type": "image",
+      "heading": "",
+      "body": "",
+      "image": "templates/skill-creator-visuals/slide08-use-cases.png"
+    },
+    {
+      "type": "side_by_side",
+      "heading": "How to Get Skill Creator",
+      "left_panel": {
+        "title": "Option A: Extensions",
+        "color": "#d4edda",
+        "items": ["Open Claude Code", "Go to Extensions", "Search 'skill-creator'", "Click Install", "Type /skill-creator"]
+      },
+      "right_panel": {
+        "title": "Option B: GitHub",
+        "color": "#d6eaf8",
+        "items": ["Go to github.com/", "  anthropics/skills", "Copy skill-creator/ folder", "Paste into .claude/skills/", "Type /skill-creator"]
+      },
+      "bottom_note": "Both paths give you the same skill. Pick whichever is faster."
+    },
+    {
+      "type": "quote",
+      "heading": "",
+      "body": "The best AI tools don't just follow instructions.\nThey learn to get better at following them.\nSkill Creator brings that loop to Claude Code."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for more",
+      "body": "Shaid | GenAI Architect\n\n#ClaudeCode #AI #Skills #DevTools"
+    }
+  ]
+}

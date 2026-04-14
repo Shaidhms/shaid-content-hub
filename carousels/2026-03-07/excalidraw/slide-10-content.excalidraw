@@ -1,0 +1,233 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "68ab5d26",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 308.0,
+      "height": 39.199999999999996,
+      "text": "Pro Tip: Speed Boost",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "f5ec7703",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 320,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          320,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "4eddd6b0",
+      "type": "ellipse",
+      "x": 360,
+      "y": 60,
+      "width": 10,
+      "height": 10,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "30584a3b",
+      "type": "text",
+      "x": 40,
+      "y": 90,
+      "width": 366.3,
+      "height": 25.2,
+      "text": "After your first chat, go to Settings",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "832463df",
+      "type": "text",
+      "x": 40,
+      "y": 141,
+      "width": 277.20000000000005,
+      "height": 25.2,
+      "text": "Find \"KV Cache Quantization\"",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "4578a75d",
+      "type": "text",
+      "x": 40,
+      "y": 192,
+      "width": 227.70000000000002,
+      "height": 25.2,
+      "text": "Switch from f16 to q4_0",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "7c72542d",
+      "type": "text",
+      "x": 40,
+      "y": 243,
+      "width": 356.40000000000003,
+      "height": 25.2,
+      "text": "This roughly triples inference speed",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "a82a0dd1",
+      "type": "text",
+      "x": 40,
+      "y": 279,
+      "width": 247.50000000000003,
+      "height": 25.2,
+      "text": "with minimal quality loss",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "e64746f5",
+      "type": "text",
+      "x": 40,
+      "y": 330,
+      "width": 356.40000000000003,
+      "height": 25.2,
+      "text": "Also: First message is always slower",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "cad9da25",
+      "type": "text",
+      "x": 40,
+      "y": 366,
+      "width": 297.0,
+      "height": 25.2,
+      "text": "as the model loads into memory",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "a4bdd469",
+      "type": "text",
+      "x": 40,
+      "y": 402,
+      "width": 346.5,
+      "height": 25.2,
+      "text": "Subsequent messages are much faster",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "380ce4c1",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "10/12",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "c6b895d1",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "4fb312cc",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "de083ee5",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

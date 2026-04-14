@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      margin: 0;
+    }
+
+    .slide {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-bg {
+      position: absolute;
+      inset: 0;
+      background: #191923;
+    }
+    .slide-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+      background-size: 300px 300px;
+      opacity: 0.5;
+    }
+    .slide-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.3) 100%);
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+    }
+
+    .text-white { color: #ede8df; }
+    .text-accent { color: #d4826a; }
+    .text-secondary { color: #777; }
+
+    /* ===== FOOTER (all slides) ===== */
+    .slide-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 44px;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(237, 232, 223, 0.35);
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== TITLE ===== */
+    .slide-title .slide-content {
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
+    .slide-title .title-line {
+      font-size: 160px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -5px;
+      text-align: center;
+    }
+
+    /* ===== INTRO ===== */
+    .slide-intro .slide-content {
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 80px 70px 140px 70px;
+    }
+    .intro-text {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -1px;
+      color: #ede8df;
+      max-width: 960px;
+    }
+    .intro-text .accent { color: #d4826a; }
+
+    /* ===== CONTENT ===== */
+    .slide-content-type .slide-content {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 100px 80px;
+      gap: 30px;
+    }
+    .content-heading {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      color: #ede8df;
+    }
+    .content-heading .accent { color: #d4826a; }
+    .content-body {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #ede8df;
+      opacity: 0.85;
+    }
+    .content-body .accent { color: #d4826a; font-weight: 700; }
+    .content-body ul {
+      list-style: none;
+      padding: 0;
+    }
+    .content-body ul li {
+      padding: 8px 0;
+      padding-left: 30px;
+      position: relative;
+    }
+    .content-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #d4826a;
+    }
+
+    /* ===== QUOTE ===== */
+    .slide-quote .slide-content {
+      justify-content: center;
+      align-items: center;
+      padding: 100px 80px;
+    }
+    .quote-text {
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.4;
+      color: #ede8df;
+      text-align: center;
+      max-width: 900px;
+    }
+    .quote-mark {
+      font-size: 120px;
+      color: #d4826a;
+      line-height: 0.5;
+      margin-bottom: 20px;
+    }
+
+    /* ===== NUMBERED LIST ===== */
+    .slide-numbered .slide-content {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px;
+      gap: 20px;
+    }
+    .numbered-heading {
+      font-size: 64px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+    .numbered-heading .accent { color: #d4826a; }
+    .numbered-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+    .numbered-num {
+      font-size: 28px;
+      font-weight: 900;
+      color: #d4826a;
+      background: rgba(212, 130, 106, 0.15);
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .numbered-text {
+      font-size: 32px;
+      font-weight: 400;
+      color: #ede8df;
+      line-height: 1.4;
+      padding-top: 8px;
+    }
+
+    /* ===== SKILL CARD ===== */
+    .slide-skill .slide-content {
+      display: grid;
+      grid-template-columns: 52% 1fr;
+      gap: 24px;
+      padding: 44px;
+      align-content: stretch;
+    }
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .skill-header {
+      background: #d4826a;
+      border-radius: 20px;
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+    }
+    .skill-label {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(25, 25, 35, 0.5);
+    }
+    .skill-name {
+      font-size: 68px;
+      font-weight: 900;
+      color: #191923;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-top: 16px;
+    }
+    .skill-screenshot {
+      background: #2a2a3a;
+      border-radius: 20px;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .screenshot-bar {
+      padding: 14px 20px;
+      font-size: 14px;
+      color: #666;
+      background: #222233;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .screenshot-bar .dots {
+      display: flex;
+      gap: 6px;
+    }
+    .screenshot-bar .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #444;
+    }
+    .screenshot-content {
+      flex: 1;
+      overflow: hidden;
+    }
+    .screenshot-readme {
+      background: #ffffff;
+      margin: 16px;
+      border-radius: 12px;
+      padding: 28px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #333;
+      height: calc(100% - 32px);
+      overflow: hidden;
+    }
+    .screenshot-readme h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 14px;
+    }
+    .screenshot-readme .badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .screenshot-readme .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #e8e8e8;
+      color: #555;
+    }
+    .badge-green { background: #d4edda !important; color: #2d6a3f !important; }
+    .badge-blue { background: #d6eaf8 !important; color: #2563eb !important; }
+    .screenshot-readme p {
+      margin-bottom: 10px;
+      color: #444;
+      font-size: 16px;
+    }
+    .screenshot-readme ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .screenshot-readme li {
+      margin-bottom: 6px;
+      color: #444;
+      font-size: 15px;
+    }
+    .screenshot-readme .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #222;
+      margin: 16px 0 10px;
+    }
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .desc-card {
+      background: rgba(25, 25, 35, 0.7);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 36px 34px;
+      flex: 1;
+    }
+    .card-label {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 22px;
+    }
+    .desc-card .card-text {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #ddd8cf;
+    }
+    .info-card {
+      background: rgba(25, 25, 35, 0.7);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 36px 34px;
+    }
+    .info-card .card-link {
+      font-size: 22px;
+      color: #ddd8cf;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    /* ===== CTA ===== */
+    .slide-cta .slide-content {
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .cta-line {
+      font-size: 150px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -5px;
+      text-align: center;
+    }
+    /* ===== IMAGE SLIDE ===== */
+    .slide-image .slide-content {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 70px 80px;
+      gap: 24px;
+    }
+    .image-heading {
+      font-size: 64px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+      line-height: 1.1;
+    }
+    .image-heading .accent { color: #d4826a; }
+    .image-caption {
+      font-size: 28px;
+      font-weight: 400;
+      color: #ede8df;
+      opacity: 0.7;
+      line-height: 1.4;
+    }
+    .image-container {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0 40px;
+    }
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+
+    /* ===== DIAGRAM (inline SVG) ===== */
+    .slide-diagram .slide-content {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px;
+      gap: 30px;
+    }
+    .diagram-heading {
+      font-size: 64px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+    }
+    .diagram-heading .accent { color: #d4826a; }
+    .diagram-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+    .diagram-container svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* ===== VISUAL CONTENT (text + illustration side by side) ===== */
+    .slide-visual .slide-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 80px 60px 120px;
+      align-items: center;
+      align-content: center;
+      height: 100%;
+    }
+    .visual-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .visual-heading {
+      font-size: 56px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+      line-height: 1.1;
+    }
+    .visual-heading .accent { color: #d4826a; }
+    .visual-body {
+      font-size: 28px;
+      font-weight: 400;
+      color: #ede8df;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+    .visual-body ul { list-style: none; padding: 0; }
+    .visual-body ul li {
+      padding: 6px 0 6px 28px;
+      position: relative;
+    }
+    .visual-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #d4826a;
+    }
+    .visual-illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Mock app window */
+    .mock-window {
+      background: #2a2a3a;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .mock-titlebar {
+      background: #222233;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mock-titlebar .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #444;
+    }
+    .mock-titlebar .dot:nth-child(1) { background: #ff5f56; }
+    .mock-titlebar .dot:nth-child(2) { background: #ffbd2e; }
+    .mock-titlebar .dot:nth-child(3) { background: #27c93f; }
+    .mock-body {
+      padding: 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #c8c8d0;
+      min-height: 280px;
+    }
+    .mock-body .prompt { color: #27c93f; }
+    .mock-body .cmd { color: #d4826a; }
+    .mock-body .comment { color: #666; }
+    .mock-body .output { color: #888; }
+    .mock-body .success { color: #27c93f; }
+
+    /* Before/After comparison */
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 24px;
+      width: 100%;
+      align-items: stretch;
+    }
+    .compare-panel {
+      border-radius: 20px;
+      padding: 40px 32px;
+    }
+    .compare-panel.before {
+      background: rgba(220, 80, 80, 0.12);
+      border: 1px solid rgba(220, 80, 80, 0.25);
+    }
+    .compare-panel.after {
+      background: rgba(39, 201, 63, 0.12);
+      border: 1px solid rgba(39, 201, 63, 0.25);
+    }
+    .compare-label {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .compare-panel.before .compare-label { color: #dc5050; }
+    .compare-panel.after .compare-label { color: #27c93f; }
+    .compare-item {
+      font-size: 26px;
+      color: #ede8df;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .compare-item .x { color: #dc5050; font-weight: 900; }
+    .compare-item .check { color: #27c93f; font-weight: 900; }
+    .compare-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .compare-arrow svg { width: 48px; height: 48px; }
+    .compare-panel.neutral-left,
+    .compare-panel.neutral-right {
+      background: rgba(212, 130, 106, 0.08);
+      border: 1px solid rgba(212, 130, 106, 0.2);
+    }
+
+    /* ===== TABLE ===== */
+    .slide-table .slide-content {
+      justify-content: flex-start;
+      padding-top: 80px;
+    }
+    .table-heading {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 40px;
+      letter-spacing: -2px;
+      color: #ede8df;
+    }
+    .table-heading .accent { color: #d4826a; }
+    .data-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 130, 106, 0.25);
+    }
+    .data-table th {
+      background: rgba(212, 130, 106, 0.18);
+      color: #d4826a;
+      font-size: 22px;
+      font-weight: 800;
+      padding: 18px 20px;
+      text-align: left;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(212, 130, 106, 0.3);
+    }
+    .data-table td {
+      font-size: 22px;
+      color: #ede8df;
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(237, 232, 223, 0.08);
+    }
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    .data-table tr:nth-child(even) td {
+      background: rgba(237, 232, 223, 0.03);
+    }
+    .data-table td:first-child {
+      font-weight: 700;
+      color: #d4826a;
+    }
+
+    /* ===== CTA (redesigned with photo) ===== */
+    .slide-cta .slide-content {
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .cta-line {
+      font-size: 150px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -5px;
+      text-align: center;
+    }
+    .cta-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: 40px;
+      border: 4px solid #d4826a;
+      box-shadow: 0 0 40px rgba(212, 130, 106, 0.3);
+    }
+    .cta-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .cta-name {
+      font-size: 60px;
+      font-weight: 900;
+      color: #ede8df;
+      margin-top: 24px;
+      letter-spacing: -1px;
+    }
+    .cta-role {
+      font-size: 28px;
+      font-weight: 600;
+      color: #d4826a;
+      margin-top: 4px;
+      letter-spacing: 2px;
+    }
+    .cta-subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      color: rgba(237, 232, 223, 0.6);
+      margin-top: 16px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .cta-hashtags {
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(237, 232, 223, 0.4);
+      margin-top: 24px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="slide slide-title">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="title-line text-white">OpenClaw:</div>
+        <div class="title-line text-accent">Your 24/7 AI Assistant</div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-intro">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="intro-text">310K+ GitHub stars.
+50+ integrations.
+Runs <span class="accent">locally</span> on your machine.
+
+OpenClaw is the open-source AI agent
+that actually <span class="accent">does things</span> for you.
+
+This is Part 1 of a 4-part series.</div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-content-type">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="content-heading">What is <span class="accent">OpenClaw?</span></div>
+        <div class="content-body"><ul><li>Open-source AI agent (Node.js)</li><li>Connects to Claude, GPT, DeepSeek</li><li>Works via WhatsApp, Telegram, Slack, Discord</li><li>Runs locally - your data stays with you</li><li>Plans and executes multi-step tasks autonomously</li></ul></div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-content-type">
+      <div class="slide-bg"></div>
+      <div class="slide-content" style="gap: 30px;">
+        <div class="content-heading">Before vs <span class="accent">After</span> OpenClaw</div>
+        <div class="comparison-container">
+          <div class="compare-panel before">
+            <div class="compare-label">BEFORE</div>
+            <div class="compare-item"><span class="x">&#10007;</span> Manually triaging 50+ emails daily</div><div class="compare-item"><span class="x">&#10007;</span> Copy-pasting between 10 tools</div><div class="compare-item"><span class="x">&#10007;</span> Forgetting follow-ups and deadlines</div><div class="compare-item"><span class="x">&#10007;</span> Spending hours on repetitive tasks</div>
+          </div>
+          <div class="compare-arrow"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M8 24h28M28 16l8 8-8 8" fill="none" stroke="#d4826a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="compare-panel after">
+            <div class="compare-label">AFTER</div>
+            <div class="compare-item"><span class="check">&#10003;</span> AI triages and drafts email replies</div><div class="compare-item"><span class="check">&#10003;</span> One agent coordinates all your tools</div><div class="compare-item"><span class="check">&#10003;</span> Automated reminders and summaries</div><div class="compare-item"><span class="check">&#10003;</span> Hours reclaimed every single week</div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-numbered">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="numbered-heading">Why Developers <span class="accent">Love</span> It</div>
+        
+        <div class="numbered-item">
+          <div class="numbered-num">01</div>
+          <div class="numbered-text">Open source - full control, no vendor lock-in</div>
+        </div>
+        <div class="numbered-item">
+          <div class="numbered-num">02</div>
+          <div class="numbered-text">50+ messaging integrations out of the box</div>
+        </div>
+        <div class="numbered-item">
+          <div class="numbered-num">03</div>
+          <div class="numbered-text">Agentic - it plans, decides, and executes</div>
+        </div>
+        <div class="numbered-item">
+          <div class="numbered-num">04</div>
+          <div class="numbered-text">Runs locally - privacy first, always</div>
+        </div>
+        <div class="numbered-item">
+          <div class="numbered-num">05</div>
+          <div class="numbered-text">Fastest growing OSS repo in history</div>
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-diagram">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="diagram-heading">How OpenClaw <span class="accent">Works</span></div>
+        <div class="diagram-container"><svg width="500" height="840" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="arrowf" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#d4826a" opacity="0.8"/></marker></defs>
+<rect x="80.0" y="30" width="340" height="100" rx="18" fill="#d4826a" opacity="0.15" stroke="#d4826a" stroke-width="2" stroke-opacity="0.4"/>
+<text x="250.0" y="80.0" fill="#ede8df" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" font-family="Inter, sans-serif">You (Chat)</text>
+<line x1="250.0" y1="135" x2="250.0" y2="190" stroke="#d4826a" stroke-width="3" marker-end="url(#arrowf)" opacity="0.6"/>
+<rect x="80.0" y="200" width="340" height="100" rx="18" fill="#d4826a" opacity="0.15" stroke="#d4826a" stroke-width="2" stroke-opacity="0.4"/>
+<text x="250.0" y="250.0" fill="#ede8df" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" font-family="Inter, sans-serif">OpenClaw Agent</text>
+<line x1="250.0" y1="305" x2="250.0" y2="360" stroke="#d4826a" stroke-width="3" marker-end="url(#arrowf)" opacity="0.6"/>
+<rect x="80.0" y="370" width="340" height="100" rx="18" fill="#d4826a" opacity="0.15" stroke="#d4826a" stroke-width="2" stroke-opacity="0.4"/>
+<text x="250.0" y="420.0" fill="#ede8df" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" font-family="Inter, sans-serif">LLM (Claude/GPT)</text>
+<line x1="250.0" y1="475" x2="250.0" y2="530" stroke="#d4826a" stroke-width="3" marker-end="url(#arrowf)" opacity="0.6"/>
+<rect x="80.0" y="540" width="340" height="100" rx="18" fill="#d4826a" opacity="0.15" stroke="#d4826a" stroke-width="2" stroke-opacity="0.4"/>
+<text x="250.0" y="590.0" fill="#ede8df" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" font-family="Inter, sans-serif">Tools &amp; APIs</text>
+<line x1="250.0" y1="645" x2="250.0" y2="700" stroke="#d4826a" stroke-width="3" marker-end="url(#arrowf)" opacity="0.6"/>
+<rect x="80.0" y="710" width="340" height="100" rx="18" fill="#d4826a" opacity="0.15" stroke="#d4826a" stroke-width="2" stroke-opacity="0.4"/>
+<text x="250.0" y="760.0" fill="#ede8df" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" font-family="Inter, sans-serif">Result Delivered</text>
+</svg></div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-visual">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="visual-text">
+          <div class="visual-heading">It Actually <span class="accent">Does</span> Things</div>
+          <div class="visual-body">Tell it to scaffold a React app.<br>It runs the commands.<br>Tell it to debug your code.<br>It reads, fixes, and commits.</div>
+        </div>
+        <div class="visual-illustration">
+          <div class="mock-window">
+            <div class="mock-titlebar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="mock-body"><div class="prompt">You: scaffold a React app with Tailwind</div><div class="cmd">&gt; npx create-react-app my-app</div><div class="cmd">&gt; cd my-app &amp;&amp; npm install tailwindcss</div><div class="success">Done. Tailwind configured and ready.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-quote">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">OpenClaw doesn&#x27;t just answer questions.
+It takes action.
+That&#x27;s the difference between
+a chatbot and an AI agent.</div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-content-type">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="content-heading">Who Is This <span class="accent">For?</span></div>
+        <div class="content-body"><ul><li>Developers automating repetitive workflows</li><li>Solo founders wearing 10 hats</li><li>Freelancers managing clients and projects</li><li>Anyone who wants a personal AI operator</li></ul></div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-cta">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="cta-line text-white">Follow for</div>
+        <div class="cta-line text-accent">Part 2!</div>
+        <div class="cta-photo"><img src="/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg" alt="Shaid"></div>
+        <div class="cta-name">Shaid</div>
+        <div class="cta-role">GenAI Architect &amp; Builder</div>
+        <div class="cta-subtitle">AI Products &amp; Automation | Ship AI. Share Insights.</div>
+        <div class="cta-hashtags">#OpenClaw #AI #GenAI #Automation #OpenSource</div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+</body>
+</html>

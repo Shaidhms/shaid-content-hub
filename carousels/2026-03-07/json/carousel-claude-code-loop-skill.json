@@ -1,0 +1,109 @@
+{
+  "title": "Claude Code Loop Skill",
+  "color_scheme": {
+    "background": "#F5F5FA",
+    "text": "#1E1E2E",
+    "accent": "#2563EB",
+    "secondary": "#64748B"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code's Loop Skill",
+      "body": "Your AI agent now works\nwhile you're not watching.\n\nRecurring tasks. Reminders. Monitoring.\nAll inside one session."
+    },
+    {
+      "type": "content",
+      "heading": "What is Loop?",
+      "body": "A built-in Claude Code skill that\nschedules recurring tasks for up to 3 days\n\nUses cron jobs under the hood\nWorks in Terminal, VS Code, and Desktop app\n\nInvoke with /loop or just plain English"
+    },
+    {
+      "type": "side_by_side",
+      "heading": "Two Modes of Loop",
+      "left_panel": {
+        "title": "Recurring Intervals",
+        "color": "#d6eaf8",
+        "items": ["Every 5 min: check deploy", "Every 30 min: review logs", "Every hour: run review-pr skill", "Every 2 hours: check ClickUp"]
+      },
+      "right_panel": {
+        "title": "One-Time Reminders",
+        "color": "#d4edda",
+        "items": ["At 3 PM: remind me to call", "In 45 min: stand up and stretch", "At 4:30: pick up groceries", "At 10:23: check on project"]
+      },
+      "bottom_note": "Both use cron jobs. One-time reminders auto-delete after firing."
+    },
+    {
+      "type": "code_snippet",
+      "heading": "How to Use It",
+      "body": "Just type naturally or use the /loop command:",
+      "file_label": "Claude Code Terminal",
+      "code": "# Using /loop command\n> /loop 5m check if deploy is healthy\n\n# Using natural language\n> Every 10 minutes, check my ClickUp\n  for new updates on our project\n\n# One-time reminder\n> At 3 PM remind me to review the PR\n\n# Loop a skill\n> Every 20 min run my review-pr skill"
+    },
+    {
+      "type": "feature_cards",
+      "heading": "Key Features",
+      "cards": [
+        {
+          "icon": "01",
+          "title": "Same Session Context",
+          "desc": "Runs in your current session.\nReads previous context continuously."
+        },
+        {
+          "icon": "02",
+          "title": "Loop Any Skill",
+          "desc": "Chain with /review-pr, /commit,\nor any custom skill on a timer."
+        },
+        {
+          "icon": "03",
+          "title": "Natural Language",
+          "desc": "No syntax to learn.\nJust describe what you want."
+        },
+        {
+          "icon": "04",
+          "title": "Cancel Anytime",
+          "desc": "Just say 'stop the loop'\nor 'cancel that reminder'."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "How It Works Under the Hood",
+      "body": "Three cron tools power the entire loop system",
+      "diagram": {
+        "type": "flow",
+        "elements": ["You give a prompt", "cron create", "Cron fires at interval", "Claude executes task", "cron list (check)", "cron delete (cancel)"],
+        "connections": [[0,1], [1,2], [2,3], [3,2], [0,4], [0,5]]
+      }
+    },
+    {
+      "type": "before_after",
+      "heading": "Loop vs Scheduled Tasks",
+      "before": {
+        "title": "Loop",
+        "items": ["3-day expiry", "Same session only", "No catch-up", "Available everywhere"],
+        "note": "Best for: help me NOW"
+      },
+      "process": ["When to", "use which?"],
+      "after": {
+        "title": "Scheduled Tasks",
+        "items": ["Long-lived", "Persistent storage", "Has catch-up", "Desktop app only (for now)"],
+        "note": "Best for: daily/weekly routines"
+      }
+    },
+    {
+      "type": "numbered_list",
+      "heading": "6 Ways to Use Loop Today",
+      "body": "1. Monitor urgent emails every 5 min\n2. Check deploy status every hour\n3. Track a 3-day sprint deadline\n4. Watch logs during testing\n5. Run review-pr on a schedule\n6. Build your own executive assistant"
+    },
+    {
+      "type": "content",
+      "heading": "Know the Limits",
+      "body": "3-day max expiry, then auto-deletes\nClose terminal = all loops gone\nNo catch-up if you miss a fire\nEach tab has its own separate loops\n\nFor anything longer than 3 days\nuse Scheduled Tasks instead"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for more",
+      "body": "Shaid | GenAI Architect\n\n#ClaudeCode #AI #Loop #DevTools #Automation"
+    }
+  ]
+}

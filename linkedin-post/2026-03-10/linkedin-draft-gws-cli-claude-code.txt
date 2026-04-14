@@ -1,0 +1,61 @@
+Google just open-sourced a CLI that gives Claude Code access to your entire Google Workspace.
+
+
+
+
+
+One tool. One install. Everything connected.
+
+Drive. Gmail. Calendar. Docs. Sheets. Slides.
+All accessible from your terminal through a single command-line interface.
+
+No MCP configs. No API wrappers. No boilerplate.
+
+I've been using Claude Code as my daily driver for months now.
+The one thing that always felt clunky was Google Workspace integration.
+You'd set up MCP servers, manage multiple auth flows, deal with context bloat.
+
+This changes that completely.
+
+The GWS CLI reads Google's own Discovery Service at runtime.
+When Google adds an API endpoint, the CLI picks it up automatically.
+Zero maintenance. Zero config drift.
+
+Here's what caught my attention:
+
+. One interface for all of Google Workspace
+. JSON-first structured responses (AI agents love this)
+. Auto-discovery so it stays current without updates
+. 100+ built-in skills for common workflows
+. Low overhead because it's just one tool, not ten
+
+The setup is straightforward.
+One npm install. A Google Cloud project. OAuth credentials.
+Six steps and you're running commands like:
+
+gws drive files list
+gws gmail users messages list
+gws calendar events list
+
+But the real power is when Claude Code starts chaining these together.
+Triage emails by priority. Create docs from templates. Schedule meetings from spreadsheet data.
+
+It's not an officially supported Google product yet.
+It's an open-source project in active development, marching toward v1.0.
+Some rough edges exist. But the foundation is solid.
+
+I've put together a detailed step-by-step setup guide with screenshots, terminal commands, and the full installation walkthrough.
+
+Check the attachment for the complete breakdown.
+
+Start with the install. Let Claude Code handle the rest.
+
+#GWSCLI #ClaudeCode #GoogleWorkspace
+
+---
+IMAGE PROMPT:
+Create an illustrative image showing a terminal/CLI interface in the center connected by glowing lines to Google Workspace icons (Drive triangle, Gmail envelope, Calendar, Sheets, Docs, Slides) arranged in a semi-circle around it. The style should be modern dark theme with deep navy background (#191923). Include Shaid's photo blended into the illustration, standing confidently beside the terminal interface. His face must be 100% photorealistic while the body and surroundings blend into the illustrative style. Color palette: dark navy, coral (#d4826a) accents, white text. Typography: bold sans-serif. Aspect ratio 16:9 for LinkedIn.
+
+QUOTE FOR IMAGE:
+"One CLI. Every Google Service. Zero boilerplate."
+---

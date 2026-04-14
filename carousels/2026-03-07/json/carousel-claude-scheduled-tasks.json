@@ -1,0 +1,107 @@
+{
+  "title": "Claude Code Scheduled Tasks",
+  "color_scheme": {
+    "background": "#F5F5FA",
+    "text": "#1E1E2E",
+    "accent": "#2563EB",
+    "secondary": "#64748B"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code Now Runs\nWhile You Sleep",
+      "body": "Scheduled Tasks just dropped.\nYour AI agent is now a 24/7 employee.\n\nHere's everything you need to know."
+    },
+    {
+      "type": "content",
+      "heading": "What Are Scheduled Tasks?",
+      "body": "Native cron-like scheduling\nbuilt into Claude Code Desktop\n\nSchedule any skill or workflow\nto run hourly, daily, or weekly\n\nNo external scripts needed.\nNo extra setup. Just prompts."
+    },
+    {
+      "type": "side_by_side",
+      "heading": "Two Ways to Set It Up",
+      "left_panel": {
+        "title": "Schedule Tab",
+        "color": "#d6eaf8",
+        "items": ["Open Desktop App", "Click Schedule tab", "New Task button", "Set name + prompt + schedule", "Choose model + folder", "Done."]
+      },
+      "right_panel": {
+        "title": "From Any Session",
+        "color": "#d4edda",
+        "items": ["Open any Claude Code session", "Type /schedule", "Describe what you want", "Claude sets it up for you", "That's literally it."]
+      },
+      "bottom_note": "Both take under a minute to set up."
+    },
+    {
+      "type": "before_after",
+      "heading": "Why This Changes Everything",
+      "before": {
+        "title": "Traditional Scripts",
+        "items": ["Hits error -> stops", "No context awareness", "Can't fix itself", "You debug manually"],
+        "note": "Fragile and dumb"
+      },
+      "process": ["Agentic", "Workflows", "Win"],
+      "after": {
+        "title": "Scheduled Tasks",
+        "items": ["Hits error -> tries 3 fixes", "Reads your full project", "Self-healing agent", "Uses all your tools"],
+        "note": "Smart and resilient"
+      }
+    },
+    {
+      "type": "diagram",
+      "heading": "The Self-Improving Loop",
+      "body": "Each run can make the next one better",
+      "diagram": {
+        "type": "cycle",
+        "elements": ["Task Runs", "Fix Own Code\nif Errors", "Rewrite Prompt\nif Suboptimal", "Update Status File\nfor Next Run"],
+        "connections": [[0,1], [1,2], [2,3], [3,0]]
+      }
+    },
+    {
+      "type": "quote",
+      "heading": "",
+      "body": "Every morning at 6am,\nmy 'Good Morning Shaid' skill runs.\n\nIt checks my calendar,\nreviews my projects,\nand plans my day.\n\nAll before I wake up."
+    },
+    {
+      "type": "feature_cards",
+      "heading": "Limitations You Should Know",
+      "cards": [
+        {
+          "icon": "01",
+          "title": "Desktop App Required",
+          "desc": "Computer on + app open\n(catches up if you miss runs)"
+        },
+        {
+          "icon": "02",
+          "title": "Stateless Sessions",
+          "desc": "Each run is fresh.\nUse a status file for memory."
+        },
+        {
+          "icon": "03",
+          "title": "Permission Control",
+          "desc": "Lock down destructive commands.\nNo unsupervised deletes."
+        },
+        {
+          "icon": "04",
+          "title": "Desktop Only (For Now)",
+          "desc": "Terminal + IDE support\ncoming soon."
+        }
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Pro Tips for Power Users",
+      "body": "Run manually first to catch permission issues before they block your automation\n\nAdd a hook for sound notifications so you hear when tasks finish\n\nPut 'notify me when done' in your prompts for ClickUp or Slack alerts\n\nUse one status file per task, not append logs, keeps context lean\n\nDeny destructive bash commands in your project settings"
+    },
+    {
+      "type": "content",
+      "heading": "Ideas to Automate Today",
+      "body": "Daily standup prep at 6am\n\nWeekly code review summaries\n\nAuto-triage GitHub issues\n\nMorning news/research briefs\n\nProject health checks every hour"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for more",
+      "body": "Shaid | GenAI Architect\n\n#ClaudeCode #AI #Automation\n#ScheduledTasks #GenAI"
+    }
+  ]
+}

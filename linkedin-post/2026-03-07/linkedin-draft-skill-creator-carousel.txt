@@ -1,0 +1,46 @@
+Most people use Claude Code to follow instructions.
+What if it could learn to get better at following them?
+
+
+
+
+
+
+
+
+
+
+That's what Skill Creator does.
+
+It lets you build, test, benchmark, and improve
+Claude Code skills without writing a single line of code.
+
+I've been building skills manually for weeks.
+Writing SKILL.md files by hand. Guessing if triggers work.
+No way to test. No way to measure improvement.
+
+Skill Creator changes that entirely.
+
+It brings a proper feedback loop to something
+that was previously just trial and error.
+
+I put together a detailed breakdown of how it works
+and attached it to this post.
+
+It covers what skills are, the full Create-Eval-Improve-Benchmark cycle,
+real examples, and how to install it today.
+
+Check out the attachment for the full breakdown.
+
+The best AI tools don't just follow instructions.
+They learn to get better at following them.
+
+#ClaudeCode #GenerativeAI #AIProductivity
+
+---
+IMAGE PROMPT:
+A cinematic 16:9 illustration showing a glowing feedback loop cycle in the center: four interconnected nodes labeled Create, Eval, Improve, Benchmark, forming a diamond shape with energy flowing between them. The loop floats above a developer's desk with a Claude Code terminal visible on screen. Shaid's face is photorealistic, blended naturally into the illustrated scene, seated at the desk looking up at the loop with a focused expression. Color palette: deep navy background, electric cyan and teal accents, orange and purple highlights on the Improve and Benchmark nodes. Clean sans-serif white typography in the lower third. Mood: innovative, systematic, empowering.
+
+QUOTE FOR IMAGE:
+"The best AI tools don't just follow instructions. They learn to get better at following them."
+---

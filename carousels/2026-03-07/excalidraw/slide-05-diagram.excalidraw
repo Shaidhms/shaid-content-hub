@@ -1,0 +1,380 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "ef2f63db",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 354.20000000000005,
+      "height": 39.199999999999996,
+      "text": "The Self-Improving Loop",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "71fa686e",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 350,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          350,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "392f8af4",
+      "type": "rectangle",
+      "x": 210.0,
+      "y": 135.0,
+      "width": 120,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "08c95254",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "08c95254",
+      "type": "text",
+      "x": 220.0,
+      "y": 147.4,
+      "width": 100,
+      "height": 25.2,
+      "text": "Task Runs",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "392f8af4",
+      "strokeColor": "#ffffff"
+    },
+    {
+      "id": "3725c428",
+      "type": "rectangle",
+      "x": 370.0,
+      "y": 295.0,
+      "width": 120,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffffff",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "5f6bb324",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "5f6bb324",
+      "type": "text",
+      "x": 380.0,
+      "y": 307.4,
+      "width": 100,
+      "height": 25.2,
+      "text": "Fix Own Code\nif Errors",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "3725c428",
+      "strokeColor": "#2D2D2D"
+    },
+    {
+      "id": "6b73026b",
+      "type": "rectangle",
+      "x": 210.0,
+      "y": 455.0,
+      "width": 120,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "49dc3407",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "49dc3407",
+      "type": "text",
+      "x": 220.0,
+      "y": 467.4,
+      "width": 100,
+      "height": 25.2,
+      "text": "Rewrite Prompt\nif Suboptimal",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "6b73026b",
+      "strokeColor": "#ffffff"
+    },
+    {
+      "id": "e2181e66",
+      "type": "rectangle",
+      "x": 50.0,
+      "y": 295.0,
+      "width": 120,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffffff",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "90037ccf",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "90037ccf",
+      "type": "text",
+      "x": 60.0,
+      "y": 307.4,
+      "width": 100,
+      "height": 25.2,
+      "text": "Update Status File\nfor Next Run",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "e2181e66",
+      "strokeColor": "#2D2D2D"
+    },
+    {
+      "id": "06d1e809",
+      "type": "arrow",
+      "x": 270.0,
+      "y": 160.0,
+      "width": 160.0,
+      "height": 160.0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          160.0,
+          160.0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "startBinding": {
+        "elementId": "392f8af4",
+        "focus": 0,
+        "gap": 5
+      },
+      "endBinding": {
+        "elementId": "3725c428",
+        "focus": 0,
+        "gap": 5
+      }
+    },
+    {
+      "id": "481d7b80",
+      "type": "arrow",
+      "x": 430.0,
+      "y": 320.0,
+      "width": -160.0,
+      "height": 160.0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -160.0,
+          160.0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "startBinding": {
+        "elementId": "3725c428",
+        "focus": 0,
+        "gap": 5
+      },
+      "endBinding": {
+        "elementId": "6b73026b",
+        "focus": 0,
+        "gap": 5
+      }
+    },
+    {
+      "id": "66706b42",
+      "type": "arrow",
+      "x": 270.0,
+      "y": 480.0,
+      "width": -160.0,
+      "height": -160.0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -160.0,
+          -160.0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "startBinding": {
+        "elementId": "6b73026b",
+        "focus": 0,
+        "gap": 5
+      },
+      "endBinding": {
+        "elementId": "e2181e66",
+        "focus": 0,
+        "gap": 5
+      }
+    },
+    {
+      "id": "1999f708",
+      "type": "arrow",
+      "x": 110.0,
+      "y": 320.0,
+      "width": 160.0,
+      "height": -160.0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          160.0,
+          -160.0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "startBinding": {
+        "elementId": "e2181e66",
+        "focus": 0,
+        "gap": 5
+      },
+      "endBinding": {
+        "elementId": "392f8af4",
+        "focus": 0,
+        "gap": 5
+      }
+    },
+    {
+      "id": "9e1ed281",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "05/10",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "79d037e3",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "d0b9f7f9",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "3277d375",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

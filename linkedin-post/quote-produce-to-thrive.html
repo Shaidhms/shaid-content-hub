@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quote - Produce to Thrive</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1a1a2e;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 40%, #16213e 100%);
+  }
+
+  /* Subtle grain texture */
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  /* Accent glow */
+  .glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: 0;
+  }
+
+  .glow-1 {
+    background: #e94560;
+    top: -100px;
+    right: -100px;
+  }
+
+  .glow-2 {
+    background: #0f3460;
+    bottom: -100px;
+    left: -100px;
+    opacity: 0.25;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 80px;
+    max-width: 900px;
+  }
+
+  /* Decorative quotation mark */
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 180px;
+    font-weight: 900;
+    color: #e94560;
+    opacity: 0.2;
+    line-height: 1;
+    margin-bottom: -60px;
+    display: block;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    margin-bottom: 50px;
+  }
+
+  .quote-text .highlight {
+    color: #e94560;
+    font-weight: 900;
+  }
+
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: #e94560;
+    margin: 0 auto 30px;
+    border-radius: 2px;
+  }
+
+  .author {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* Corner accents */
+  .corner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+  }
+
+  .corner::before, .corner::after {
+    content: '';
+    position: absolute;
+    background: rgba(233, 69, 96, 0.3);
+  }
+
+  .corner-tl { top: 40px; left: 40px; }
+  .corner-tl::before { width: 60px; height: 2px; top: 0; left: 0; }
+  .corner-tl::after { width: 2px; height: 60px; top: 0; left: 0; }
+
+  .corner-br { bottom: 40px; right: 40px; }
+  .corner-br::before { width: 60px; height: 2px; bottom: 0; right: 0; }
+  .corner-br::after { width: 2px; height: 60px; bottom: 0; right: 0; }
+
+  /* Style selector */
+  .controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+    background: rgba(0,0,0,0.8);
+    padding: 12px 20px;
+    border-radius: 12px;
+  }
+
+  .controls button {
+    padding: 8px 18px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s;
+  }
+
+  .controls button:hover, .controls button.active {
+    background: #e94560;
+    border-color: #e94560;
+  }
+
+  /* Style 2: Light minimal */
+  .card.style-light {
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+  }
+
+  .style-light .quote-mark { color: #222; opacity: 0.08; }
+  .style-light .quote-text { color: #1a1a1a; }
+  .style-light .quote-text .highlight { color: #e94560; }
+  .style-light .author { color: rgba(0,0,0,0.4); }
+  .style-light .corner::before, .style-light .corner::after { background: rgba(0,0,0,0.1); }
+  .style-light .glow-1 { background: #e94560; opacity: 0.08; }
+  .style-light .glow-2 { background: #667eea; opacity: 0.08; }
+
+  /* Style 3: Bold gradient */
+  .card.style-bold {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  }
+
+  .style-bold .glow-1 { background: #667eea; opacity: 0.2; }
+  .style-bold .glow-2 { background: #764ba2; opacity: 0.2; }
+  .style-bold .quote-mark { color: #667eea; }
+  .style-bold .quote-text .highlight { color: #a78bfa; }
+  .style-bold .divider { background: #667eea; }
+  .style-bold .corner::before, .style-bold .corner::after { background: rgba(102, 126, 234, 0.3); }
+</style>
+</head>
+<body>
+
+<div class="card" id="card">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-br"></div>
+
+  <div class="content">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">
+      If you don't <span class="highlight">produce</span>, you won't <span class="highlight">thrive</span> — no matter how skilled or talented you are.
+    </p>
+    <div class="divider"></div>
+    <p class="author">— Shaid</p>
+  </div>
+</div>
+
+<div class="controls">
+  <button class="active" onclick="setStyle('dark')">Dark</button>
+  <button onclick="setStyle('light')">Light</button>
+  <button onclick="setStyle('bold')">Purple</button>
+</div>
+
+<script>
+  function setStyle(style) {
+    const card = document.getElementById('card');
+    card.className = 'card';
+    if (style === 'light') card.classList.add('style-light');
+    if (style === 'bold') card.classList.add('style-bold');
+
+    document.querySelectorAll('.controls button').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

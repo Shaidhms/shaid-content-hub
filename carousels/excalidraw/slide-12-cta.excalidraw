@@ -1,0 +1,135 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "9e75f365",
+      "type": "ellipse",
+      "x": 95.0,
+      "y": 100,
+      "width": 350,
+      "height": 350,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffe0cc",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "1ec6d2d0",
+      "type": "text",
+      "x": 90.0,
+      "y": 200,
+      "width": 360,
+      "height": 44.8,
+      "text": "Follow for more",
+      "fontSize": 32,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "91994983",
+      "type": "line",
+      "x": 220.0,
+      "y": 250,
+      "width": 100.0,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100.0,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 1
+    },
+    {
+      "id": "06135368",
+      "type": "text",
+      "x": 90.0,
+      "y": 270,
+      "width": 360,
+      "height": 25.2,
+      "text": "Shaid | GenAI Architect\n\nI build AI products and share what I learn.\n\n#ClaudeCode #GenAI #DeveloperProductivity",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "7ae9fd92",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "12/12",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "9b481da1",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "e89e307c",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "290f9821",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

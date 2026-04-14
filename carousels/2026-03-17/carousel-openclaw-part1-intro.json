@@ -1,0 +1,73 @@
+{
+  "title": "OpenClaw Part 1 - What & Why",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "OpenClaw:",
+      "heading_accent": "Your 24/7 AI Assistant"
+    },
+    {
+      "type": "intro",
+      "text": "310K+ GitHub stars.\n50+ integrations.\nRuns <accent>locally</accent> on your machine.\n\nOpenClaw is the open-source AI agent\nthat actually <accent>does things</accent> for you.\n\nThis is Part 1 of a 4-part series."
+    },
+    {
+      "type": "content",
+      "heading": "What is <accent>OpenClaw?</accent>",
+      "body": "- Open-source AI agent (Node.js)\n- Connects to Claude, GPT, DeepSeek\n- Works via WhatsApp, Telegram, Slack, Discord\n- Runs locally - your data stays with you\n- Plans and executes multi-step tasks autonomously"
+    },
+    {
+      "type": "before_after",
+      "heading": "Before vs <accent>After</accent> OpenClaw",
+      "before": ["Manually triaging 50+ emails daily", "Copy-pasting between 10 tools", "Forgetting follow-ups and deadlines", "Spending hours on repetitive tasks"],
+      "after": ["AI triages and drafts email replies", "One agent coordinates all your tools", "Automated reminders and summaries", "Hours reclaimed every single week"]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Why Developers <accent>Love</accent> It",
+      "items": ["Open source - full control, no vendor lock-in", "50+ messaging integrations out of the box", "Agentic - it plans, decides, and executes", "Runs locally - privacy first, always", "Fastest growing OSS repo in history"]
+    },
+    {
+      "type": "diagram",
+      "heading": "How OpenClaw <accent>Works</accent>",
+      "diagram_type": "flow",
+      "elements": ["You (Chat)", "OpenClaw Agent", "LLM (Claude/GPT)", "Tools & APIs", "Result Delivered"]
+    },
+    {
+      "type": "visual",
+      "heading": "It Actually <accent>Does</accent> Things",
+      "body": "Tell it to scaffold a React app.\nIt runs the commands.\nTell it to debug your code.\nIt reads, fixes, and commits.",
+      "terminal": [
+        {"class": "prompt", "text": "You: scaffold a React app with Tailwind"},
+        {"class": "cmd", "text": "> npx create-react-app my-app"},
+        {"class": "cmd", "text": "> cd my-app && npm install tailwindcss"},
+        {"class": "success", "text": "Done. Tailwind configured and ready."}
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "OpenClaw doesn't just answer questions.\nIt takes action.\nThat's the difference between\na chatbot and an AI agent."
+    },
+    {
+      "type": "content",
+      "heading": "Who Is This <accent>For?</accent>",
+      "body": "- Developers automating repetitive workflows\n- Solo founders wearing 10 hats\n- Freelancers managing clients and projects\n- Anyone who wants a personal AI operator"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "Part 2!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#OpenClaw #AI #GenAI #Automation #OpenSource"
+    }
+  ]
+}

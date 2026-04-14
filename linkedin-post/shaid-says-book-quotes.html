@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaid's Spark x Vadivelu - Book Quotes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    gap: 60px;
+  }
+
+  h2.label {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, #ffffff 0%, #f0f4ff 50%, #e8eeff 100%);
+  }
+
+  /* Subtle radial glow */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 70% 25%, rgba(59, 130, 246, 0.08) 0%, transparent 55%);
+    z-index: 1;
+  }
+
+  /* Top quote section */
+  .quote-section {
+    padding: 60px 65px 30px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: #2563eb;
+    opacity: 0.15;
+    line-height: 1;
+    display: block;
+    margin-bottom: -30px;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1e293b;
+  }
+
+  .quote-text.smaller {
+    font-size: 36px;
+  }
+
+  .quote-text .hl {
+    color: #2563eb;
+    font-weight: 900;
+  }
+
+  .source {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(30, 41, 59, 0.4);
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Vadivelu image section */
+  .meme-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 50px;
+  }
+
+  .meme-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .meme-img-wrapper {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .meme-img-inner {
+    width: 460px;
+    height: 310px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid rgba(37, 99, 235, 0.2);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.1);
+  }
+
+  .meme-img-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* Caption below the image */
+  .meme-caption {
+    text-align: center;
+    padding: 14px 20px 0;
+    color: rgba(30, 41, 59, 0.45);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+  }
+
+  /* Thought bubble next to the image */
+  .thought-bubble {
+    background: rgba(37, 99, 235, 0.06);
+    border: 1.5px solid rgba(37, 99, 235, 0.15);
+    border-radius: 20px;
+    padding: 14px 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #2563eb;
+    font-weight: 600;
+    max-width: 240px;
+    text-align: center;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .thought-bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 16px;
+    height: 16px;
+    background: rgba(37, 99, 235, 0.06);
+    border-left: 1.5px solid rgba(37, 99, 235, 0.15);
+    border-bottom: 1.5px solid rgba(37, 99, 235, 0.15);
+  }
+
+  /* Bottom bar - solid blue */
+  .bottom-bar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    background: #2563eb;
+  }
+
+  .bar-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .bar-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bar-info { flex: 1; }
+
+  .bar-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .bar-title {
+    font-size: 13px;
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .bar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .bar-brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #2563eb;
+    background: #ffffff;
+  }
+
+  .bar-brand-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  /* Corner accents */
+  .corner { position: absolute; width: 50px; height: 50px; z-index: 3; }
+  .corner::before, .corner::after {
+    content: '';
+    position: absolute;
+    background: rgba(37, 99, 235, 0.12);
+  }
+
+  .corner-tl { top: 25px; left: 25px; }
+  .corner-tl::before { width: 50px; height: 2px; top: 0; left: 0; }
+  .corner-tl::after { width: 2px; height: 50px; top: 0; left: 0; }
+
+  .corner-tr { top: 25px; right: 25px; }
+  .corner-tr::before { width: 50px; height: 2px; top: 0; right: 0; }
+  .corner-tr::after { width: 2px; height: 50px; top: 0; right: 0; }
+
+  /* Emoji decorations */
+  .emoji-deco {
+    position: absolute;
+    font-size: 60px;
+    opacity: 0.05;
+    z-index: 1;
+  }
+  .deco-1 { top: 80px; right: 60px; transform: rotate(20deg); }
+  .deco-2 { bottom: 180px; left: 40px; transform: rotate(-15deg); }
+  .deco-3 { top: 200px; right: 150px; transform: rotate(45deg); }
+
+</style>
+</head>
+<body>
+
+<!-- ======= QUOTE 1: Simon Sinek - Why ======= -->
+<h2 class="label">Quote 1: Start with Why</h2>
+<div class="card">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="emoji-deco deco-1">🤔</div>
+  <div class="emoji-deco deco-2">💡</div>
+  <div class="emoji-deco deco-3">🎯</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">
+      People don't buy <span class="hl">what</span> you do; they buy <span class="hl">why</span> you do it.
+    </p>
+    <p class="source">Simon Sinek, Start with Why</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-container">
+      <div class="meme-img-wrapper">
+        <div class="meme-img-inner">
+          <img src="codes-to-post-in-linkedin/vadivelu-why-me.jpg" alt="Vadivelu why me">
+        </div>
+        <div class="meme-caption">Me explaining "why" to the client who just wants it cheap</div>
+      </div>
+      <div class="thought-bubble">Why-aa? Enna why? Budget solu da! 😤</div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ======= QUOTE 2: Simon Sinek - Leaders Sacrifice ======= -->
+<h2 class="label">Quote 2: Start with Why - Leadership</h2>
+<div class="card">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="emoji-deco deco-1">👑</div>
+  <div class="emoji-deco deco-2">🫡</div>
+  <div class="emoji-deco deco-3">💪</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text smaller">
+      Great leaders are willing to <span class="hl">sacrifice</span> their own interests for the good of those who <span class="hl">follow</span> them.
+    </p>
+    <p class="source">Simon Sinek, Start with Why</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-container">
+      <div class="meme-img-wrapper">
+        <div class="meme-img-inner">
+          <img src="codes-to-post-in-linkedin/vadivelu-crying.jpg" alt="Vadivelu crying">
+        </div>
+        <div class="meme-caption">When the boss says "we're all in this together"</div>
+      </div>
+      <div class="thought-bubble">Sacrifice-aa? En lunch skip panradhu sacrifice illa? 🫡</div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ======= QUOTE 3: Stephen Covey - Begin with End ======= -->
+<h2 class="label">Quote 3: 7 Habits - Begin with the End</h2>
+<div class="card">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="emoji-deco deco-1">🏁</div>
+  <div class="emoji-deco deco-2">🧠</div>
+  <div class="emoji-deco deco-3">🎯</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">
+      Begin with the <span class="hl">end</span> in mind.
+    </p>
+    <p class="source">Stephen Covey, The 7 Habits of Highly Effective People</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-container">
+      <div class="meme-img-wrapper">
+        <div class="meme-img-inner">
+          <img src="codes-to-post-in-linkedin/vadivelu-thinking-new.jpg" alt="Vadivelu thinking">
+        </div>
+        <div class="meme-caption">Me starting a project without any plan:</div>
+      </div>
+      <div class="thought-bubble">End-aa? Naanga start-layae mudichom da! 🏁</div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ======= QUOTE 4: Stephen Covey - Schedule Priorities ======= -->
+<h2 class="label">Quote 4: 7 Habits - Schedule Priorities</h2>
+<div class="card">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="emoji-deco deco-1">📅</div>
+  <div class="emoji-deco deco-2">⏰</div>
+  <div class="emoji-deco deco-3">📋</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text smaller">
+      The key is not to prioritize what's on your <span class="hl">schedule</span>, but to schedule your <span class="hl">priorities</span>.
+    </p>
+    <p class="source">Stephen Covey, The 7 Habits of Highly Effective People</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-container">
+      <div class="meme-img-wrapper">
+        <div class="meme-img-inner">
+          <img src="codes-to-post-in-linkedin/vadivelu-shock.jpg" alt="Vadivelu shocked">
+        </div>
+        <div class="meme-caption">My schedule: Netflix, sleep, Netflix, eat, panic at deadline</div>
+      </div>
+      <div class="thought-bubble">Priority-aa? Naan daily survive panradhe priority da! 📅</div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ======= QUOTE 5: Sapiens - Monkey Banana ======= -->
+<h2 class="label">Quote 5: Sapiens - Monkey Banana</h2>
+<div class="card">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="emoji-deco deco-1">🍌</div>
+  <div class="emoji-deco deco-2">🍌</div>
+  <div class="emoji-deco deco-3">🐒</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text smaller">
+      You could never convince a <span class="hl">monkey</span> to give you a banana by promising him limitless <span class="hl">bananas after death.</span>
+    </p>
+    <p class="source">Yuval Noah Harari, Sapiens</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-container">
+      <div class="meme-img-wrapper">
+        <div class="meme-img-inner">
+          <img src="codes-to-post-in-linkedin/vadivelu-2.jpg" alt="Vadivelu thinking about bananas">
+        </div>
+        <div class="meme-caption">Me listening to my manager's "future growth" pitch</div>
+      </div>
+      <div class="thought-bubble">Banana kuduthaa paesu da... 🍌</div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ======= QUOTE 6: Thinking Fast and Slow ======= -->
+<h2 class="label">Quote 6: Thinking, Fast and Slow</h2>
+<div class="card">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="emoji-deco deco-1">🧠</div>
+  <div class="emoji-deco deco-2">💭</div>
+  <div class="emoji-deco deco-3">😤</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text smaller">
+      Nothing in life is as <span class="hl">important</span> as you think it is, while you are <span class="hl">thinking</span> about it.
+    </p>
+    <p class="source">Daniel Kahneman, Thinking, Fast and Slow</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-container">
+      <div class="meme-img-wrapper">
+        <div class="meme-img-inner">
+          <img src="codes-to-post-in-linkedin/vadivelu-all-knowing.png" alt="Vadivelu all knowing">
+        </div>
+        <div class="meme-caption">Me overthinking a Slack message at 2 AM:</div>
+      </div>
+      <div class="thought-bubble">Important-aa irundhaa WhatsApp la soluvaan! 💭</div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

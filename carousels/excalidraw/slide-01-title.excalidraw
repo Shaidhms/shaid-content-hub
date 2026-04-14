@@ -1,0 +1,135 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "9f620aaa",
+      "type": "ellipse",
+      "x": 80.0,
+      "y": 80,
+      "width": 380,
+      "height": 380,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffe0cc",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "ac92d463",
+      "type": "text",
+      "x": 70.0,
+      "y": 175.0,
+      "width": 400,
+      "height": 50.4,
+      "text": "Claude Code Skills",
+      "fontSize": 36,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "a45dac6b",
+      "type": "line",
+      "x": 230.0,
+      "y": 255.0,
+      "width": 80.0,
+      "height": 0.0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          80.0,
+          0.0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "c0a09342",
+      "type": "text",
+      "x": 70.0,
+      "y": 275.0,
+      "width": 400,
+      "height": 28.0,
+      "text": "Stop repeating yourself. Teach\nClaude your workflow once. It\nremembers forever.",
+      "fontSize": 20,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "6e74c5af",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "01/12",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "9654aab7",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "b24116a1",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "0b48cb9a",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

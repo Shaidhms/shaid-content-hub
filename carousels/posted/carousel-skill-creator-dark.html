@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      margin: 0;
+    }
+
+    .slide {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-bg {
+      position: absolute;
+      inset: 0;
+      background: #191923;
+    }
+    .slide-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+      background-size: 300px 300px;
+      opacity: 0.5;
+    }
+    .slide-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.3) 100%);
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+    }
+
+    .text-white { color: #ede8df; }
+    .text-accent { color: #d4826a; }
+    .text-secondary { color: #777; }
+
+    /* ===== FOOTER (all slides) ===== */
+    .slide-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 44px;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(237, 232, 223, 0.35);
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== TITLE ===== */
+    .slide-title .slide-content {
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
+    .slide-title .title-line {
+      font-size: 160px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -5px;
+      text-align: center;
+    }
+
+    /* ===== INTRO ===== */
+    .slide-intro .slide-content {
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 80px 70px 140px 70px;
+    }
+    .intro-text {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -1px;
+      color: #ede8df;
+      max-width: 960px;
+    }
+    .intro-text .accent { color: #d4826a; }
+
+    /* ===== CONTENT ===== */
+    .slide-content-type .slide-content {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 100px 80px;
+      gap: 30px;
+    }
+    .content-heading {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      color: #ede8df;
+    }
+    .content-heading .accent { color: #d4826a; }
+    .content-body {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #ede8df;
+      opacity: 0.85;
+    }
+    .content-body .accent { color: #d4826a; font-weight: 700; }
+    .content-body ul {
+      list-style: none;
+      padding: 0;
+    }
+    .content-body ul li {
+      padding: 8px 0;
+      padding-left: 30px;
+      position: relative;
+    }
+    .content-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #d4826a;
+    }
+
+    /* ===== QUOTE ===== */
+    .slide-quote .slide-content {
+      justify-content: center;
+      align-items: center;
+      padding: 100px 80px;
+    }
+    .quote-text {
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.4;
+      color: #ede8df;
+      text-align: center;
+      max-width: 900px;
+    }
+    .quote-mark {
+      font-size: 120px;
+      color: #d4826a;
+      line-height: 0.5;
+      margin-bottom: 20px;
+    }
+
+    /* ===== NUMBERED LIST ===== */
+    .slide-numbered .slide-content {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px;
+      gap: 20px;
+    }
+    .numbered-heading {
+      font-size: 64px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+    .numbered-heading .accent { color: #d4826a; }
+    .numbered-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+    .numbered-num {
+      font-size: 28px;
+      font-weight: 900;
+      color: #d4826a;
+      background: rgba(212, 130, 106, 0.15);
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .numbered-text {
+      font-size: 32px;
+      font-weight: 400;
+      color: #ede8df;
+      line-height: 1.4;
+      padding-top: 8px;
+    }
+
+    /* ===== SKILL CARD ===== */
+    .slide-skill .slide-content {
+      display: grid;
+      grid-template-columns: 52% 1fr;
+      gap: 24px;
+      padding: 44px;
+      align-content: stretch;
+    }
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .skill-header {
+      background: #d4826a;
+      border-radius: 20px;
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+    }
+    .skill-label {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(25, 25, 35, 0.5);
+    }
+    .skill-name {
+      font-size: 68px;
+      font-weight: 900;
+      color: #191923;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-top: 16px;
+    }
+    .skill-screenshot {
+      background: #2a2a3a;
+      border-radius: 20px;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .screenshot-bar {
+      padding: 14px 20px;
+      font-size: 14px;
+      color: #666;
+      background: #222233;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .screenshot-bar .dots {
+      display: flex;
+      gap: 6px;
+    }
+    .screenshot-bar .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #444;
+    }
+    .screenshot-content {
+      flex: 1;
+      overflow: hidden;
+    }
+    .screenshot-readme {
+      background: #ffffff;
+      margin: 16px;
+      border-radius: 12px;
+      padding: 28px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #333;
+      height: calc(100% - 32px);
+      overflow: hidden;
+    }
+    .screenshot-readme h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 14px;
+    }
+    .screenshot-readme .badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .screenshot-readme .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #e8e8e8;
+      color: #555;
+    }
+    .badge-green { background: #d4edda !important; color: #2d6a3f !important; }
+    .badge-blue { background: #d6eaf8 !important; color: #2563eb !important; }
+    .screenshot-readme p {
+      margin-bottom: 10px;
+      color: #444;
+      font-size: 16px;
+    }
+    .screenshot-readme ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .screenshot-readme li {
+      margin-bottom: 6px;
+      color: #444;
+      font-size: 15px;
+    }
+    .screenshot-readme .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #222;
+      margin: 16px 0 10px;
+    }
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .desc-card {
+      background: rgba(25, 25, 35, 0.7);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 36px 34px;
+      flex: 1;
+    }
+    .card-label {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 22px;
+    }
+    .desc-card .card-text {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #ddd8cf;
+    }
+    .info-card {
+      background: rgba(25, 25, 35, 0.7);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 36px 34px;
+    }
+    .info-card .card-link {
+      font-size: 22px;
+      color: #ddd8cf;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    /* ===== CTA ===== */
+    .slide-cta .slide-content {
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .cta-line {
+      font-size: 150px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -5px;
+      text-align: center;
+    }
+    /* ===== IMAGE SLIDE ===== */
+    .slide-image .slide-content {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 70px 80px;
+      gap: 24px;
+    }
+    .image-heading {
+      font-size: 64px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+      line-height: 1.1;
+    }
+    .image-heading .accent { color: #d4826a; }
+    .image-caption {
+      font-size: 28px;
+      font-weight: 400;
+      color: #ede8df;
+      opacity: 0.7;
+      line-height: 1.4;
+    }
+    .image-container {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0 40px;
+    }
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+
+    /* ===== DIAGRAM (inline SVG) ===== */
+    .slide-diagram .slide-content {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px;
+      gap: 30px;
+    }
+    .diagram-heading {
+      font-size: 64px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+    }
+    .diagram-heading .accent { color: #d4826a; }
+    .diagram-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+    .diagram-container svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* ===== VISUAL CONTENT (text + illustration side by side) ===== */
+    .slide-visual .slide-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 80px 60px 120px;
+      align-items: center;
+      align-content: center;
+      height: 100%;
+    }
+    .visual-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .visual-heading {
+      font-size: 56px;
+      font-weight: 900;
+      color: #ede8df;
+      letter-spacing: -2px;
+      line-height: 1.1;
+    }
+    .visual-heading .accent { color: #d4826a; }
+    .visual-body {
+      font-size: 28px;
+      font-weight: 400;
+      color: #ede8df;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+    .visual-body ul { list-style: none; padding: 0; }
+    .visual-body ul li {
+      padding: 6px 0 6px 28px;
+      position: relative;
+    }
+    .visual-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #d4826a;
+    }
+    .visual-illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Mock app window */
+    .mock-window {
+      background: #2a2a3a;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .mock-titlebar {
+      background: #222233;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mock-titlebar .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #444;
+    }
+    .mock-titlebar .dot:nth-child(1) { background: #ff5f56; }
+    .mock-titlebar .dot:nth-child(2) { background: #ffbd2e; }
+    .mock-titlebar .dot:nth-child(3) { background: #27c93f; }
+    .mock-body {
+      padding: 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #c8c8d0;
+      min-height: 280px;
+    }
+    .mock-body .prompt { color: #27c93f; }
+    .mock-body .cmd { color: #d4826a; }
+    .mock-body .comment { color: #666; }
+    .mock-body .output { color: #888; }
+    .mock-body .success { color: #27c93f; }
+
+    /* Before/After comparison */
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 24px;
+      width: 100%;
+      align-items: stretch;
+    }
+    .compare-panel {
+      border-radius: 20px;
+      padding: 40px 32px;
+    }
+    .compare-panel.before {
+      background: rgba(220, 80, 80, 0.12);
+      border: 1px solid rgba(220, 80, 80, 0.25);
+    }
+    .compare-panel.after {
+      background: rgba(39, 201, 63, 0.12);
+      border: 1px solid rgba(39, 201, 63, 0.25);
+    }
+    .compare-label {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .compare-panel.before .compare-label { color: #dc5050; }
+    .compare-panel.after .compare-label { color: #27c93f; }
+    .compare-item {
+      font-size: 26px;
+      color: #ede8df;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .compare-item .x { color: #dc5050; font-weight: 900; }
+    .compare-item .check { color: #27c93f; font-weight: 900; }
+    .compare-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .compare-arrow svg { width: 48px; height: 48px; }
+
+    /* ===== CTA (redesigned with photo) ===== */
+    .slide-cta .slide-content {
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .cta-line {
+      font-size: 150px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -5px;
+      text-align: center;
+    }
+    .cta-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: 40px;
+      border: 4px solid #d4826a;
+      box-shadow: 0 0 40px rgba(212, 130, 106, 0.3);
+    }
+    .cta-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .cta-name {
+      font-size: 60px;
+      font-weight: 900;
+      color: #ede8df;
+      margin-top: 24px;
+      letter-spacing: -1px;
+    }
+    .cta-role {
+      font-size: 28px;
+      font-weight: 600;
+      color: #d4826a;
+      margin-top: 4px;
+      letter-spacing: 2px;
+    }
+    .cta-subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      color: rgba(237, 232, 223, 0.6);
+      margin-top: 16px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .cta-hashtags {
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(237, 232, 223, 0.4);
+      margin-top: 24px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="slide slide-title">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="title-line text-white">skill</div>
+        <div class="title-line text-accent">creator.</div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-intro">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="intro-text">Claude Code can now <span class="accent">build its own skills.</span> Create, test, benchmark, and improve Agent Skills <span class="accent">without writing code.</span> Teach it once. <span class="accent">Use it forever.</span></div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-image">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="image-heading">What Are <span class="accent">Skills?</span></div>
+        <div class="image-caption">Reusable muscle memory that makes Claude Code smarter. Code Review, Doc Generator, Test Writer and more.</div>
+        <div class="image-container">
+          <img src="/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide02-skills-visual.png" alt="">
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-content-type">
+      <div class="slide-bg"></div>
+      <div class="slide-content" style="gap: 30px;">
+        <div class="content-heading">Before vs <span class="accent">With</span> Skill Creator</div>
+        <div class="comparison-container">
+          <div class="compare-panel before">
+            <div class="compare-label">BEFORE</div>
+            <div class="compare-item"><span class="x">&#10007;</span> Write SKILL.md by hand</div><div class="compare-item"><span class="x">&#10007;</span> Guess if the description triggers</div><div class="compare-item"><span class="x">&#10007;</span> No way to test if it works</div><div class="compare-item"><span class="x">&#10007;</span> No way to measure improvement</div><div class="compare-item"><span class="x">&#10007;</span> Breaks silently after updates</div>
+          </div>
+          <div class="compare-arrow"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M8 24h28M28 16l8 8-8 8" fill="none" stroke="#d4826a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="compare-panel after">
+            <div class="compare-label">AFTER</div>
+            <div class="compare-item"><span class="check">&#10003;</span> Describe what you want in English</div><div class="compare-item"><span class="check">&#10003;</span> Auto-optimized trigger descriptions</div><div class="compare-item"><span class="check">&#10003;</span> Evals verify every change</div><div class="compare-item"><span class="check">&#10003;</span> Benchmarks track pass rate + tokens</div><div class="compare-item"><span class="check">&#10003;</span> Re-run after model updates</div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-image">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="image-heading">The <span class="accent">4 Modes</span></div>
+        <div class="image-caption">Create, Eval, Benchmark, and Improve. A complete lifecycle for building skills.</div>
+        <div class="image-container">
+          <img src="/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide04-four-modes.png" alt="">
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-image">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="image-heading">How It <span class="accent">Works</span></div>
+        <div class="image-caption">Describe what you need. Skill Creator writes SKILL.md, generates eval cases, runs them, and verifies.</div>
+        <div class="image-container">
+          <img src="/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide05-how-it-works.png" alt="">
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-image">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="image-heading">Continuous <span class="accent">Improvement</span> Loop</div>
+        <div class="image-caption">Create → Eval → Benchmark → Improve. A self-improving cycle that makes your skills better over time.</div>
+        <div class="image-container">
+          <img src="/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide06-lifecycle.png" alt="">
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-image">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="image-heading">Multi-Agent <span class="accent">Benchmarking</span></div>
+        <div class="image-caption">Skill Creator spawns parallel agents to run evals, aggregate results, and compare skill versions.</div>
+        <div class="image-container">
+          <img src="/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide07-multi-agent.png" alt="">
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-image">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="image-heading">What Can You <span class="accent">Build?</span></div>
+        <div class="image-caption">Security Reviewer, API Doc Generator, Commit Writer, Test Generator, Post Writer, PR Reviewer and more.</div>
+        <div class="image-container">
+          <img src="/Users/shaid/Documents/Shaid_Works/Nisha/templates/skill-creator-visuals/slide08-use-cases.png" alt="">
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-visual">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="visual-text">
+          <div class="visual-heading">Get It in <span class="accent">30 Seconds</span></div>
+          <div class="visual-body"><ul><li>Search &#x27;skill-creator&#x27; in Extensions</li><li>Or copy from GitHub</li><li>Paste into .claude/skills/</li><li>Type /skill-creator to start</li></ul></div>
+        </div>
+        <div class="visual-illustration">
+          <div class="mock-window">
+            <div class="mock-titlebar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="mock-body"><div class="comment"># Option A: VS Code Extensions</div><div class="prompt">&gt; Extensions &gt; Search &#x27;skill-creator&#x27;</div><div class="success">✓ Installed</div><div class="output"></div><div class="comment"># Option B: GitHub</div><div class="prompt">$ cp -r skill-creator/</div><div class="cmd">  → .claude/skills/skill-creator/</div><div class="output"></div><div class="prompt">$ claude</div><div class="cmd">&gt; /skill-creator</div><div class="success">✓ Skill Creator ready.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-quote">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">The best AI tools don&#x27;t just follow instructions. They learn to get better at following them. Skill Creator brings that loop to Claude Code.</div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+    <div class="slide slide-cta">
+      <div class="slide-bg"></div>
+      <div class="slide-content">
+        <div class="cta-line text-white">Follow for</div>
+        <div class="cta-line text-accent">More!</div>
+        <div class="cta-photo"><img src="/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg" alt="Shaid"></div>
+        <div class="cta-name">Shaid</div>
+        <div class="cta-role">GenAI Architect &amp; Builder</div>
+        <div class="cta-subtitle">AI Products &amp; Automation | Ship AI. Share Insights.</div>
+        <div class="cta-hashtags">#ClaudeCode #AI #Skills #SkillCreator #DevTools</div>
+      </div>
+      <div class="slide-footer"><span>Shaid | GenAI Architect &amp; Builder</span><span>Turning Ideas into Reality</span></div>
+    </div>
+</body>
+</html>

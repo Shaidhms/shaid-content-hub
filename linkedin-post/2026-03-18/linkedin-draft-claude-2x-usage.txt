@@ -1,0 +1,70 @@
+Claude just became the #1 free app on the App Store.
+And now they're doubling everyone's usage. For free.
+
+
+
+
+
+Here's what's happening.
+
+Anthropic is running a 2x usage promotion from March 13 to March 28.
+Every plan gets double the limits during off-peak hours.
+Free. Pro. Max. Team. All of them.
+
+No upgrade required. No strings attached.
+It just works.
+
+This isn't a marketing gimmick.
+This is what happens when a company hits a growth inflection point and doubles down on retention instead of paywalls.
+
+Think about this for a second.
+
+Claude dethroned ChatGPT as the #1 free AI app.
+First time that's happened.
+And their response wasn't to gate features or push premium harder.
+
+They opened the doors wider.
+
+As someone who builds with Claude every single day, this hits differently.
+I use Claude Code for development, content, planning, client work.
+It's not a tool I open occasionally. It's embedded in my workflow.
+
+Getting 2x usage during off-peak hours means I can push harder in the evenings and weekends without hitting walls.
+That's exactly when side projects and freelance work happen.
+
+Here's what the promotion actually covers:
+
+* Claude web, desktop, and mobile apps
+* Claude Code
+* Cowork
+* Claude for Excel and PowerPoint
+* Off-peak hours: outside 8 AM to 2 PM ET on weekdays
+* Weekends: 2x usage all day, no restrictions
+
+The timing is smart too.
+Off-peak hours in US Eastern time line up perfectly with IST evenings.
+If you're in India building with Claude after your day job, you're basically getting double capacity during your most productive hours.
+
+This is what thoughtful product growth looks like.
+Not louder ads. Not aggressive upsells.
+Just more value for the people already using the product.
+
+If you haven't tried Claude yet, this is the window.
+Two weeks of doubled limits to test what it can actually do.
+
+And if you're already using it, push harder.
+Build that side project. Ship that feature. Write that content.
+The ceiling just got higher.
+
+March 28 is the cutoff.
+Use it before it's gone.
+
+#Claude #Anthropic #AI #GenerativeAI #ClaudeCode #AITools #BuildInPublic #DeveloperTools #AICoding #ProductGrowth #TechNews
+
+---
+IMAGE PROMPT:
+An illustrative digital artwork showing a glowing Claude logo (orange/amber tones) at the center, radiating energy outward in a "2x" burst effect. Shaid stands in the foreground, looking up at the glowing logo with a laptop in hand, blended naturally into the illustration style. The background is a deep navy blue with subtle circuit-like patterns. The overall mood is energetic and optimistic. Bold white typography overlays the image with the featured quote. Style: modern tech illustration with warm amber and deep blue color palette. Aspect ratio: 16:9.
+
+QUOTE FOR IMAGE:
+"They opened the doors wider."
+---

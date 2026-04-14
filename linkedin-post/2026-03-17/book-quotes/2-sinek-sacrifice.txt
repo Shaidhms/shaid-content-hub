@@ -1,0 +1,30 @@
+The worst leaders I've worked with all had one thing in common.
+
+
+They took credit when things went well. And hid when things went wrong.
+
+15 years in consulting. Big firms. Enterprise clients. Belgium, Netherlands, India. I've seen enough leadership to fill a book nobody would buy.
+
+Bad leader: "We delivered ahead of schedule."
+(Translation: the team pulled three all-nighters while I updated the status report.)
+
+Same leader when something breaks: "I'll need to look into who was responsible for this."
+
+Meanwhile the best manager I ever had did something I still think about. A deployment went sideways in the Netherlands. Client was furious. This guy walked into the call, said "This was my call, I'll fix it," and took the full hit.
+
+He didn't even work on that module.
+
+We would've done anything for him after that. And we basically did. Next three months we shipped like it was personal.
+
+That's the sacrifice Sinek talks about. Not the "I skipped lunch" kind.
+
+. The leaders people actually follow are the ones who take the hit first.
+. "I sacrifice for the team" usually means "I stay till 6 PM sometimes."
+. If your sacrifice needs announcing, it probably isn't one.
+. People don't follow titles. They follow the person who showed up when it got ugly.
+
+"Great leaders are willing to sacrifice their own interests for the good of those who follow them." - Simon Sinek
+
+Still looking for more of those leaders. They're rare.
+
+#Leadership #Management #TeamCulture #CareerLessons #TechLeadership

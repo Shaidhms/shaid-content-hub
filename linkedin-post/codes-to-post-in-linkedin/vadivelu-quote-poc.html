@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaid's Spark x Vadivelu - POC</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    gap: 60px;
+  }
+
+  h2.label {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(170deg, #0a0a1a 0%, #111827 40%, #0f172a 100%);
+  }
+
+  /* Subtle texture overlay */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
+    z-index: 1;
+  }
+
+  /* Top quote section */
+  .quote-section {
+    padding: 60px 65px 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: #f59e0b;
+    opacity: 0.3;
+    line-height: 1;
+    display: block;
+    margin-bottom: -30px;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #f1f5f9;
+  }
+
+  .quote-text .hl {
+    color: #fbbf24;
+    font-weight: 900;
+  }
+
+  .source {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(241, 245, 249, 0.35);
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Vadivelu image section */
+  .meme-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 50px;
+  }
+
+  .meme-img-wrapper {
+    position: relative;
+    width: 500px;
+    height: 340px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid rgba(251, 191, 36, 0.3);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+
+  .meme-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Funny caption on the meme */
+  .meme-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: #fbbf24;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  /* Thought bubble pointing to Vadivelu */
+  .thought-bubble {
+    position: absolute;
+    top: -50px;
+    right: -60px;
+    background: rgba(251, 191, 36, 0.12);
+    border: 1.5px solid rgba(251, 191, 36, 0.25);
+    border-radius: 20px;
+    padding: 12px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #fbbf24;
+    font-weight: 600;
+    max-width: 220px;
+    text-align: center;
+  }
+
+  .thought-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 30px;
+    width: 16px;
+    height: 16px;
+    background: rgba(251, 191, 36, 0.12);
+    border-right: 1.5px solid rgba(251, 191, 36, 0.25);
+    border-bottom: 1.5px solid rgba(251, 191, 36, 0.25);
+    transform: rotate(45deg);
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    background: rgba(251, 191, 36, 0.04);
+    border-top: 1px solid rgba(251, 191, 36, 0.1);
+  }
+
+  .bar-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #f59e0b;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .bar-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bar-info { flex: 1; }
+
+  .bar-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+
+  .bar-title {
+    font-size: 13px;
+    margin-top: 3px;
+    color: rgba(241, 245, 249, 0.35);
+  }
+
+  .bar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .bar-brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    background: #f59e0b;
+  }
+
+  .bar-brand-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 3px;
+    color: #f1f5f9;
+    opacity: 0.5;
+  }
+
+  /* Corner accents */
+  .corner { position: absolute; width: 50px; height: 50px; z-index: 3; }
+  .corner::before, .corner::after {
+    content: '';
+    position: absolute;
+    background: rgba(251, 191, 36, 0.15);
+  }
+
+  .corner-tl { top: 25px; left: 25px; }
+  .corner-tl::before { width: 50px; height: 2px; top: 0; left: 0; }
+  .corner-tl::after { width: 2px; height: 50px; top: 0; left: 0; }
+
+  .corner-tr { top: 25px; right: 25px; }
+  .corner-tr::before { width: 50px; height: 2px; top: 0; right: 0; }
+  .corner-tr::after { width: 2px; height: 50px; top: 0; right: 0; }
+
+  /* Banana emoji decoration */
+  .banana-deco {
+    position: absolute;
+    font-size: 60px;
+    opacity: 0.08;
+    z-index: 1;
+  }
+  .banana-1 { top: 80px; right: 60px; transform: rotate(20deg); }
+  .banana-2 { bottom: 180px; left: 40px; transform: rotate(-15deg); }
+  .banana-3 { top: 200px; right: 150px; transform: rotate(45deg); }
+</style>
+</head>
+<body>
+
+<h2 class="label">POC: Vadivelu x Sapiens (Monkey-Banana Quote)</h2>
+<div class="card" id="vadivelu-sapiens">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <!-- Subtle banana decorations -->
+  <div class="banana-deco banana-1">🍌</div>
+  <div class="banana-deco banana-2">🍌</div>
+  <div class="banana-deco banana-3">🐒</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">
+      You could never convince a <span class="hl">monkey</span> to give you a banana by promising him limitless <span class="hl">bananas after death.</span>
+    </p>
+    <p class="source">Yuval Noah Harari, Sapiens</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-img-wrapper">
+      <img src="vadivelu-2.jpg" alt="Vadivelu thinking">
+      <div class="meme-caption">Me listening to my manager's "future growth" pitch</div>
+      <div class="thought-bubble">Banana kuduthaa paesu da... 🍌</div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

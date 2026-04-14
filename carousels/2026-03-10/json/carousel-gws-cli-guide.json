@@ -1,0 +1,173 @@
+{
+  "title": "GWS CLI Complete Guide",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Google's New Tool",
+      "heading_accent": "10x'd Claude Code."
+    },
+    {
+      "type": "image",
+      "heading": "The Internet <accent>Noticed.</accent>",
+      "caption": "5.2M views. 15K GitHub stars. Addy Osmani called it 'built for humans and agents.'",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/01-tweet-addy-osmani.png"
+    },
+    {
+      "type": "intro",
+      "text": "Google just open-sourced a CLI that lets you control your <accent>entire Google Workspace</accent> from the terminal.\n\nDrive. Gmail. Calendar. Docs. Sheets. Slides.\n\nOne command. One tool. <accent>Zero boilerplate.</accent>"
+    },
+    {
+      "type": "image",
+      "heading": "What is a <accent>CLI?</accent>",
+      "caption": "GUI = clicking buttons. CLI = typing commands. Think of it as a text remote control for your computer.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/05-excalidraw-what-is-cli.png"
+    },
+    {
+      "type": "image",
+      "heading": "One CLI. <accent>Every</accent> Google Service.",
+      "caption": "GWS CLI connects Claude Code to Drive, Gmail, Sheets, Docs, Slides, and Calendar through a single interface.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/02-gws-hub-diagram.png"
+    },
+    {
+      "type": "image",
+      "heading": "Why <accent>GWS CLI</accent> Changes Everything",
+      "caption": "One interface. JSON-first. Auto-discovery. Zero maintenance. Built-in skills. Low overhead.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/04-excalidraw-gws-benefits.png"
+    },
+    {
+      "type": "before_after",
+      "heading": "Old Way vs <accent>GWS CLI</accent>",
+      "before": ["API calls with raw markdown output", "Multiple MCP configs eating context", "Manual auth for each Google service", "Copy-paste from ChatGPT to Docs"],
+      "after": ["Formatted Google Docs via bash", "One CLI, all services, tiny footprint", "Single OAuth, all APIs unlocked", "Claude Code creates directly in Workspace"]
+    },
+    {
+      "type": "image",
+      "heading": "What Can <accent>GWS</accent> Do?",
+      "caption": "Ask Claude Code and it lists every capability: Drive, Gmail, Calendar, Docs, Sheets, Slides, and 100+ built-in skills.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/03-claude-gws-capabilities.png"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "100+ Built-in <accent>Skills</accent>",
+      "items": ["Create events from Sheets data", "Build presentations from templates", "Triage and archive emails by label", "Generate reports from spreadsheet data", "Find free time and schedule meetings"]
+    },
+    {
+      "type": "image",
+      "heading": "Install from <accent>GitHub</accent>",
+      "caption": "Go to github.com/googleworkspace/cli. Open source, Apache 2.0. One npm install and you're ready.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/06-github-repo.png"
+    },
+    {
+      "type": "image",
+      "heading": "Or Let <accent>Claude Code</accent> Do It",
+      "caption": "Paste the GitHub link into Claude Code. Say 'Install this GWS CLI and help me set up everything.' It reads the docs and installs for you.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/08-claude-code-install.png"
+    },
+    {
+      "type": "image",
+      "heading": "Configure <accent>GCP Auth</accent>",
+      "caption": "Once installed, you need to set up Google Cloud authentication. Here's the manual setup (no gcloud needed).",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/09-manual-setup-steps.png"
+    },
+    {
+      "type": "visual",
+      "heading": "Step 1: Create <accent>GCP Project</accent>",
+      "body": "- Go to console.cloud.google.com\n- Click 'New Project'\n- Name it (e.g. 'Claude Code GWS')\n- Wait for it to spin up, then select it",
+      "terminal": [
+        {"class": "prompt", "text": "Google Cloud Console"},
+        {"class": "cmd", "text": "> Select Project > New Project"},
+        {"class": "cmd", "text": "> Name: Claude Code GWS"},
+        {"class": "success", "text": "Project created. Select it."}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 2: <accent>Enable</accent> APIs",
+      "body": "- Go to APIs & Services in your project\n- Enable each API you want to use:\n- Drive, Gmail, Calendar, Sheets, Docs, Slides\n- Click the enable link one at a time",
+      "terminal": [
+        {"class": "prompt", "text": "APIs & Services > Library"},
+        {"class": "cmd", "text": "> Search: Gmail API > Enable"},
+        {"class": "cmd", "text": "> Search: Google Drive API > Enable"},
+        {"class": "cmd", "text": "> Search: Google Calendar API > Enable"},
+        {"class": "success", "text": "Repeat for Sheets, Docs, Slides"}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 3: <accent>OAuth</accent> Consent Screen",
+      "body": "- Go to APIs & Services > OAuth consent screen\n- Click 'Get Started'\n- Choose Internal (your org) or External\n- If External: add your email as test user\n- Fill in app name and contact info, then create",
+      "terminal": [
+        {"class": "prompt", "text": "OAuth consent screen"},
+        {"class": "cmd", "text": "> App name: GWS CLI"},
+        {"class": "cmd", "text": "> User type: Internal (or External + test user)"},
+        {"class": "success", "text": "Consent screen configured"}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 4: Create <accent>OAuth Client ID</accent>",
+      "body": "- Go to APIs & Services > Credentials\n- Click 'Create Credentials' > OAuth Client ID\n- Application type: Desktop app\n- Name it (e.g. 'GWS')\n- Download the JSON file",
+      "terminal": [
+        {"class": "prompt", "text": "Credentials > Create Credentials"},
+        {"class": "cmd", "text": "> OAuth Client ID > Desktop app"},
+        {"class": "success", "text": "Client ID and Client Secret created"},
+        {"class": "cmd", "text": "> Download JSON"}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 5: Save Credentials & <accent>Login</accent>",
+      "body": "- Save the downloaded JSON to ~/.config/gws/\n- Rename it to client_secret.json\n- Run gws auth login\n- Browser opens, choose your account\n- Allow access to all services",
+      "terminal": [
+        {"class": "prompt", "text": "$ mv ~/Downloads/client_secret*.json \\"},
+        {"class": "cmd", "text": "     ~/.config/gws/client_secret.json"},
+        {"class": "prompt", "text": "$ gws auth login"},
+        {"class": "success", "text": "Opening browser for authentication..."},
+        {"class": "success", "text": "Authentication successful!"}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 6: <accent>Verify</accent> It Works",
+      "body": "- Run a simple test command\n- If you get an API error, click the enable URL\n- Wait 10 seconds and retry\n- Once it works, you're all set!",
+      "terminal": [
+        {"class": "prompt", "text": "$ gws drive files list \\"},
+        {"class": "cmd", "text": "     --params '{\"pageSize\": 5}'"},
+        {"class": "success", "text": "Found 5 files in your Google Drive"},
+        {"class": "success", "text": "GWS CLI is ready to use!"}
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Key <accent>Commands</accent> Cheat Sheet",
+      "items": ["gws drive files list -- List your Drive files", "gws gmail users messages list -- Read your inbox", "gws calendar events list -- View your calendar", "gws sheets spreadsheets create -- Create a new sheet", "gws auth login --scopes drive,gmail -- Login with specific APIs"]
+    },
+    {
+      "type": "quote",
+      "text": "This is not another MCP config.\nNot another API wrapper.\n\nIt's one CLI that gives Claude Code\naccess to your entire Google Workspace.\n\nInstall it today. You'll wonder\nhow you coded without it."
+    },
+    {
+      "type": "image",
+      "heading": "One <accent>Disclaimer</accent>",
+      "caption": "This is NOT an officially supported Google enterprise product. It's an open-source CLI still in active development (pre-v1.0). Expect some rough edges. But it will only get better from here.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/gws-screenshots/07-github-readme.png"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#GWSCLI #ClaudeCode #GoogleWorkspace #GenAI #AITools"
+    }
+  ]
+}

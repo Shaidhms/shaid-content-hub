@@ -1,0 +1,120 @@
+{
+  "title": "Claude Code Skills",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code",
+      "heading_accent": "skills."
+    },
+    {
+      "type": "intro",
+      "text": "Stop repeating yourself. Teach Claude your workflow <accent>once.</accent> It remembers <accent>forever.</accent>"
+    },
+    {
+      "type": "content",
+      "heading": "The <accent>Problem</accent> Every Dev Has",
+      "body": "- Every new Claude session starts from zero\n- \"Follow our team's coding conventions\"\n- \"Use TypeScript strict mode\"\n- \"Run tests before committing\"\n- \"Format the PR description like this\"\n\nYou paste the same context. Again and again.\nSkills are the permanent fix."
+    },
+    {
+      "type": "visual",
+      "heading": "What Is a <accent>Skill?</accent>",
+      "body": "- A SKILL.md file with instructions\n- Slash command to invoke it\n- Bundle scripts, templates & examples\n- Claude loads it automatically",
+      "terminal": [
+        {"class": "comment", "text": "# .claude/skills/code-reviewer/SKILL.md"},
+        {"class": "output", "text": ""},
+        {"class": "cmd", "text": "---"},
+        {"class": "cmd", "text": "name: code-reviewer"},
+        {"class": "cmd", "text": "description: Review code for conventions"},
+        {"class": "cmd", "text": "user-invocable: true"},
+        {"class": "cmd", "text": "---"},
+        {"class": "output", "text": ""},
+        {"class": "output", "text": "# Code Reviewer"},
+        {"class": "output", "text": "- Check for TypeScript strict mode"},
+        {"class": "output", "text": "- Flag any `any` types"},
+        {"class": "success", "text": "- Verify test coverage > 80%"}
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "Where Do <accent>Files</accent> Go?",
+      "before": [
+        "Option A: Self-Contained",
+        ".claude/skills/infographic/",
+        "  SKILL.md",
+        "  scripts/generate-image.js",
+        "  references/style-guide.md"
+      ],
+      "after": [
+        "Option B: Stored Elsewhere",
+        "my-project/",
+        "  .claude/skills/infographic/SKILL.md",
+        "  scripts/infographic/generate.js",
+        "  references/style-guide.md"
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "How a Skill <accent>Executes</accent>",
+      "diagram_type": "flow",
+      "elements": ["You type /code-reviewer", "Claude loads SKILL.md", "Analyzes staged changes", "Checks conventions", "Returns structured review"]
+    },
+    {
+      "type": "before_after",
+      "heading": "Skill <accent>Creator</accent> in Action",
+      "before": [
+        "False Triggers",
+        "Missed Fires",
+        "Wrong skill loads",
+        "Too broad or narrow"
+      ],
+      "after": [
+        "5 of 6 improved",
+        "Precise triggers",
+        "Zero false fires",
+        "Optimized descriptions"
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "Where Skills <accent>Live</accent>",
+      "body": "- ~/.claude/skills/ (Personal)\n  Follows you across all projects\n  Your coding style & preferences\n\n- .claude/skills/ (Project)\n  Committed to git with your repo\n  Shared with your entire team\n\nUse both. Personal for you, project for your team."
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Build Your First Skill in <accent>5</accent> Min",
+      "items": [
+        "Create .claude/skills/my-skill/ folder",
+        "Add a SKILL.md with YAML frontmatter",
+        "Write step-by-step instructions in markdown",
+        "Drop in example outputs or helper scripts",
+        "Type /my-skill and watch it execute"
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "What You Can <accent>Automate</accent>",
+      "body": "- Code reviews with your team's standards\n- PR descriptions from git diff\n- Blog posts in your exact writing voice\n- Database migrations with safety checks\n- Security audits against OWASP rules\n- Test generation for your specific stack\n- Document generation (PDF, DOCX, PPTX)\n\nAnything you repeat becomes a skill."
+    },
+    {
+      "type": "quote",
+      "text": "The developers who win with AI won't be the ones who prompt better. They'll be the ones who build systems around AI."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #GenAI #DeveloperProductivity"
+    }
+  ]
+}

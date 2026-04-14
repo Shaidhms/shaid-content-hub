@@ -1,0 +1,38 @@
+Your AI agent is writing code right now.
+But you have no idea what it's doing.
+
+
+
+
+
+
+A blinking cursor. Scrolling text. Maybe some logs.
+Zero visual feedback.
+
+
+Then I found a VS Code extension called Pixel Agents.
+It turns your AI coding agents into animated pixel art characters
+sitting in a virtual office.
+
+Your agent writes code, the character types at a desk.
+Your agent searches files, the character reads documents.
+Your agent goes idle, the character walks to the break room.
+
+It does nothing productive.
+But developers can't stop watching it.
+
+As AI agents become teammates and not just tools,
+we need better ways to see what they're doing.
+
+I broke it all down in the PDF attached to this post.
+Give it a read.
+
+#AIAgents #DevTools #ClaudeCode
+
+---
+IMAGE PROMPT:
+A wide 16:9 illustration in a soft, modern flat style with a light blue-gray background (#F5F5FA). The scene shows a pixel art virtual office viewed from an isometric angle, with tiny animated characters sitting at desks and walking between rooms. In the foreground bottom-right, Shaid's photo is blended into the illustration in a natural way - his face 100% photorealistic while his body and surroundings transition into the pixel art style, as if he's looking into the office scene. A bold white text overlay reads the quote in a clean sans-serif font. Soft blue (#2563EB) accent elements frame the composition. The overall mood is playful, techy, and approachable.
+
+QUOTE FOR IMAGE:
+"What if you could actually watch your AI agents work?"
+---

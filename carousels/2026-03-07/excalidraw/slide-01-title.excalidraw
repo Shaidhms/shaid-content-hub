@@ -1,0 +1,135 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "14cf90c4",
+      "type": "ellipse",
+      "x": 80.0,
+      "y": 80,
+      "width": 380,
+      "height": 380,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffe0cc",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "05e69f7a",
+      "type": "text",
+      "x": 70.0,
+      "y": 175.0,
+      "width": 400,
+      "height": 50.4,
+      "text": "Claude Code Now Runs\nWhile You Sleep",
+      "fontSize": 36,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "24dac361",
+      "type": "line",
+      "x": 230.0,
+      "y": 255.0,
+      "width": 80.0,
+      "height": 0.0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          80.0,
+          0.0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "8220c378",
+      "type": "text",
+      "x": 70.0,
+      "y": 275.0,
+      "width": 400,
+      "height": 28.0,
+      "text": "Scheduled Tasks just dropped. Your\nAI agent is now a 24/7 employee.\nHere's everything you need to know.",
+      "fontSize": 20,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "f46c4d35",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "01/10",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "2bb53860",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "8ce45c8f",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "adbcffd2",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

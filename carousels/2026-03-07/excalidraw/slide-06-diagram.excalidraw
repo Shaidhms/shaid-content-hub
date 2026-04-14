@@ -1,0 +1,435 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "23fa7d3b",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 415.8,
+      "height": 39.199999999999996,
+      "text": "How It Works Under the Hood",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "c97a7616",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 350,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          350,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "42fa97c1",
+      "type": "rectangle",
+      "x": 120.0,
+      "y": 90,
+      "width": 300,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "5759777f",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "5759777f",
+      "type": "text",
+      "x": 130.0,
+      "y": 102.4,
+      "width": 280,
+      "height": 25.2,
+      "text": "You give a prompt",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "42fa97c1",
+      "strokeColor": "#ffffff"
+    },
+    {
+      "id": "edf49261",
+      "type": "arrow",
+      "x": 270.0,
+      "y": 140,
+      "width": 0.0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0,
+          40
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "7725b87b",
+      "type": "rectangle",
+      "x": 120.0,
+      "y": 190,
+      "width": 300,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffffff",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "baf1b6da",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "baf1b6da",
+      "type": "text",
+      "x": 130.0,
+      "y": 202.4,
+      "width": 280,
+      "height": 25.2,
+      "text": "cron create",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "7725b87b",
+      "strokeColor": "#2D2D2D"
+    },
+    {
+      "id": "85bfabe0",
+      "type": "arrow",
+      "x": 270.0,
+      "y": 240,
+      "width": 0.0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0,
+          40
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "9c0ccd8d",
+      "type": "rectangle",
+      "x": 120.0,
+      "y": 290,
+      "width": 300,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "8ea554f2",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "8ea554f2",
+      "type": "text",
+      "x": 130.0,
+      "y": 302.4,
+      "width": 280,
+      "height": 25.2,
+      "text": "Cron fires at interval",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "9c0ccd8d",
+      "strokeColor": "#ffffff"
+    },
+    {
+      "id": "5e5c7089",
+      "type": "arrow",
+      "x": 270.0,
+      "y": 340,
+      "width": 0.0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0,
+          40
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "5cc44f01",
+      "type": "rectangle",
+      "x": 120.0,
+      "y": 390,
+      "width": 300,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffffff",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "85ceff9c",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "85ceff9c",
+      "type": "text",
+      "x": 130.0,
+      "y": 402.4,
+      "width": 280,
+      "height": 25.2,
+      "text": "Claude executes task",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "5cc44f01",
+      "strokeColor": "#2D2D2D"
+    },
+    {
+      "id": "70934b7b",
+      "type": "arrow",
+      "x": 270.0,
+      "y": 440,
+      "width": 0.0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0,
+          40
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "6da38574",
+      "type": "rectangle",
+      "x": 120.0,
+      "y": 490,
+      "width": 300,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "5f9070ff",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "5f9070ff",
+      "type": "text",
+      "x": 130.0,
+      "y": 502.4,
+      "width": 280,
+      "height": 25.2,
+      "text": "cron list (check)",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "6da38574",
+      "strokeColor": "#ffffff"
+    },
+    {
+      "id": "54295cd2",
+      "type": "arrow",
+      "x": 270.0,
+      "y": 540,
+      "width": 0.0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0,
+          40
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 2,
+      "roughness": 1
+    },
+    {
+      "id": "3340514b",
+      "type": "rectangle",
+      "x": 120.0,
+      "y": 590,
+      "width": 300,
+      "height": 50,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#ffffff",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "f8806dbe",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "f8806dbe",
+      "type": "text",
+      "x": 130.0,
+      "y": 602.4,
+      "width": 280,
+      "height": 25.2,
+      "text": "cron delete (cancel)",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "3340514b",
+      "strokeColor": "#2D2D2D"
+    },
+    {
+      "id": "caa170e9",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "06/10",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "c3d6d420",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "7053877d",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "4eef67c1",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

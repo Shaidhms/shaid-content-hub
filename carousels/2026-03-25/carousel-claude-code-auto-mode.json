@@ -1,0 +1,97 @@
+{
+  "title": "Claude Code Auto Mode",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Stop Using",
+      "heading_accent": "Bypass Permissions."
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>Announcement</accent>",
+      "caption": "Claude Code just released Auto Mode -- a smarter way to handle permissions",
+      "image": "/tmp/yt-screenshots/crop_tweet_v2.jpg"
+    },
+    {
+      "type": "before_after",
+      "heading": "The <accent>Problem</accent>",
+      "before": ["Ask Before Edits = stops every few seconds", "You can't walk away from long tasks", "Every bash command needs approval"],
+      "after": ["Bypass Permissions = no safety net", "Claude can delete files, run anything", "Called 'dangerously skip' for a reason"]
+    },
+    {
+      "type": "image",
+      "heading": "What <accent>Ask Mode</accent> Looks Like",
+      "caption": "Every edit, every bash command -- Claude stops and waits for your approval",
+      "image": "/tmp/yt-screenshots/crop_bypass.jpg"
+    },
+    {
+      "type": "content",
+      "heading": "Enter <accent>Auto Mode</accent>",
+      "body": "- A classifier checks each action before executing\n- Safe actions run automatically\n- Risky actions get flagged and blocked\n- Claude tries a different approach if blocked\n- Ideal for long-running tasks"
+    },
+    {
+      "type": "image",
+      "heading": "Auto Mode <accent>In Action</accent>",
+      "caption": "Notice 'Auto mode' in the bottom bar -- Claude handles permissions intelligently",
+      "image": "/tmp/yt-screenshots/crop_testing.jpg"
+    },
+    {
+      "type": "diagram",
+      "heading": "How The <accent>Classifier</accent> Works",
+      "diagram_type": "flow",
+      "elements": ["Tool Call Made", "Classifier Reviews", "Safe? Execute", "Risky? Block + Retry"]
+    },
+    {
+      "type": "image",
+      "heading": "Risky Actions Get <accent>Flagged</accent>",
+      "caption": "Tried to delete files -- Auto Mode caught it and asked for confirmation",
+      "image": "/tmp/yt-screenshots/crop_risky.jpg"
+    },
+    {
+      "type": "visual",
+      "heading": "How to <accent>Enable</accent> It",
+      "body": "- Available for Claude Team plans now\n- Enterprise + API coming soon\n- Works in terminal and VS Code\n- Toggle via Shift+Tab in CLI",
+      "terminal": [
+        {"class": "prompt", "text": "$ claude --enable-auto-mode"},
+        {"class": "cmd", "text": ""},
+        {"class": "success", "text": "✓ Auto permissions mode enabled."},
+        {"class": "cmd", "text": "  Claude will make changes without asking."},
+        {"class": "cmd", "text": "  Review commits before pushing."}
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "<accent>Official</accent> Announcement",
+      "caption": "Anthropic's blog -- Auto mode sits between 'ask everything' and 'skip everything'",
+      "image": "/tmp/yt-screenshots/crop_howworks.jpg"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Key <accent>Takeaways</accent>",
+      "items": [
+        "Auto Mode = smart middle ground for permissions",
+        "Classifier checks every tool call for risk",
+        "Safe actions run, risky ones get blocked",
+        "Sessions cost slightly more (AI reviews each action)",
+        "Best for long-running tasks you want to walk away from"
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": ".claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #AutoMode #AI #GenAI #Anthropic"
+    }
+  ]
+}

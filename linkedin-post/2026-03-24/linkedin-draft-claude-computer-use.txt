@@ -1,0 +1,56 @@
+Claude can now control your computer. Your actual desktop.
+
+
+
+
+
+Anthropic shipped Computer Use for Claude Code.
+It moves your mouse, clicks buttons, types into apps.
+Takes screenshots to figure out what's on screen.
+
+Not a browser extension. Not a workaround.
+Native desktop control, built into Claude.
+
+I've been building with Claude Code for months.
+This one caught me off guard.
+
+I was away from my desk. Someone needed a file urgently.
+I texted Claude from my phone.
+It woke my Mac, opened Finder, found the PDF, opened the chat app, and sent it.
+
+I didn't touch my computer once.
+
+When you're a solo builder, half your day is "I'll do it when I'm back at my laptop."
+I'm not sure that excuse works anymore.
+
+It basically screenshots your screen, figures out what's where, clicks and types for you. Asks before doing anything sensitive, which I appreciate.
+
+Where I see this being useful:
+
+. Sending files through Slack, Telegram, or any messaging app
+. Running calculations and saving to Notes or Sheets
+. Automating legacy apps that have no API
+. Scheduling recurring desktop tasks
+
+It's rough around the edges still.
+
+Research preview. Mac only, Windows coming.
+Can't click inside browsers (security restriction).
+Pro and Max plans only.
+
+But the pace is wild. Anthropic shipped Dispatch, Scheduled Tasks, and Computer Use in the same week. Combine scheduled tasks with computer use and you basically have an assistant that works while you sleep.
+
+I've attached a breakdown with setup instructions and use cases if you want the details.
+
+One person with the right tools can now do what used to take a small team.
+We're watching that happen in real time.
+
+#ClaudeCode #ComputerUse #Anthropic #AI #GenerativeAI #AIAutomation #DeveloperTools #GenAI #BuildInPublic #TechLeadership #SoloFounder #CodingWithAI
+
+---
+IMAGE PROMPT:
+Create a cinematic, dark-themed illustration (16:9 aspect ratio) showing a laptop screen with a glowing Claude AI interface actively controlling desktop applications. Ghostly translucent hands made of light emerge from the screen, clicking and typing across multiple open windows (Finder, Slack, a code editor). In the foreground, Shaid is casually standing to the side looking at his phone, relaxed and confident, while the AI handles the desktop behind him. His face must be 100% photorealistic while his body and surroundings blend into a sleek illustrative style. Color palette: deep navy (#191923) background, warm coral (#d4826a) accents on the AI light trails, soft cream (#ede8df) text. The quote text should appear in a clean sans-serif font at the bottom.
+
+QUOTE FOR IMAGE:
+"One person with the right tools can now do what used to take a small team."
+---

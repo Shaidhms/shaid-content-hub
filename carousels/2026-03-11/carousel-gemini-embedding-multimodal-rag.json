@@ -1,0 +1,98 @@
+{
+  "title": "Gemini Embedding 2 - Multimodal RAG",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Multimodal RAG with",
+      "heading_accent": "Gemini Embedding 2."
+    },
+    {
+      "type": "image",
+      "heading": "Meet <accent>Gemini Embedding 2</accent>",
+      "caption": "Google's first natively multimodal embedding model. Released March 10, 2026.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-11/images/gemini-embedding-hero.png"
+    },
+    {
+      "type": "intro",
+      "text": "Google just dropped <accent>Gemini Embedding 2</accent> -- the first embedding model that maps text, images, video, audio, and documents into a <accent>single unified space</accent>.\n\nNo more separate pipelines.\nNo more converting everything to text.\n\nOne model. Five modalities. One vector space."
+    },
+    {
+      "type": "before_after",
+      "heading": "RAG Pipelines: <accent>Before vs After</accent>",
+      "before": ["Separate embeddings for text & images", "Convert PDFs to text first", "Audio needs transcription step", "Multiple indexes to maintain", "Cross-modal search = hacky workarounds"],
+      "after": ["One model handles all 5 modalities", "PDFs embedded natively (visual + text)", "Audio embedded directly, no transcription", "Single unified vector index", "Cross-modal search just works"]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "5 Modalities, <accent>One Space</accent>",
+      "items": ["Text -- up to 8,192 tokens, 100+ languages", "Images -- up to 6 per request (PNG, JPEG)", "Video -- up to 120 seconds (MP4, MOV)", "Audio -- native ingestion, no transcription needed", "Documents -- PDFs up to 6 pages, visual + text"]
+    },
+    {
+      "type": "visual",
+      "heading": "Build It in <accent>5 Lines</accent>",
+      "body": "Embed text, images, and audio\nin a single API call.\n\nNo preprocessing.\nNo separate models.\nJust pass it in.",
+      "terminal": [
+        {"class": "comment", "text": "# Embed text + image + audio together"},
+        {"class": "cmd", "text": "from google import genai"},
+        {"class": "cmd", "text": "from google.genai import types"},
+        {"class": "prompt", "text": ""},
+        {"class": "cmd", "text": "client = genai.Client()"},
+        {"class": "cmd", "text": "result = client.models.embed_content("},
+        {"class": "cmd", "text": "  model=\"gemini-embedding-2-preview\","},
+        {"class": "cmd", "text": "  contents=["},
+        {"class": "success", "text": "    \"What is multimodal RAG?\","},
+        {"class": "success", "text": "    types.Part.from_bytes(image, \"image/png\"),"},
+        {"class": "success", "text": "    types.Part.from_bytes(audio, \"audio/mpeg\"),"},
+        {"class": "cmd", "text": "  ]"},
+        {"class": "cmd", "text": ")"}
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "Multimodal <accent>RAG Flow</accent>",
+      "diagram_type": "flow",
+      "elements": ["Ingest: Text + Images + Audio + Video + PDFs", "Embed: Gemini Embedding 2 (unified space)", "Store: Vector DB (Chroma / Weaviate / Qdrant)", "Query: User asks question (any modality)", "Retrieve: Top-k nearest neighbors", "Generate: Gemini Pro answers with context"]
+    },
+    {
+      "type": "content",
+      "heading": "Why <accent>Matryoshka</accent> Matters",
+      "body": "- Default output: 3,072 dimensions\n- Scale down to 1,536 or 768 dynamically\n- Smaller = faster search, lower storage cost\n- Larger = higher accuracy\n- Same model, flexible tradeoff\n- No retraining needed"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "8 Built-in <accent>Task Types</accent>",
+      "items": ["RETRIEVAL_QUERY -- search queries for RAG", "RETRIEVAL_DOCUMENT -- index docs for retrieval", "SEMANTIC_SIMILARITY -- recommendations, dedup", "CLASSIFICATION -- sentiment, spam detection", "CLUSTERING -- organize docs, anomaly detection", "QUESTION_ANSWERING -- chatbots, QA systems", "CODE_RETRIEVAL_QUERY -- find code blocks", "FACT_VERIFICATION -- automated fact-checking"]
+    },
+    {
+      "type": "content",
+      "heading": "Plug Into Your <accent>Stack</accent>",
+      "body": "- LangChain + LlamaIndex\n- Haystack\n- Weaviate, Qdrant, ChromaDB\n- Google Vector Search\n- BigQuery, Pinecone\n- Vertex AI RAG Engine\n\nModel ID: gemini-embedding-2-preview\nAvailable via Gemini API + Vertex AI"
+    },
+    {
+      "type": "quote",
+      "text": "The best RAG pipelines don't convert everything to text first. They understand each modality natively."
+    },
+    {
+      "type": "content",
+      "heading": "Key <accent>Takeaway</accent>",
+      "body": "- One embedding model for ALL modalities\n- Interleaved input (image + text in one call)\n- Matryoshka dimensions (3072 / 1536 / 768)\n- 8 task types for optimized retrieval\n- Drop-in replacement for text-only embeddings\n- RAG just got multimodal. For real."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#GeminiAPI #MultimodalRAG #GenAI #Embeddings #AI"
+    }
+  ]
+}

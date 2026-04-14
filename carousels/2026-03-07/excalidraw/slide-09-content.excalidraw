@@ -1,0 +1,191 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "9c77bb5e",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 354.20000000000005,
+      "height": 39.199999999999996,
+      "text": "Ideas to Automate Today",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "ef4036df",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 350,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          350,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "7c387e6a",
+      "type": "ellipse",
+      "x": 390,
+      "y": 60,
+      "width": 10,
+      "height": 10,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "12222957",
+      "type": "text",
+      "x": 40,
+      "y": 90,
+      "width": 247.50000000000003,
+      "height": 25.2,
+      "text": "Daily standup prep at 6am",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "91f3c9af",
+      "type": "text",
+      "x": 40,
+      "y": 141,
+      "width": 277.20000000000005,
+      "height": 25.2,
+      "text": "Weekly code review summaries",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "caaa7fc3",
+      "type": "text",
+      "x": 40,
+      "y": 192,
+      "width": 247.50000000000003,
+      "height": 25.2,
+      "text": "Auto-triage GitHub issues",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "d6592e7d",
+      "type": "text",
+      "x": 40,
+      "y": 243,
+      "width": 277.20000000000005,
+      "height": 25.2,
+      "text": "Morning news/research briefs",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "56ad8287",
+      "type": "text",
+      "x": 40,
+      "y": 294,
+      "width": 316.8,
+      "height": 25.2,
+      "text": "Project health checks every hour",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "685337dd",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "09/10",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "25bca94a",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "f2a6d0b8",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "cfa407a1",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

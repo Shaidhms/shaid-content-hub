@@ -1,0 +1,313 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "abd718e8",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 477.40000000000003,
+      "height": 39.199999999999996,
+      "text": "Build Your First Skill in 5 Min",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "e2e3f408",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 350,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          350,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "4347e92a",
+      "type": "ellipse",
+      "x": 40,
+      "y": 90,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "c9608922",
+      "type": "text",
+      "x": 48,
+      "y": 94,
+      "width": 20,
+      "height": 25.2,
+      "text": "1",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "abefbf72",
+      "type": "text",
+      "x": 90,
+      "y": 95,
+      "width": 334.40000000000003,
+      "height": 22.4,
+      "text": "Create .claude/skills/my-skill/\nfolder",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "b0c510d2",
+      "type": "ellipse",
+      "x": 40,
+      "y": 146,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "a65209c4",
+      "type": "text",
+      "x": 48,
+      "y": 150,
+      "width": 20,
+      "height": 25.2,
+      "text": "2",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "b8731dd0",
+      "type": "text",
+      "x": 90,
+      "y": 151,
+      "width": 316.8,
+      "height": 22.4,
+      "text": "Add a SKILL.md with YAML\nfrontmatter",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "3b4dbc94",
+      "type": "ellipse",
+      "x": 40,
+      "y": 202,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "15e24914",
+      "type": "text",
+      "x": 48,
+      "y": 206,
+      "width": 20,
+      "height": 25.2,
+      "text": "3",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "54f41786",
+      "type": "text",
+      "x": 90,
+      "y": 207,
+      "width": 378.40000000000003,
+      "height": 22.4,
+      "text": "Write step-by-step instructions in\nmarkdown",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "a71ce80d",
+      "type": "ellipse",
+      "x": 40,
+      "y": 258,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "aba21392",
+      "type": "text",
+      "x": 48,
+      "y": 262,
+      "width": 20,
+      "height": 25.2,
+      "text": "4",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "f3211ddc",
+      "type": "text",
+      "x": 90,
+      "y": 263,
+      "width": 360.8,
+      "height": 22.4,
+      "text": "Drop in example outputs or helper\nscripts",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "e68ba98e",
+      "type": "ellipse",
+      "x": 40,
+      "y": 314,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "58c127b5",
+      "type": "text",
+      "x": 48,
+      "y": 318,
+      "width": 20,
+      "height": 25.2,
+      "text": "5",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "00a5075e",
+      "type": "text",
+      "x": 90,
+      "y": 319,
+      "width": 308.0,
+      "height": 22.4,
+      "text": "Type /my-skill and watch it execute",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "3c02d0ba",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "09/12",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "f5f87e3a",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "0c9d4a26",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "117b649d",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

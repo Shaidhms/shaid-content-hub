@@ -1,0 +1,130 @@
+{
+  "title": "AI Coding Tools Compared",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "I Tried Every AI",
+      "heading_accent": "Coding Tool."
+    },
+    {
+      "type": "intro",
+      "text": "Claude Code. Cursor. Copilot. Windsurf. Aider. Cline.\n\nI've used them all. Some for months. Some I dropped in <accent>days</accent>.\n\nHere's an honest breakdown of what actually works and which one I <accent>ship code</accent> with."
+    },
+    {
+      "type": "image",
+      "heading": "204 Tools. <accent>One Landscape.</accent>",
+      "caption": "ToolShelf tracks 204 AI coding tools in 2026. The terminal is the new IDE.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/reference_screenshots/cropped-ai-coding-landscape.png"
+    },
+    {
+      "type": "before_after",
+      "heading": "The Old Way vs <accent>Agentic</accent> Coding",
+      "before": ["Tab-complete one line at a time", "Copy-paste from ChatGPT", "Context lost every prompt", "You do the grunt work"],
+      "after": ["AI reads your whole codebase", "Edits multiple files at once", "Runs tests, commits, deploys", "You think. AI executes."]
+    },
+    {
+      "type": "visual",
+      "heading": "Claude <accent>Code</accent>",
+      "body": "- 46% developer satisfaction (highest)\n- Terminal-native agentic coding\n- Skills, Hooks, MCP integrations\n- 5.5x more token-efficient than Cursor\n- $20/mo Pro | $100/mo Max",
+      "terminal": [
+        {"class": "prompt", "text": "$ claude"},
+        {"class": "cmd", "text": "> Fix the auth bug in login.ts"},
+        {"class": "success", "text": "Reading src/auth/login.ts..."},
+        {"class": "success", "text": "Found issue: token expiry not checked"},
+        {"class": "success", "text": "Editing login.ts... Running tests..."},
+        {"class": "success", "text": "All 12 tests passing. Ready to commit."}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "<accent>Cursor</accent> IDE",
+      "body": "- 19% satisfaction, AI-first VS Code fork\n- Composer + Agent + Background agents\n- Visual Editor for drag-and-drop UI\n- Credit-based billing (watch burn rate)\n- $20/mo Pro | $40/mo Business",
+      "terminal": [
+        {"class": "prompt", "text": "Cursor Composer"},
+        {"class": "cmd", "text": "> Add dark mode to the settings page"},
+        {"class": "success", "text": "Editing 3 files..."},
+        {"class": "success", "text": "settings.tsx, theme.ts, globals.css"},
+        {"class": "cmd", "text": "Apply All  |  Reject"}
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "Claude Code vs Cursor: <accent>Clear Winner?</accent>",
+      "caption": "Builder.io's deep dive comparison. Claude Code uses 5.5x fewer tokens for identical tasks.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/reference_screenshots/cropped-cursor-vs-claude-code-scrolled.png"
+    },
+    {
+      "type": "visual",
+      "heading": "GitHub <accent>Copilot</accent>",
+      "body": "- 42% market share, 20M+ users\n- Multi-model: Claude, GPT, Gemini\n- Coding Agent auto-solves GitHub issues\n- Deepest GitHub integration\n- $10/mo Pro | $39/mo Pro+",
+      "terminal": [
+        {"class": "prompt", "text": "Copilot Coding Agent"},
+        {"class": "cmd", "text": "> Assign issue #234 to Copilot"},
+        {"class": "success", "text": "Planning fix... Creating branch..."},
+        {"class": "success", "text": "Implemented changes in 2 files"},
+        {"class": "success", "text": "PR #235 created. Ready for review."}
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>Stats</accent> Don't Lie",
+      "caption": "85% of devs use AI coding tools. Copilot leads market share. But satisfaction tells a different story.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-10/reference_screenshots/cropped-copilot-market-share.png"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "The <accent>Other</accent> 3 Worth Knowing",
+      "items": ["Windsurf ($15/mo) - Cheapest AI IDE, ranked #1 by LogRocket, acquired by Cognition AI", "Aider (Free + API) - Open source, works with ANY model, best Git integration", "Cline (Free + API) - VS Code extension, plan-then-act mode, MCP support, 5M+ devs"]
+    },
+    {
+      "type": "before_after",
+      "heading": "Terminal vs <accent>IDE</accent> Tools",
+      "before": ["Claude Code: Full autonomy, best context", "Aider: Any model, Git-native, free", "Cline: VS Code, transparent, open source"],
+      "after": ["Cursor: Best visual editing experience", "Copilot: Largest ecosystem, multi-model", "Windsurf: Cheapest, live previews"]
+    },
+    {
+      "type": "table",
+      "heading": "Pricing <accent>Cheat Sheet</accent>",
+      "headers": ["Tool", "Pro", "Max / Teams"],
+      "rows": [
+        ["Claude Code", "$20/mo", "$100/mo Max"],
+        ["Cursor", "$20/mo", "$40/mo Teams"],
+        ["Copilot", "$10/mo", "$39/mo Pro+"],
+        ["Windsurf", "$15/mo", "$30/mo Teams"],
+        ["Aider", "Free", "Bring your API key"],
+        ["Cline", "Free", "Bring your API key"]
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Pick Your <accent>Tool</accent>",
+      "items": ["Full autonomy + terminal? Claude Code", "Best visual IDE experience? Cursor", "Cheapest paid IDE? Windsurf", "Free + open source? Aider or Cline", "Best autocomplete + GitHub? Copilot"]
+    },
+    {
+      "type": "quote",
+      "text": "I use Claude Code to ship.\nCursor when I need to see the code.\nCopilot for autocomplete.\n\nThe best setup isn't one tool.\nIt's knowing when to use which."
+    },
+    {
+      "type": "content",
+      "heading": "My <accent>Stack</accent> in 2026",
+      "body": "Primary: Claude Code (90% of my work)\nSecondary: Cursor for visual editing\nAutocomplete: Copilot for quick completions\n\nClaude Code changed how I build.\nI think in outcomes, not lines of code."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#AICodingTools #ClaudeCode #Cursor #GitHubCopilot #GenAI"
+    }
+  ]
+}

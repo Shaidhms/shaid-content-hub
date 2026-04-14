@@ -1,0 +1,52 @@
+Skill doesn't pay the bills. Output does.
+
+
+
+I spent 15 years in performance engineering.
+I've worked in Belgium, Netherlands, led teams at big consulting firms.
+On paper, I looked like someone who had it figured out.
+
+Then I got into Gen AI around September last year.
+
+I did what I always do. Learn first, build later.
+Watched tutorials. Read papers. Took notes nobody would ever read.
+I could explain RAG pipelines, vector databases, embedding models.
+At parties. To people who didn't ask.
+
+Six months of that.
+
+You know what I had to show for it? A very organized Notion page.
+
+Meanwhile I kept seeing people online shipping actual things.
+Ugly apps. Broken demos. Stuff that made me think "I could do better than that."
+
+But they were out there. And I was still "preparing."
+
+Here's the thing nobody tells you about preparing:
+It feels exactly like progress. Same dopamine hit.
+Except at the end, you have notes. They have users.
+
+What finally broke the cycle for me was embarrassment, honestly.
+I pushed out a rough project. Messy code. UI that looked like it was built in 2012.
+Posted it anyway.
+
+Got more response in two weeks than six months of learning ever gave me.
+
+Some things I keep telling myself now:
+
+. Nobody cares about your Notion page. Ship something.
+. "Getting ready" is just procrastination with better lighting.
+. One ugly app that exists beats ten perfect apps in your head.
+. People hire track records. Not potential.
+
+I still catch myself slipping back into tutorial mode sometimes.
+Old habits. But now I notice it faster.
+
+If you're sitting on skills and wondering why nothing's moving,
+this might be the reason.
+
+"If you don't produce, you won't thrive, no matter how skilled or talented you are."
+
+That line hit me. Maybe it'll hit you too.
+
+#Productivity #BuildInPublic #CareerGrowth #AI #SoftwareEngineering #TechCareers #GrowthMindset #DeveloperLife

@@ -1,0 +1,134 @@
+{
+  "title": "Claude Code Dispatch: 10x Your Context Window",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code",
+      "heading_accent": "Dispatch."
+    },
+    {
+      "type": "intro",
+      "text": "Your Claude Code session has a <accent>context window limit</accent>.\n\nEvery file read, every search, every tool call eats into it.\n\nWhat if you could <accent>10x your effective context</accent> by turning your session into a lightweight orchestrator?"
+    },
+    {
+      "type": "before_after",
+      "heading": "The <accent>Problem</accent>",
+      "before": [
+        "One session handles everything",
+        "Context fills up fast with sequential tasks",
+        "Session slows down as context grows",
+        "You restart and lose all progress"
+      ],
+      "after": [
+        "Main session stays lean (orchestrator only)",
+        "Each task gets a fresh context window",
+        "5 parallel workers = 5x throughput",
+        "Workers complete independently"
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Install in <accent>10 Seconds</accent>",
+      "body": "One command.\nGlobal or project-level.\nNo config needed.",
+      "terminal": [
+        {"class": "prompt", "text": "$ npx skills add bassimeledath/dispatch -g"},
+        {"class": "success", "text": ""},
+        {"class": "success", "text": "✓ Skill installed globally"},
+        {"class": "success", "text": "✓ Config auto-generated at ~/.dispatch/config.yaml"},
+        {"class": "success", "text": "✓ Available models detected: claude, gpt, gemini"},
+        {"class": "prompt", "text": ""},
+        {"class": "cmd", "text": "Ready to use: /dispatch [task]"}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Dispatch <accent>Your First Task</accent>",
+      "body": "Name the model.\nDescribe the task.\nThat's it.",
+      "terminal": [
+        {"class": "prompt", "text": "claude> /dispatch use opus to review this PR for edge cases"},
+        {"class": "success", "text": ""},
+        {"class": "success", "text": "✓ Created checklist plan"},
+        {"class": "success", "text": "✓ Spawning background worker [opus]..."},
+        {"class": "cmd", "text": "  → Worker running in fresh context"},
+        {"class": "cmd", "text": "  → Your session is free. Keep working."},
+        {"class": "prompt", "text": ""},
+        {"class": "prompt", "text": "claude> /dispatch use sonnet to write integration tests"},
+        {"class": "success", "text": "✓ Spawning background worker [sonnet]..."},
+        {"class": "cmd", "text": "  → 2 workers running in parallel"}
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "How <accent>Dispatch</accent> Works",
+      "diagram_type": "flow",
+      "elements": ["You describe task", "Dispatcher creates plan", "Worker spawns (fresh context)", "Worker executes checklist", "Questions? You answer inline", "Results delivered back"]
+    },
+    {
+      "type": "visual",
+      "heading": "Workers Can <accent>Ask Questions</accent>",
+      "body": "Workers don't fail silently.\nThey ask you for clarity.\nYou answer. They continue.\nNo context lost.",
+      "terminal": [
+        {"class": "cmd", "text": "── Worker [opus] has a question ──"},
+        {"class": "prompt", "text": ""},
+        {"class": "cmd", "text": "Q: Should I include auth edge cases"},
+        {"class": "cmd", "text": "   in the PR review, or just the"},
+        {"class": "cmd", "text": "   data validation layer?"},
+        {"class": "prompt", "text": ""},
+        {"class": "prompt", "text": "claude> Include both. Auth is critical."},
+        {"class": "success", "text": ""},
+        {"class": "success", "text": "✓ Answer relayed to worker [opus]"},
+        {"class": "success", "text": "✓ Worker resuming with full context..."}
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Why This Is <accent>Powerful</accent>",
+      "items": [
+        "10x effective context — each worker gets a fresh window",
+        "Non-blocking — your session stays free while workers run",
+        "Multi-model — mix Claude, GPT, Gemini per task",
+        "Interactive — workers ask questions, you answer, no restart",
+        "Zero config — auto-detects models on first run"
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Mix <accent>Models</accent> Per Task",
+      "body": "Use the right model\nfor the right job.\nAll from one session.",
+      "terminal": [
+        {"class": "prompt", "text": "claude> /dispatch use opus to architect the database schema"},
+        {"class": "success", "text": "✓ Worker [opus] spawned"},
+        {"class": "prompt", "text": ""},
+        {"class": "prompt", "text": "claude> /dispatch use sonnet to write unit tests"},
+        {"class": "success", "text": "✓ Worker [sonnet] spawned"},
+        {"class": "prompt", "text": ""},
+        {"class": "prompt", "text": "claude> /dispatch use gpt-5.3 to refactor config parser"},
+        {"class": "success", "text": "✓ Worker [gpt-5.3] spawned"},
+        {"class": "prompt", "text": ""},
+        {"class": "cmd", "text": "── 3 workers running in parallel ──"},
+        {"class": "cmd", "text": "── Session context: clean ──"}
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Stop filling one context window with everything.\nStart orchestrating many."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": ".claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #AI #Dispatch #GenAI #DevTools"
+    }
+  ]
+}

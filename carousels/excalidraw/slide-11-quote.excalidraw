@@ -1,0 +1,131 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "ef77e630",
+      "type": "rectangle",
+      "x": 30,
+      "y": 80,
+      "width": 480,
+      "height": 460,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#FFF8F0",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "be29c013",
+      "type": "text",
+      "x": 50,
+      "y": 90,
+      "width": 39.6,
+      "height": 100.8,
+      "text": "\u201c",
+      "fontSize": 72,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "ad854e62",
+      "type": "text",
+      "x": 90.0,
+      "y": 180,
+      "width": 360,
+      "height": 30.799999999999997,
+      "text": "The developers who win with AI\nwon't be the ones who prompt\nbetter. They'll be the ones\nwho build systems around AI.",
+      "fontSize": 22,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "7fdd9012",
+      "type": "text",
+      "x": 450,
+      "y": 460,
+      "width": 39.6,
+      "height": 100.8,
+      "text": "\u201d",
+      "fontSize": 72,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "ea149219",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "11/12",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "1af85eb8",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "ad27fb73",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "2b8f41ae",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

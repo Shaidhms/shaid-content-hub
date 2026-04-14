@@ -1,0 +1,96 @@
+{
+  "title": "Codex Just 10x'd Claude Code Projects",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "OpenAI Codex",
+      "heading_accent": "just 10x'd Claude Code."
+    },
+    {
+      "type": "intro",
+      "text": "OpenAI just released an <accent>official Codex plugin for Claude Code</accent>.\n\nIt's not a replacement. It's a power combo.\n\nHere's what it does, how to set it up, and why you should care."
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>Benchmarks</accent>",
+      "caption": "Claude Opus 4.6 vs GPT-5.4 — core coding benchmarks. GPT-5.4 leads in most, but Opus holds its own on HumanEval.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/benchmarks.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "Claude Code <accent>Pitfalls</accent>",
+      "caption": "Claude Code over-engineers, hits token limits fast, and drifts on long runs. Codex fills exactly these gaps.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/cc_pitfalls.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "Codex <accent>Weaknesses</accent>",
+      "caption": "Codex needs detailed prompts, produces flat output, and uses rigid naming. Claude Code handles this side perfectly.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/codex_weaknesses.jpg"
+    },
+    {
+      "type": "before_after",
+      "heading": "Why Use <accent>Both?</accent>",
+      "before": ["Claude: Creative, contextual, long-run architect", "Codex: Fast, parallel, background reviewer"],
+      "after": ["Claude plans & builds", "Codex audits & challenges", "Feed results back = better code"]
+    },
+    {
+      "type": "image",
+      "heading": "How to <accent>Set It Up</accent>",
+      "caption": "Install via /plugin marketplace. Supports /codex:rescue, /codex:review, /codex:adversarial-review and more.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/setup_commands.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>/codex:review</accent> Command",
+      "caption": "Run a Codex review on your current work or branch. Runs in the background — Claude keeps coding while Codex reviews.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/review_commands.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "Live Demo: <accent>Game Build</accent>",
+      "caption": "Claude Code builds a 2D roguelike dungeon crawler. Codex tab active in the sidebar. Both agents working in parallel.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/game_build.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "The Game <accent>Actually Runs</accent>",
+      "caption": "Fully playable roguelike with combat, inventory, minimap — built in minutes with Claude Code + Codex combo.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/game_running.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "Adversarial Review <accent>in Action</accent>",
+      "caption": "Codex adversarial review runs in the background. Claude checks /codex:status — review finds real game-breaking bugs.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-04-14/screenshots/adversarial_results.jpg"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "The <accent>Power Workflow</accent>",
+      "items": [
+        "Claude Code builds the feature",
+        "Run /codex:adversarial-review in background",
+        "Claude keeps working on the next task",
+        "Feed Codex findings back to Claude",
+        "Claude fixes the bugs Codex found"
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #OpenAI #Codex #GenAI #AITools"
+    }
+  ]
+}

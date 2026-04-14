@@ -1,0 +1,105 @@
+{
+  "title": "Gemini 3.1 Flash Live Changed Voice Agents Forever",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Gemini 3.1 Flash Live",
+      "heading_accent": "Just Changed Voice Agents."
+    },
+    {
+      "type": "intro",
+      "text": "Google just dropped their <accent>biggest voice model upgrade yet</accent>. It's no longer speech-to-text-to-speech. It's straight up <accent>speech-to-speech</accent>. Lower latency. More human. And you can try it for free."
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>Announcement</accent>",
+      "caption": "Google's official blog post - Mar 26, 2026",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-28/screenshots/02-benchmark-cropped.jpg"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "What Makes It <accent>Different</accent>",
+      "items": [
+        "Speech-to-speech (no text conversion in between)",
+        "19% better multi-step function calling vs Gemini 2.5",
+        "Works in noisy environments (traffic, restaurants)",
+        "Understands sarcasm, stress, and frustration",
+        "70+ languages with real-time translation"
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "Try It <accent>Free</accent> in Google AI Studio",
+      "caption": "Select Gemini 3.1 Flash Live Preview - no API key needed",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-28/screenshots/04-ai-studio-cropped.jpg"
+    },
+    {
+      "type": "content",
+      "heading": "What You Can Do <accent>Right Now</accent>",
+      "body": "- Talk, use Webcam, or Share Screen\n- Set custom System Instructions\n- Change voice, thinking level, media resolution\n- Enable Function Calling for tool use\n- Turn on Google Search grounding"
+    },
+    {
+      "type": "before_after",
+      "heading": "Old Voice Agents vs <accent>Gemini Live</accent>",
+      "before": [
+        "Speech to text to speech (slow)",
+        "Awkward interruptions",
+        "Fails in noisy environments",
+        "No emotional context"
+      ],
+      "after": [
+        "Direct speech-to-speech",
+        "Natural interruptions (stops instantly)",
+        "Works with background noise",
+        "Detects tone, sarcasm, stress"
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "<accent>Pricing:</accent> Free vs Paid",
+      "before": [
+        "FREE TIER",
+        "Cost: $0",
+        "Data: Used by Google",
+        "Rate limits: Lower",
+        "No context caching",
+        "No Batch API"
+      ],
+      "after": [
+        "PAID TIER (per 1M tokens)",
+        "Text: $0.75 in / $4.50 out",
+        "Audio: $0.005/min in / $0.018/min out",
+        "Enterprise-grade privacy",
+        "Context caching available",
+        "~14 cents per 10-min call"
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "The <accent>Mindset</accent> Shift",
+      "diagram_type": "cycle",
+      "elements": ["Be Genuinely Curious", "Use AI to Research & Learn", "Fact-Check Everything", "Build & Ship Fast"]
+    },
+    {
+      "type": "quote",
+      "text": "You don't need to understand everything. You need to understand enough to communicate what you want and make things safe."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#GeminiFlashLive #VoiceAgents #AI #GenAI #GoogleAI #BuildInPublic"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "title": "Claude Skills",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "branding": {
+    "name": "SHAAI",
+    "tagline": "Solutions",
+    "tagline_color": "#7dff5c"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude",
+      "heading_accent": "skills."
+    },
+    {
+      "type": "intro",
+      "text": "Claude <accent>skills</accent> are reusable capabilities for AI agents, easily installed with a single command. They bundle slash commands, agents, hooks, and <accent>MCP</accent> servers into shareable packages that work across <accent>Claude Code, Cowork & Claude AI.</accent>"
+    },
+    {
+      "type": "skill_card",
+      "skill_name": "context7",
+      "url": "github.com/upstash/context7",
+      "description": "Context7 is an MCP server skill that pulls version-specific documentation directly from source repos into Claude's context. Instead of relying on outdated training data, Claude gets live, accurate API docs for any library you're working with.",
+      "more_info": "https://github.com/upstash/context7",
+      "readme": {
+        "title": "Context7 MCP - Up-to-date Code Docs",
+        "badges": [
+          {"text": "context7.com", "color": "blue"},
+          {"text": "14.05k", "color": "green"},
+          {"text": "npm v2.1.3"},
+          {"text": "MIT"}
+        ],
+        "sections": [
+          {
+            "title": "Without Context7",
+            "items": [
+              "Code examples are outdated and based on year-old training data",
+              "Hallucinated APIs that don't even exist",
+              "Generic answers for old package versions"
+            ]
+          },
+          {
+            "title": "With Context7",
+            "text": "Live, accurate API docs for any library"
+          }
+        ]
+      }
+    },
+    {
+      "type": "skill_card",
+      "skill_name": "ralph-loop",
+      "url": "github.com/frankbria/ralph-claude-code",
+      "description": "Ralph Loop is an official Anthropic skill that turns Claude into a self-driving development agent. It implements a stop-hook pattern that enables long-running, multi-hour autonomous coding sessions by resetting Claude's context between tasks automatically.",
+      "more_info": "https://github.com/anthropics/claude-plugins-official",
+      "readme": {
+        "title": "Ralph for Claude Code",
+        "badges": [
+          {"text": "Test Suite: passing", "color": "green"},
+          {"text": "MIT"},
+          {"text": "v0.11.5", "color": "blue"},
+          {"text": "556 passing", "color": "green"}
+        ],
+        "sections": [
+          {
+            "text": "Autonomous AI development loop with intelligent exit detection"
+          },
+          {
+            "title": "What's Working Now",
+            "items": [
+              "Autonomous development loops with intelligent exit detection",
+              "Dual-condition exit gate: Requires BOTH completion indicators",
+              "Rate limiting with hourly reset (100 calls/hour)",
+              "Circuit breaker with advanced error detection",
+              "Session continuity with --resume flag"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "skill_card",
+      "skill_name": "frontend-design",
+      "url": "anthropics/claude-code/tree/main/plugins/frontend-design",
+      "description": "The most popular Claude skill with 96K+ installs. It transforms Claude's UI output from generic defaults into distinctive, production-grade interfaces with bold typography, unique color palettes, and creative layouts.",
+      "more_info": "https://claude.com/plugins",
+      "readme": {
+        "title": "Frontend Design Plugin",
+        "badges": [
+          {"text": "README"}
+        ],
+        "sections": [
+          {
+            "text": "Generates distinctive, production-grade frontend interfaces."
+          },
+          {
+            "title": "What It Does",
+            "items": [
+              "Bold aesthetic choices",
+              "Distinctive typography and color palettes",
+              "High-impact animations and visual details",
+              "Context-aware implementation"
+            ]
+          },
+          {
+            "title": "Usage",
+            "text": "\"Create a dashboard for a music streaming app\""
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!"
+    }
+  ]
+}

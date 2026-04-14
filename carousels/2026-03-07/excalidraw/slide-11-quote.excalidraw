@@ -1,0 +1,131 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "0d7b24a7",
+      "type": "rectangle",
+      "x": 30,
+      "y": 100,
+      "width": 480,
+      "height": 380,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#FFF8F0",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "id": "3be339ff",
+      "type": "text",
+      "x": 50,
+      "y": 110,
+      "width": 39.6,
+      "height": 100.8,
+      "text": "\u201c",
+      "fontSize": 72,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "48d6ac6d",
+      "type": "text",
+      "x": 90.0,
+      "y": 200,
+      "width": 360,
+      "height": 30.799999999999997,
+      "text": "AI that works without the\ninternet is not a feature.\nIt's the future.",
+      "fontSize": 22,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "a1338154",
+      "type": "text",
+      "x": 450,
+      "y": 400,
+      "width": 39.6,
+      "height": 100.8,
+      "text": "\u201d",
+      "fontSize": 72,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "d70b91d4",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "11/12",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "6baf24a1",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "a341b67d",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "934a8503",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

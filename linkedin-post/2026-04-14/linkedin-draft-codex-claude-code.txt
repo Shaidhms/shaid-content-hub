@@ -1,0 +1,64 @@
+I stopped using one AI for everything.
+Now I use two. The difference surprised me.
+
+
+
+
+Here's the actual workflow.
+
+
+
+
+Most people run Claude Code like a solo dev.
+One prompt. One model. Ship it.
+It works. But it tops out.
+
+Claude is genuinely good at building.
+Long context, complex architecture, multi-file sessions.
+It also over-engineers sometimes, runs out of tokens, and drifts on longer tasks.
+
+Which is fine. I just stopped pretending one tool covers all of it.
+
+What changed things for me: the OpenAI Codex plugin running inside Claude Code.
+Not a replacement. More like a second set of eyes on the same work.
+
+What it looks like in practice:
+
+Claude builds the feature.
+While it's still running, I kick off /codex:adversarial-review in the background.
+Codex looks at the same codebase from a different angle.
+When Claude wraps up, I feed those findings back in.
+Claude fixes what it missed.
+
+Both running at the same time. No waiting.
+
+The demo that made it click:
+Claude built a full 2D roguelike dungeon crawler from scratch.
+Codex did an adversarial review and found actual bugs.
+Save states silently resetting. Staircase logic that permanently locked the player.
+Claude would have shipped it. Codex caught it before that happened.
+
+That's not Claude failing. That's just what happens when a second reviewer looks at the same code.
+
+What you actually get from running both:
+
+• Claude handles the build, context, and long-run architecture
+• Codex runs a background adversarial pass on the same code
+• Feed the results back and Claude fixes the gaps it missed
+• No context switching, both run at the same time
+• More coverage, same amount of time
+
+Pick your model carefully. But build the workflow around it.
+That's where the real gap opens up.
+
+The full walkthrough is in the attachment — every step of the process, with visuals from the actual demo.
+
+#ClaudeCode #OpenAICodex #AITools #GenerativeAI #DeveloperTools #CodingWithAI #BuildInPublic #AIEngineering #SoftwareDevelopment #GenAI
+
+---
+IMAGE PROMPT:
+A split-screen illustrative scene showing two AI agents working in parallel on a futuristic dark-toned coding workspace. On the left side, a glowing Claude Code interface with flowing code and architectural diagrams being built. On the right side, a Codex-style agent running a review scan, with red markers highlighting code issues. In the center, a photorealistic portrait of Shaid (South Asian man, glasses, beard, wearing a suit with blue tie, blended naturally into the illustration) positioned as the architect overseeing both agents. The overall aesthetic is dark navy blue with coral/orange accent glows, resembling a high-tech war room. Illustrative style with painterly edges, not a plain photo. Aspect ratio 16:9. Bold sans-serif typography overlay.
+
+QUOTE FOR IMAGE:
+"Two agents. One codebase. Running in parallel."
+---

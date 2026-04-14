@@ -1,0 +1,109 @@
+{
+  "title": "Claude Code Scheduled Tasks",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "branding": {
+    "name": "SHAAI",
+    "tagline": "Solutions",
+    "tagline_color": "#7dff5c"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code",
+      "heading_accent": "scheduled tasks."
+    },
+    {
+      "type": "intro",
+      "text": "Your AI agent is now a <accent>24/7 employee.</accent> Native cron-like scheduling built into <accent>Claude Code Desktop.</accent> Schedule any skill or workflow to run hourly, daily, or weekly. No external scripts. No extra setup. <accent>Just prompts.</accent>"
+    },
+    {
+      "type": "visual",
+      "heading": "Two Ways to <accent>Set It Up</accent>",
+      "body": "- Desktop App > Schedule tab\n- Set name, prompt, schedule\n- Or type /schedule in session\n- Claude handles the rest",
+      "terminal": [
+        {"class": "prompt", "text": "$ claude"},
+        {"class": "cmd", "text": "> /schedule"},
+        {"class": "output", "text": ""},
+        {"class": "output", "text": "Creating scheduled task..."},
+        {"class": "output", "text": "Name: Morning Standup Prep"},
+        {"class": "output", "text": "Schedule: Daily at 6:00 AM"},
+        {"class": "output", "text": "Prompt: Review calendar, summarize tasks"},
+        {"class": "output", "text": ""},
+        {"class": "success", "text": "✓ Task scheduled successfully"}
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "Why This <accent>Changes</accent> Everything",
+      "before": [
+        "Scripts hit errors and stop dead",
+        "No context awareness at all",
+        "Can't fix itself automatically",
+        "You debug everything manually"
+      ],
+      "after": [
+        "Hits error, tries 3 different fixes",
+        "Reads your full project context",
+        "Self-healing agentic workflow",
+        "Uses all your MCP tools and skills"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Every morning at 6am, my 'Good Morning Shaid' skill runs. It checks my calendar, reviews my projects, and plans my day. All before I wake up."
+    },
+    {
+      "type": "diagram",
+      "heading": "The <accent>Self-Improving</accent> Loop",
+      "diagram_type": "cycle",
+      "elements": [
+        "Task Runs",
+        "Fix Own Code\nif Errors",
+        "Rewrite Prompt\nif Suboptimal",
+        "Update Status\nfor Next Run"
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "<accent>5</accent> Pro Tips",
+      "items": [
+        "Run manually first to catch permission issues",
+        "Add a hook for sound notifications when tasks finish",
+        "Put 'notify me when done' in prompts for Slack alerts",
+        "Use one status file per task, not append logs",
+        "Deny destructive bash commands in project settings"
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Limitations to <accent>Know</accent>",
+      "items": [
+        "Desktop app must be open (catches up if you miss runs)",
+        "Each run is stateless - use a status file for memory",
+        "Lock down destructive commands in permissions",
+        "Desktop only for now - terminal support coming soon"
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "Ideas to <accent>Automate</accent> Today",
+      "body": "- Daily standup prep at 6am\n- Weekly code review summaries\n- Auto-triage GitHub issues\n- Morning news and research briefs\n- Project health checks every hour"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #AI #Automation #ScheduledTasks #GenAI"
+    }
+  ]
+}

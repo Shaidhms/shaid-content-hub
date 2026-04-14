@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaid's Spark - Outliers</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, #ffffff 0%, #f0f4ff 50%, #e8eeff 100%);
+  }
+
+  .glow-1 {
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: #2563eb;
+    top: -150px; right: -100px;
+    opacity: 0.04;
+    filter: blur(140px);
+    z-index: 0;
+  }
+  .glow-2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: #3b82f6;
+    bottom: 100px; left: -100px;
+    opacity: 0.04;
+    filter: blur(140px);
+    z-index: 0;
+  }
+
+  .corner { position: absolute; width: 50px; height: 50px; z-index: 3; }
+  .corner::before, .corner::after { content: ''; position: absolute; background: rgba(37, 99, 235, 0.12); }
+  .corner-tl { top: 35px; left: 35px; }
+  .corner-tl::before { width: 50px; height: 2px; top: 0; left: 0; }
+  .corner-tl::after { width: 2px; height: 50px; top: 0; left: 0; }
+  .corner-tr { top: 35px; right: 35px; }
+  .corner-tr::before { width: 50px; height: 2px; top: 0; right: 0; }
+  .corner-tr::after { width: 2px; height: 50px; top: 0; right: 0; }
+
+  .quote-section {
+    padding: 60px 80px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: #2563eb;
+    opacity: 0.1;
+    line-height: 1;
+    display: block;
+    margin-bottom: -30px;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a2e;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .quote-text .hl {
+    color: #2563eb;
+    font-weight: 900;
+  }
+
+  .source {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgba(26, 26, 46, 0.4);
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .meme-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding: 20px 60px;
+    gap: 30px;
+  }
+
+  .meme-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meme-img-wrapper {
+    width: 460px;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid rgba(37, 99, 235, 0.15);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  }
+
+  .meme-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .meme-caption {
+    margin-top: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(26, 26, 46, 0.45);
+    text-align: center;
+    max-width: 420px;
+  }
+
+  .speech-bubble {
+    position: relative;
+    background: rgba(37, 99, 235, 0.06);
+    border: 1.5px solid rgba(37, 99, 235, 0.15);
+    border-radius: 20px;
+    padding: 18px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #2563eb;
+    font-weight: 600;
+    max-width: 240px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 12px solid rgba(37, 99, 235, 0.15);
+  }
+
+  .deco {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0.06;
+    z-index: 1;
+  }
+  .deco-1 { top: 100px; right: 80px; transform: rotate(15deg); }
+  .deco-2 { bottom: 200px; left: 50px; transform: rotate(-10deg); }
+
+  .bottom-bar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    background: #2563eb;
+  }
+
+  .bar-photo {
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .bar-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .bar-info { flex: 1; }
+  .bar-name { font-size: 20px; font-weight: 700; color: #ffffff; }
+  .bar-title { font-size: 13px; margin-top: 3px; color: rgba(255,255,255,0.6); }
+  .bar-brand { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+  .bar-brand-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif; font-size: 22px;
+    color: #2563eb; background: #ffffff;
+  }
+  .bar-brand-text {
+    font-family: 'Bebas Neue', sans-serif; font-size: 26px;
+    letter-spacing: 3px; color: #ffffff; opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+
+  <div class="deco deco-1">💻</div>
+  <div class="deco deco-2">🔁</div>
+
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">
+      <span class="hl">Practice</span> isn't the thing you do once you're good. It's the thing you do that <span class="hl">makes you good.</span>
+    </p>
+    <p class="source">Malcolm Gladwell, Outliers</p>
+  </div>
+
+  <div class="meme-section">
+    <div class="meme-left">
+      <div class="meme-img-wrapper">
+        <img src="images/vadivelu-cool-sunglasses.jpg" alt="Vadivelu cool with sunglasses">
+      </div>
+      <div class="meme-caption">Me after 6 months of practice pretending I was always this good</div>
+    </div>
+    <div class="speech-bubble">Practice dhan da secret... talent ellaam myth 😎</div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar-photo"><img src="images/shaid-photo.jpeg" alt="Shaid"></div>
+    <div class="bar-info">
+      <div class="bar-name">Shaid</div>
+      <div class="bar-title">Gen AI Architect & Builder</div>
+    </div>
+    <div class="bar-brand">
+      <div class="bar-brand-icon">S</div>
+      <div class="bar-brand-text">SHAID'S SPARK</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

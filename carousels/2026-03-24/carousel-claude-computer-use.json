@@ -1,0 +1,113 @@
+{
+  "title": "Claude Code Can Now Control Your Computer",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Claude Code Can Now",
+      "heading_accent": "Control Your Computer."
+    },
+    {
+      "type": "intro",
+      "text": "Anthropic just shipped <accent>Computer Use</accent> for Claude Code.\n\nIt can now natively control your mouse, keyboard, and take screenshots to interact with any app on your desktop.\n\nHere's what it does, how to set it up, and the best use cases."
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>Announcement</accent>",
+      "caption": "Anthropic's official post - Computer Use is live in Claude Cowork and Claude Code",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-24/claude-announcement.png"
+    },
+    {
+      "type": "image",
+      "heading": "Enable It in <accent>Settings</accent>",
+      "caption": "Claude Desktop App → Settings → General → Toggle Computer Use ON",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-24/claude-settings.png"
+    },
+    {
+      "type": "visual",
+      "heading": "How It <accent>Works</accent>",
+      "body": "Claude takes a screenshot of your screen\nIdentifies UI elements and buttons\nClicks, types, and navigates for you\nAsks for confirmation on sensitive actions",
+      "terminal": [
+        {"class": "prompt", "text": "You:"},
+        {"class": "cmd", "text": "> Find the ROI calculator PDF in my downloads and send it via ClickUp DM"},
+        {"class": "success", "text": "✓ Opened Finder → Found PDF"},
+        {"class": "success", "text": "✓ Opened ClickUp → Found chat"},
+        {"class": "success", "text": "✓ Attached file → Sent DM"}
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "The <accent>Dispatch</accent> Combo",
+      "before": ["You're away from your desk", "Someone needs a file urgently", "You can't remote into your laptop", "Task sits waiting until you're back"],
+      "after": ["Text Claude from your phone", "It wakes your computer", "Opens the right app automatically", "Finds the file and sends it"]
+    },
+    {
+      "type": "diagram",
+      "heading": "The <accent>Workflow</accent>",
+      "diagram_type": "cycle",
+      "elements": ["You send a message from phone", "Dispatch routes to your Mac", "Claude takes control of desktop", "Task completed autonomously"]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "What It Can <accent>Do</accent>",
+      "items": ["Screenshot Capture - see your screen in real time", "Mouse Control - click, drag, scroll, move cursor", "Keyboard Input - type text and use shortcuts", "Desktop Automation - interact with any app"]
+    },
+    {
+      "type": "diagram",
+      "heading": "Under the <accent>Hood</accent>",
+      "diagram_type": "flow",
+      "elements": ["You give a prompt", "Claude takes screenshot", "Identifies UI elements", "Clicks / types / navigates", "Takes another screenshot", "Repeats until done"]
+    },
+    {
+      "type": "content",
+      "heading": "The <accent>Agent Loop</accent>",
+      "body": "- Claude sees your screen via screenshots\n- Decides which tool action to take next\n- Executes: mouse click, keyboard, or bash\n- Checks the result via new screenshot\n- Loops until the task is complete\n- Asks for confirmation on risky actions"
+    },
+    {
+      "type": "before_after",
+      "heading": "<accent>Safety</accent> Built In",
+      "before": ["Prompt injection from screenshots", "Accidental clicks on sensitive data", "Unauthorized actions on accounts", "Runaway automation loops"],
+      "after": ["Auto-classifiers flag injections", "Permission required per app", "Confirmation before send actions", "Sandboxed environment recommended"]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Best <accent>Use Cases</accent>",
+      "items": ["Send files via Slack, Telegram, or any app", "Run calculations and save to Notes", "Automate legacy apps with no API", "Schedule recurring desktop tasks", "Test your apps - find bugs automatically"]
+    },
+    {
+      "type": "content",
+      "heading": "Current <accent>Limitations</accent>",
+      "body": "- Research preview (Mac OS only, Windows coming soon)\n- Can't click inside browsers (security restriction)\n- Workaround: Chrome extension or Playwright CLI\n- Pro and Max plans only (not Teams/Enterprise)\n- No drag, zoom, or fast notification handling yet"
+    },
+    {
+      "type": "content",
+      "heading": "Who Gets <accent>Access</accent>",
+      "body": "- Available in Claude Desktop App (Mac OS)\n- Works in both Cowork and Claude Code\n- Requires Pro or Max subscription\n- Windows support coming in weeks\n- Teams and Enterprise plans coming later"
+    },
+    {
+      "type": "quote",
+      "text": "It's pretty much going to be as if you have a real human working on your laptop."
+    },
+    {
+      "type": "content",
+      "heading": "The <accent>Big Picture</accent>",
+      "body": "- Anthropic ships a new feature almost every day\n- Moving toward full native desktop control\n- Browser automation coming next\n- Scheduled tasks + Computer Use = AI employee\n- Connectors first, Computer Use as fallback"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #ComputerUse #AI #Anthropic #GenAI"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "title": "OpenClaw Part 4 - Advanced Tips & Power User",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "OpenClaw:",
+      "heading_accent": "Power User Mode"
+    },
+    {
+      "type": "intro",
+      "text": "Part 4. The <accent>final</accent> part.\n\nYou've set it up. You know the features.\nNow let's unlock the <accent>advanced</accent> workflows\nthat separate casual users from power users."
+    },
+    {
+      "type": "visual",
+      "heading": "Tip 1: <accent>VPS</accent> Deployment",
+      "body": "Move OpenClaw off your laptop.\nDeploy to a $5/month VPS.\nNow it runs 24/7, even when you sleep.",
+      "terminal": [
+        {"class": "prompt", "text": "$ ssh my-vps"},
+        {"class": "cmd", "text": "$ docker pull openclaw/openclaw:latest"},
+        {"class": "cmd", "text": "$ docker compose up -d"},
+        {"class": "success", "text": "OpenClaw running 24/7 on your VPS."}
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "Multi-Agent <accent>Architecture</accent>",
+      "diagram_type": "flow",
+      "elements": ["Router Agent", "Email Agent", "Code Agent", "Research Agent", "Calendar Agent"]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "Top 5 <accent>Skills</accent> to Install",
+      "items": ["Capability Evolver - agents that improve themselves", "ClawFlows - multi-step workflow orchestrator", "GitHub Integration - code review and PR automation", "Web Researcher - deep research with citations", "Daily Digest - automated morning briefings"]
+    },
+    {
+      "type": "visual",
+      "heading": "Tip 2: <accent>Cron</accent> Jobs",
+      "body": "Schedule recurring tasks.\nDaily standup summaries.\nWeekly report generation.\nAll automated.",
+      "terminal": [
+        {"class": "prompt", "text": "You: Every Friday at 5pm, generate a weekly summary"},
+        {"class": "cmd", "text": "> Cron created: 0 17 * * 5"},
+        {"class": "cmd", "text": "> Actions: pull commits, summarize PRs,"},
+        {"class": "cmd", "text": ">   check open issues, format report"},
+        {"class": "success", "text": "Weekly summary will arrive every Friday."}
+      ]
+    },
+    {
+      "type": "before_after",
+      "heading": "Beginner vs <accent>Power</accent> User",
+      "before": ["Single agent, single channel", "Manual triggers only", "Running on laptop", "Default LLM settings"],
+      "after": ["Multi-agent specialized setup", "Cron jobs + webhooks + event triggers", "Always-on VPS deployment", "Custom prompts + temperature tuning"]
+    },
+    {
+      "type": "visual",
+      "heading": "Tip 3: Custom <accent>Skills</accent>",
+      "body": "Build your own skills.\nPackage them. Share on ClawHub.\nTurn your workflows into reusable tools.",
+      "terminal": [
+        {"class": "prompt", "text": "$ openclaw skill create lead-qualifier"},
+        {"class": "cmd", "text": "> Skill template created"},
+        {"class": "cmd", "text": "> Edit: skills/lead-qualifier/index.js"},
+        {"class": "success", "text": "$ openclaw skill publish lead-qualifier"},
+        {"class": "success", "text": "Published to ClawHub! 🦞"}
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "The <accent>Big Picture</accent>",
+      "body": "- OpenClaw is not a toy. It's infrastructure.\n- Deploy it like you'd deploy any service.\n- Specialize your agents. Automate your life.\n- The developers who master this early win."
+    },
+    {
+      "type": "cta",
+      "heading": "That's the",
+      "heading_accent": "Series!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#OpenClaw #AI #PowerUser #DevTools #Automation"
+    }
+  ]
+}

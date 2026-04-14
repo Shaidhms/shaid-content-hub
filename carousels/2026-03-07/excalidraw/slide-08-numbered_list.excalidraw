@@ -1,0 +1,313 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "elements": [
+    {
+      "id": "508c66f2",
+      "type": "text",
+      "x": 40,
+      "y": 30,
+      "width": 369.6,
+      "height": 39.199999999999996,
+      "text": "Pro Tips for Power Users",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2563EB",
+      "roughness": 1
+    },
+    {
+      "id": "2d6485f7",
+      "type": "line",
+      "x": 40,
+      "y": 65,
+      "width": 350,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          350,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 3,
+      "roughness": 2
+    },
+    {
+      "id": "56b1377f",
+      "type": "ellipse",
+      "x": 40,
+      "y": 90,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "9def02ab",
+      "type": "text",
+      "x": 48,
+      "y": 94,
+      "width": 20,
+      "height": 25.2,
+      "text": "1",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "5473f1f4",
+      "type": "text",
+      "x": 90,
+      "y": 95,
+      "width": 695.2,
+      "height": 22.4,
+      "text": "Run manually first to catch\npermission issues before they block\nyour automation",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "7908ebad",
+      "type": "ellipse",
+      "x": 40,
+      "y": 170,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "659d001d",
+      "type": "text",
+      "x": 48,
+      "y": 174,
+      "width": 20,
+      "height": 25.2,
+      "text": "2",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "8a03b8b7",
+      "type": "text",
+      "x": 90,
+      "y": 175,
+      "width": 563.2,
+      "height": 22.4,
+      "text": "Add a hook for sound notifications\nso you hear when tasks finish",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "add27406",
+      "type": "ellipse",
+      "x": 40,
+      "y": 226,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "fdeb90e3",
+      "type": "text",
+      "x": 48,
+      "y": 230,
+      "width": 20,
+      "height": 25.2,
+      "text": "3",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "f8be2bd4",
+      "type": "text",
+      "x": 90,
+      "y": 231,
+      "width": 607.2,
+      "height": 22.4,
+      "text": "Put 'notify me when done' in your\nprompts for ClickUp or Slack alerts",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "55f9f561",
+      "type": "ellipse",
+      "x": 40,
+      "y": 282,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "3ee16538",
+      "type": "text",
+      "x": 48,
+      "y": 286,
+      "width": 20,
+      "height": 25.2,
+      "text": "4",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "65b72a28",
+      "type": "text",
+      "x": 90,
+      "y": 287,
+      "width": 572.0,
+      "height": 22.4,
+      "text": "Use one status file per task, not\nappend logs, keeps context lean",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "d21446e8",
+      "type": "ellipse",
+      "x": 40,
+      "y": 338,
+      "width": 32,
+      "height": 32,
+      "strokeColor": "#2563EB",
+      "backgroundColor": "#2563EB",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roughness": 2
+    },
+    {
+      "id": "d771880a",
+      "type": "text",
+      "x": 48,
+      "y": 342,
+      "width": 20,
+      "height": 25.2,
+      "text": "5",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "strokeColor": "#ffffff",
+      "roughness": 1
+    },
+    {
+      "id": "4703c480",
+      "type": "text",
+      "x": 90,
+      "y": 343,
+      "width": 484.00000000000006,
+      "height": 22.4,
+      "text": "Deny destructive bash commands in\nyour project settings",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "dedaf2d2",
+      "type": "text",
+      "x": 480,
+      "y": 15,
+      "width": 50,
+      "height": 19.599999999999998,
+      "text": "08/10",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    },
+    {
+      "id": "07395a5e",
+      "type": "line",
+      "x": 30,
+      "y": 615,
+      "width": 480,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          480,
+          0
+        ]
+      ],
+      "strokeColor": "#2563EB",
+      "strokeWidth": 1,
+      "roughness": 1
+    },
+    {
+      "id": "6a9f7a4b",
+      "type": "text",
+      "x": 30,
+      "y": 625,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "Shaid | GenAI Architect",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "strokeColor": "#2D2D2D",
+      "roughness": 1
+    },
+    {
+      "id": "753f2157",
+      "type": "text",
+      "x": 320,
+      "y": 625,
+      "width": 200,
+      "height": 16.799999999999997,
+      "text": "Turning Ideas into Reality",
+      "fontSize": 12,
+      "fontFamily": 3,
+      "textAlign": "right",
+      "strokeColor": "#8B7355",
+      "roughness": 1
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#F5F5FA",
+    "currentItemFontFamily": 3
+  }
+}

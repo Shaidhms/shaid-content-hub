@@ -1,0 +1,75 @@
+I told my AI agent to check on my deploy every 10 minutes.
+Then I walked away from my desk.
+
+
+
+
+
+It kept checking. For 3 days straight.
+No prompts. No babysitting. No tab switching.
+
+That's the new Loop skill in Claude Code.
+
+I've been using Claude Code as my daily driver for months now.
+Terminal, VS Code, building projects, reviewing PRs.
+It's been my second brain for a while.
+
+But this week something shifted.
+
+I typed one sentence: "Every 10 minutes, check if the build is passing."
+Claude created a cron job, started monitoring, and reported back.
+I didn't touch it again.
+
+That's not a chatbot anymore.
+That's an assistant that works while you don't.
+
+Think about what this unlocks.
+
+You're waiting on an urgent email. Set a 5-minute loop.
+You're mid-deploy and need eyes on logs. Set an hourly check.
+You're in a 3-day sprint and need progress tracking. Loop handles it.
+
+The part that surprised me most?
+It runs inside your current session.
+It remembers what happened in the last check.
+It builds context over time instead of starting fresh every prompt.
+
+And you don't need to learn any special syntax.
+Just tell it what you want in plain English.
+Or use /loop if you prefer the command.
+
+I also realized this is different from Scheduled Tasks.
+Both exist now. Both are useful. But they solve different problems.
+
+Loop is your "help me right now" tool.
+Scheduled Tasks is your "remind me every Monday" tool.
+
+Knowing when to use which is the real unlock.
+
+I broke all of this down in the attachment:
+. What Loop actually is and how it works under the hood
+. The two modes (recurring vs one-time reminders)
+. How to invoke it with examples
+. Loop vs Scheduled Tasks comparison
+. 6 practical use cases you can try today
+. The limitations you should know before relying on it
+
+Check out the PDF attached to this post for the full breakdown.
+
+We're entering the phase where AI agents don't just respond.
+They anticipate. They monitor. They follow up.
+
+The developers who learn to set up these loops early
+will build workflows that compound while they sleep.
+
+Start small. Set one loop today.
+See what happens when your agent works without you.
+
+#ClaudeCode #AIAgents #DeveloperProductivity
+---
+IMAGE PROMPT:
+An illustrative, modern tech-themed image showing a developer (Shaid's face photorealistically blended in) walking away from a glowing monitor setup. The monitor displays a terminal with a looping animation/circular arrows icon. Behind the monitor, faint holographic clock faces and cron schedule symbols float in the air. The scene is split: on the left, the developer is relaxed and walking away; on the right, the AI agent (represented as a glowing blue pulse/loop symbol) continues working on the screen. Color palette: deep navy background, electric blue (#2563EB) for the loop/glow elements, warm white highlights. Style: editorial illustration with clean lines, slightly futuristic. Aspect ratio: 16:9. Typography: clean sans-serif for the quote overlay, white text with subtle blue glow.
+
+QUOTE FOR IMAGE:
+"That's not a chatbot anymore. That's an assistant that works while you don't."
+---

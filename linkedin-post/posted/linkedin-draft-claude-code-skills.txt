@@ -1,0 +1,53 @@
+I stopped prompting Claude. I started teaching it.
+
+
+
+
+
+Most developers use AI the same way every session.
+Open a chat. Paste context. Explain the rules. Get output.
+Next session? Start over.
+
+I was doing the same thing. Until I found Skills.
+
+Skills in Claude Code let you write your instructions once
+and Claude loads them automatically, every time, without asking.
+
+One markdown file. Your rules. Your workflow. Your output format.
+Type a slash command and it just runs.
+
+I used to think AI's value was in the model's intelligence.
+Now I believe it's in how well you build systems around it.
+
+That shift changed how I work with AI entirely.
+
+I broke down how Skills work, what they look like,
+and which ones are worth knowing about
+in the carousel attached to this post.
+
+It covers:
+
+• What a SKILL.md file actually looks like (with a real code example)
+• Anthropic's official open-source skills from GitHub
+• Popular community skills for security, testing, and TDD
+• The difference between personal and project skills
+• How to build your first one in 5 minutes
+
+This is not prompt engineering. This is workflow engineering.
+
+The developers who get the most out of AI
+won't be the ones who write better prompts.
+They'll be the ones who build better systems around AI.
+
+Swipe through the carousel for the full breakdown.
+
+Teach it once. Let it compound.
+
+#ClaudeCode #GenerativeAI #DeveloperProductivity
+---
+IMAGE PROMPT:
+A cinematic 16:9 illustration of a developer sitting at a desk with a glowing terminal screen. The screen shows a SKILL.md file with syntax-highlighted code. Around the developer, translucent floating cards represent different skills (PDF, code review, security, testing) connected by subtle glowing lines forming a network. Shaid's face is photorealistic, blended naturally into the illustrated scene. The body and environment use a clean, modern tech illustration style with a deep blue and warm white color palette. Cool ambient lighting with blue accent glows. The strongest quote "Teach it once. Let it compound." appears in bold, clean sans-serif typography (white text with subtle blue glow) positioned in the lower-third of the image. Overall mood: focused, futuristic, empowering.
+
+QUOTE FOR IMAGE:
+Teach it once. Let it compound.
+---

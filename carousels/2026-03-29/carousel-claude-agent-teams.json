@@ -1,0 +1,94 @@
+{
+  "title": "Build Claude Agent Teams Like a Pro",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "Build Claude",
+      "heading_accent": "Agent Teams."
+    },
+    {
+      "type": "intro",
+      "text": "Most people use Claude Code as a <accent>single agent</accent>.\n\nBut there's an experimental feature that lets you spin up <accent>multiple agents</accent> that work in parallel, talk to each other, and QA each other's work.\n\nHere's the framework to do it right."
+    },
+    {
+      "type": "before_after",
+      "heading": "Sub-agents vs <accent>Agent Teams</accent>",
+      "before": ["Work independently", "Report back to one main agent", "Can't coordinate with each other", "Sequential bottleneck"],
+      "after": ["Share a task list", "Message each other directly", "React to each other's work", "True parallel execution"]
+    },
+    {
+      "type": "visual",
+      "heading": "Step 1: <accent>Enable</accent> the Feature",
+      "body": "Agent Teams are experimental.\nDisabled by default.\nOne setting turns it on.",
+      "terminal": [
+        {"class": "prompt", "text": "// settings.json"},
+        {"class": "cmd", "text": "{"},
+        {"class": "cmd", "text": "  \"env\": {"},
+        {"class": "success", "text": "    \"CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS\": \"1\""},
+        {"class": "cmd", "text": "  }"},
+        {"class": "cmd", "text": "}"}
+      ]
+    },
+    {
+      "type": "image",
+      "heading": "Step 2: <accent>Prompt</accent> with Structure",
+      "caption": "Name the agents. Define roles. Assign file ownership. Set deliverables.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-29/screenshot-team-prompting.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "Step 3: Watch Them <accent>Build</accent>",
+      "caption": "Each agent gets its own context window. They coordinate via shared tasks and messaging.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-29/screenshot-demo.jpg"
+    },
+    {
+      "type": "image",
+      "heading": "The <accent>Do vs Don't</accent> Rules",
+      "caption": "Follow these prompting rules to avoid the #1 failure mode: agents overwriting each other.",
+      "image": "/Users/shaid/Documents/Shaid_Works/Nisha/carousels/2026-03-29/screenshot-do-dont.jpg"
+    },
+    {
+      "type": "numbered_list",
+      "heading": "The <accent>QA Loop</accent> Pattern",
+      "items": [
+        "Spawn dev agents for parallel work (frontend, backend, etc.)",
+        "Add a dedicated QA agent that reviews others' work",
+        "QA finds issues and sends them back to dev agents",
+        "Automated review cycle without human intervention",
+        "Monitor via tmux split-pane to watch all agents live"
+      ]
+    },
+    {
+      "type": "diagram",
+      "heading": "The <accent>Architecture</accent>",
+      "diagram_type": "cycle",
+      "elements": ["You (Lead)", "Orchestrator", "Agent A (Frontend)", "Agent B (Backend)", "Agent C (QA)"]
+    },
+    {
+      "type": "content",
+      "heading": "When <accent>NOT</accent> to Use Teams",
+      "body": "- Simple tasks that one agent can handle\n- Sequential work where each step depends on the last\n- Same-file edits (agents will overwrite each other)\n- When sub-agents are good enough\n\nTeams shine for parallel, multi-domain projects."
+    },
+    {
+      "type": "quote",
+      "text": "The future of AI coding isn't one agent doing everything.\nIt's a team of agents, each owning their domain,\ncoordinating like real developers."
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "More!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#ClaudeCode #AgentTeams #AI #GenAI #AIArchitecture #BuildInPublic"
+    }
+  ]
+}

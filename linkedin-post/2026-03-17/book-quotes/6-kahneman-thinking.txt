@@ -1,0 +1,33 @@
+I once spent 3 hours crafting a reply to a Slack message that nobody read.
+
+
+Three hours. Not exaggerating.
+
+Someone left a comment on my PR. "Interesting approach." That's it. Two words.
+
+My brain: "Interesting approach? Is that sarcasm? Are they questioning my architecture? Do they think I'm incompetent? Should I explain my reasoning? Should I rewrite the whole thing?"
+
+Drafted four responses. Deleted all of them. Went for a walk. Came back. Drafted a fifth. Sent it.
+
+Reply: "Oh yeah I just meant it was cool, hadn't seen that pattern before."
+
+Three hours. Gone.
+
+Kahneman wrote: "Nothing in life is as important as you think it is, while you are thinking about it."
+
+He calls it the focusing illusion. Whatever's in your head right now feels like the biggest thing in the world. That email. That comment. That one thing your manager said in the meeting.
+
+Give it 48 hours. It's nothing.
+
+I started doing something simple. When something feels urgent and emotional, I wait one day. If it still matters tomorrow, I deal with it.
+
+90% of the time? It doesn't.
+
+. Your brain lies to you about what matters. Often.
+. Urgency is a feeling, not a fact.
+. The best response to most "emergencies" is sleep.
+. If you're on your fourth draft of a reply, close the laptop.
+
+The stuff that actually matters doesn't need three hours of spiraling. It needs five minutes of doing something.
+
+#MentalHealth #Productivity #DeveloperLife #WorkCulture #Mindset

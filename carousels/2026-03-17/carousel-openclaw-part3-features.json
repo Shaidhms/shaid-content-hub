@@ -1,0 +1,87 @@
+{
+  "title": "OpenClaw Part 3 - Key Features & Workflows",
+  "style": "dark",
+  "color_scheme": {
+    "background": "#191923",
+    "text": "#ede8df",
+    "accent": "#d4826a",
+    "secondary": "#777"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "heading": "OpenClaw Features",
+      "heading_accent": "That Actually Matter"
+    },
+    {
+      "type": "intro",
+      "text": "Part 3 of the <accent>OpenClaw</accent> series.\n\nSetup is done. Now let's explore\nthe features that make OpenClaw\na <accent>productivity machine</accent>."
+    },
+    {
+      "type": "diagram",
+      "heading": "The <accent>Agent</accent> Loop",
+      "diagram_type": "cycle",
+      "elements": ["Receive Message", "Plan Actions", "Execute Tools", "Return Results"]
+    },
+    {
+      "type": "visual",
+      "heading": "Email <accent>Autopilot</accent>",
+      "body": "OpenClaw triages your inbox.\nDrafts replies. Flags urgent items.\nSends you a daily summary.",
+      "terminal": [
+        {"class": "prompt", "text": "You: Summarize my unread emails"},
+        {"class": "cmd", "text": "> Scanning 23 unread emails..."},
+        {"class": "cmd", "text": "> 3 urgent, 8 FYI, 12 promotional"},
+        {"class": "success", "text": "> Drafted replies for 3 urgent. Review?"}
+      ]
+    },
+    {
+      "type": "visual",
+      "heading": "Code <accent>Automation</accent>",
+      "body": "Scaffold projects. Debug code.\nRun tests. Push to GitHub.\nAll from your chat app.",
+      "terminal": [
+        {"class": "prompt", "text": "You: Fix the failing test in auth.test.js"},
+        {"class": "cmd", "text": "> Reading auth.test.js..."},
+        {"class": "cmd", "text": "> Found: assertion expects 200, API returns 201"},
+        {"class": "success", "text": "> Fixed and committed. Tests passing."}
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "heading": "50+ <accent>Integrations</accent>",
+      "items": ["WhatsApp, Telegram, Slack, Discord, Signal", "Gmail, Google Calendar, Notion", "GitHub, GitLab for code workflows", "Custom webhooks and cron jobs", "Any API via custom skills"]
+    },
+    {
+      "type": "before_after",
+      "heading": "Single Agent vs <accent>Multi-Agent</accent>",
+      "before": ["One agent handles everything", "Gets confused with complex tasks", "No specialization", "Errors compound across workflows"],
+      "after": ["Specialized agents per domain", "Email agent, code agent, research agent", "Each focused on its narrow task", "Fewer errors, better results"]
+    },
+    {
+      "type": "visual",
+      "heading": "<accent>ClawFlows:</accent> Chain Skills",
+      "body": "Build multi-step automated pipelines.\nTrigger on schedule or webhook.\nNo code required.",
+      "terminal": [
+        {"class": "prompt", "text": "You: Every morning at 8am:"},
+        {"class": "cmd", "text": "> 1. Check email for client replies"},
+        {"class": "cmd", "text": "> 2. Summarize and post to Slack"},
+        {"class": "cmd", "text": "> 3. Update project tracker"},
+        {"class": "success", "text": "ClawFlow created. Runs daily at 8:00 AM IST."}
+      ]
+    },
+    {
+      "type": "content",
+      "heading": "Key <accent>Takeaway</accent>",
+      "body": "- OpenClaw is not just a chatbot\n- It's an operating system for AI agents\n- 50+ integrations, multi-agent support\n- Automate the boring stuff, focus on what matters"
+    },
+    {
+      "type": "cta",
+      "heading": "Follow for",
+      "heading_accent": "Part 4!",
+      "name": "Shaid",
+      "role": "GenAI Architect & Builder",
+      "subtitle": "AI Products & Automation | Ship AI. Share Insights.",
+      "photo": "/Users/shaid/Documents/Shaid_Works/Nisha/.claude/skills/carousel-generator/1756964618776.jpeg",
+      "hashtags": "#OpenClaw #AI #Workflows #Productivity #Automation"
+    }
+  ]
+}
