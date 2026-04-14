@@ -70,6 +70,14 @@
       font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted);
       text-transform: uppercase; margin-bottom: 12px; padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .date-day-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
+      background: var(--accent-dim); color: var(--accent);
+      border: 1px solid rgba(212,130,106,0.3);
+      border-radius: 5px; padding: 2px 8px;
+      text-transform: uppercase;
     }
 
     .card {
@@ -318,7 +326,7 @@
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <div class="modal-header">
-      <div class="modal-title" id="modalTitle">Title <span id="modalDate"></span></div>
+      <div class="modal-title"><span id="modalTitle"></span><span id="modalDate"></span></div>
       <div style="display:flex;gap:8px;">
         <a class="btn btn-pdf" id="modalDlPdf" href="#" download style="display:none">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -379,10 +387,19 @@
     return allItems.find(i => i.date === item.date && i.title === item.title && i.type === targetType);
   }
 
+  const CHALLENGE_START = '2026-04-14';
+
   function formatDate(d) {
     const [y, m, day] = d.split('-');
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     return `${months[parseInt(m,10)-1]} ${parseInt(day,10)}, ${y}`;
+  }
+
+  function challengeDayNum(dateStr) {
+    if (dateStr < CHALLENGE_START) return null;
+    const start = new Date(CHALLENGE_START + 'T00:00:00');
+    const d     = new Date(dateStr + 'T00:00:00');
+    return Math.floor((d - start) / 86400000) + 1;
   }
 
   function groupByDate(items) {
@@ -432,11 +449,15 @@
       return;
     }
 
-    document.getElementById('contentArea').innerHTML = dates.map(date => `
+    document.getElementById('contentArea').innerHTML = dates.map(date => {
+      const dayNum = challengeDayNum(date);
+      const dayTag = dayNum ? `<span class="date-day-badge">Day ${dayNum}</span>` : '';
+      return `
       <div class="date-group">
-        <div class="date-label">${formatDate(date)}</div>
+        <div class="date-label">${formatDate(date)}${dayTag}</div>
         ${groups[date].map((item) => renderCard(item, allItems.indexOf(item))).join('')}
-      </div>`).join('');
+      </div>`;
+    }).join('');
   }
 
   // ── VIEWER ────────────────────────────────────────────
@@ -544,7 +565,7 @@
 
   // ── 100-DAY CHALLENGE ────────────────────────────────
   function initChallenge(items) {
-    const START = new Date('2026-04-14T00:00:00');
+    const START = new Date(CHALLENGE_START + 'T00:00:00');
     const today = new Date();
     today.setHours(0,0,0,0);
 
@@ -557,9 +578,9 @@
     document.getElementById('daysLeft').textContent =
       daysLeft > 0 ? `${daysLeft} day${daysLeft !== 1 ? 's' : ''} to go` : 'Challenge complete!';
 
-    // Count only items from Apr 14 onwards
-    const posts     = items.filter(i => i.type === 'post'     && i.date >= '2026-04-14').length;
-    const carousels = items.filter(i => i.type === 'carousel' && i.date >= '2026-04-14').length;
+    // Count only items from challenge start onwards
+    const posts     = items.filter(i => i.type === 'post'     && i.date >= CHALLENGE_START).length;
+    const carousels = items.filter(i => i.type === 'carousel' && i.date >= CHALLENGE_START).length;
     document.getElementById('statPosts').textContent     = posts;
     document.getElementById('statCarousels').textContent = carousels;
   }
