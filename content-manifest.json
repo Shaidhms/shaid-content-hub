@@ -1,6 +1,18 @@
 [
   {
     "type": "carousel",
+    "date": "2026-04-15",
+    "title": "18 Claude Code Token Hacks",
+    "pdf": "carousels/2026-04-15/carousel-claude-code-token-hacks.pdf"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-15",
+    "title": "18 Claude Code Token Hacks",
+    "txt": "linkedin-post/2026-04-15/linkedin-draft-claude-code-token-hacks.txt"
+  },
+  {
+    "type": "carousel",
     "date": "2026-04-14",
     "title": "Codex + Claude Code",
     "pdf": "carousels/2026-04-14/carousel-codex-claude-code.pdf"

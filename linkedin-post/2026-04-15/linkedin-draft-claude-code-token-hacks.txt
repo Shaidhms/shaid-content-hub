@@ -1,0 +1,18 @@
+I used to just upgrade my plan when I hit the token limit.
+
+Didn't occur to me that I was just burning context faster than I needed to.
+
+After months of daily Claude Code use, I started paying attention to what's actually eating tokens — and fixing that before reaching for a higher tier.
+
+The shift was real. Same plan. Longer sessions. Less frustration.
+
+The hacks break into three tiers:
+- Tier 1: small habits that cut waste immediately, no setup needed
+- Tier 2: changing how you load context into a session from the start
+- Tier 3: power user moves for large codebases or long build sessions
+
+One thing I didn't expect: hitting your limit isn't always a bad signal. Sometimes it means the session did exactly what it needed to do.
+
+18 hacks, explained properly. Slides below.
+
+#ClaudeCode #AIProductivity #TokenOptimization #GenAI #AITools
