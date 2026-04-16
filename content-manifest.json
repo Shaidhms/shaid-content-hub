@@ -2,6 +2,18 @@
   {
     "type": "carousel",
     "date": "2026-04-16",
+    "title": "Claude Opus 4.7 vs 4.6",
+    "pdf": "carousels/2026-04-16/carousel-opus47-vs-46.pdf"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-16",
+    "title": "Claude Opus 4.7 vs 4.6",
+    "txt": "linkedin-post/2026-04-16/linkedin-draft-opus47-vs-46.txt"
+  },
+  {
+    "type": "carousel",
+    "date": "2026-04-16",
     "title": "Claude Code Routines",
     "pdf": "carousels/2026-04-16/carousel-claude-routines.pdf"
   },

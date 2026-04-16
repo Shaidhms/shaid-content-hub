@@ -1,0 +1,39 @@
+Claude Opus 4.7 shipped today.
+4.6 is still around. Probably not for long.
+
+
+
+
+
+
+Opus 4.6 had been getting dragged for weeks.
+Hallucinations. Panic loops. Rules ignored.
+One user burned 80% of a weekly budget in 2.5 days.
+
+An AMD senior director posted this publicly:
+
+"Claude has regressed to the point it cannot be trusted."
+
+Not vibes. Procurement talking.
+
+Today 4.7 landed. Same price as 4.6.
+
+
+Anthropic even admit 4.7 trails their unreleased Mythos.
+Respect for saying it out loud.
+
+On paper, it reads like a trust fix. Not a leap.
+Real opinion after I run it.
+
+
+PDF has the full info summarized from Anthropic's docs and benchmarks.
+
+#ClaudeOpus #Anthropic #AI #GenAI #AICoding #ClaudeCode #AIProducts #DeveloperTools #BuildInPublic #TechLeadership
+
+---
+IMAGE PROMPT:
+Illustrative 16:9 LinkedIn header. Dark navy background (#191923) with subtle grain. On the left, Shaid's photo blended into the artwork — face retains 100% photorealistic accuracy, body and jacket rendered in painterly illustration style with warm coral accent light (#d4826a). To his right, a stylized glowing panel shows two bold labels stacked: "4.6" in dim grey, "4.7" in bright coral, with an upward arrow between them. Subtle circuit-board etchings fade into the background. Large text overlay centered-right in bold modern sans-serif (Inter-style): "Not vibes. Procurement talking." — "Not vibes." in off-white, "Procurement talking." in coral. Small footer text bottom-right: "Shaid | GenAI Architect". Mood: honest, grounded, technical.
+
+QUOTE FOR IMAGE:
+Not vibes. Procurement talking.
+---
