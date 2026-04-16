@@ -1,0 +1,32 @@
+Anthropic shipped Routines. My laptop is finally off the hook.
+
+
+
+
+
+
+For months I had a little graveyard of Claude Code scripts sitting on my Mac.
+A deploy checker. A standup drafter. A dependency watcher.
+All of them paused the second I closed the lid.
+
+Routines move that work to Anthropic's infrastructure.
+Save a prompt, attach a repo, pick a trigger. Done.
+It runs whether I'm asleep, boarding a flight, or nowhere near my desk.
+
+Cron was always too dumb for what I actually wanted.
+Full agents were too loose.
+Routines sit between those two, and that middle is the part I care about.
+
+Migrating one boring task this week. We'll see what breaks.
+
+Full walkthrough in the attached PDF.
+
+#ClaudeCode #Anthropic #AIAutomation #GenAI #Routines #DeveloperTools #BuildInPublic #AIProducts #TechLeadership
+
+---
+IMAGE PROMPT:
+Illustrative 16:9 composition in a dark navy and warm coral color palette. A closed silver laptop rests on a floating desk, a soft coral glow seeping out from its edges. Streams of light and small icons (calendar, webhook bolt, Slack, GitHub, a clock) drift upward from the laptop into an abstract cloud of code filaments. On the left third, Shaid's photorealistic face (100% photo accuracy on the face, no stylization) is integrated into the scene as if quietly watching, his body and jacket painted into the moody illustrative style, rimmed in warm coral light. Bold left-aligned Inter 800 typography in off-white places the quote as the focal overlay, with the phrase "off the hook" highlighted in coral. Subtle film grain, soft cinematic lighting, editorial illustration feel.
+
+QUOTE FOR IMAGE:
+My laptop is finally off the hook.
+---
