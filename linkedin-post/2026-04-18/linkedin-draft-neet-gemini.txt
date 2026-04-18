@@ -1,0 +1,48 @@
+Free NEET prep just showed up where nobody was looking.
+
+
+
+
+
+
+Google dropped full-length NEET UG mock tests inside the Gemini app.
+No subscription. No coaching fee. No queue.
+One prompt: "I want to take a NEET mock exam."
+
+Physics Wallah and Careers360 vetted the content.
+So it's not generic AI fluff.
+It's test-day material.
+
+I've been watching this pattern for months.
+
+SAT first. Then JEE Main. Now NEET.
+The playbook is clear.
+AI isn't replacing teachers.
+It's quietly becoming a study partner in Indian homes.
+
+Here's why this one hits:
+
+• 20 lakh+ students write NEET every year
+• Quality mock tests used to cost thousands
+• Self-paced prep was a luxury
+• Now it lives on their phone
+
+The coaching economy didn't see this coming.
+
+Most Indian families pay for NEET prep before they pay for school.
+This changes the math.
+
+I've attached a breakdown: how it works, the prompt, what Gemini actually returns.
+
+AI in Indian education stopped being a prediction.
+It's a product.
+
+#NEETUG #Gemini #Google #AIforEducation #GenerativeAI #EdTechIndia #StudyWithAI #AI #IndianStudents #DigitalIndia #AIProducts
+
+---
+IMAGE PROMPT:
+Illustrative 16:9 digital art on a clean white background. Center-right: a stylized Indian student at a desk holding a phone with the Gemini app open, rendered in a modern flat-illustration style with Google's color palette as accents (blue #4285F4, red #EA4335, yellow #FBBC04, green #34A853). Floating around the scene: subtle illustrated motifs of an open textbook, a stethoscope, and a large Gemini sparkle icon in the signature blue-to-purple-to-coral gradient. Shaid's photorealistic face is blended into a second illustrated figure on the left who is watching / observing the scene, body and clothing rendered in the same flat-illustration style while the face retains 100% photo accuracy. Bold text overlay in Google Sans / Inter style across the upper-left reading: "AI in Indian education stopped being a prediction. It's a product." Clean typography, generous negative space, no clutter.
+
+QUOTE FOR IMAGE:
+AI in Indian education stopped being a prediction. It's a product.
+---
