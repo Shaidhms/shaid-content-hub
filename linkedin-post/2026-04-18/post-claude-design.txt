@@ -1,0 +1,23 @@
+Anthropic shipped Claude Design today.
+
+Adobe and Figma stocks dropped the same day.
+
+Adobe: down 1.76%.
+Figma: down 10.22%.
+
+Anthropic is shipping something every other day now, and the market is just casually losing billions trying to keep up.
+
+At this point Claude isn't disrupting design.
+It's quietly making the design tool category optional.
+
+Full breakdown in the attachment.
+
+#Claude #Anthropic #ClaudeDesign #AI #GenerativeAI #Figma #Adobe #DesignTools #ProductDesign #FutureOfWork
+
+---
+IMAGE PROMPT:
+A 16:9 illustrative scene of a sleek modern design studio at dusk, with two large stock-ticker screens on the wall showing red downward arrows for "ADBE" and "FIGMA". In the foreground, a calm figure (Shaid) sits at a minimalist desk with a glowing laptop showing the Claude Design interface, casually sipping coffee while the chaos of falling charts unfolds behind him. Shaid's face must be 100% photorealistic and recognizable, while his body and the surroundings blend into a clean editorial illustration style. Color palette: deep navy, muted orange, soft cream, with red accents on the falling charts. Typography for the quote: bold modern sans-serif, top-left corner, high contrast white-on-navy. Mood: dry, deadpan, ironic.
+
+QUOTE FOR IMAGE:
+Anthropic shipped Claude Design today. Adobe and Figma dropped the same day.
+---

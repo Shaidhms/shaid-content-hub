@@ -2,6 +2,18 @@
   {
     "type": "carousel",
     "date": "2026-04-18",
+    "title": "Claude Design",
+    "pdf": "carousels/2026-04-18/carousel-claude-design.pdf"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-18",
+    "title": "Claude Design",
+    "txt": "linkedin-post/2026-04-18/post-claude-design.txt"
+  },
+  {
+    "type": "carousel",
+    "date": "2026-04-18",
     "title": "NEET UG Mock Tests in Gemini",
     "pdf": "carousels/2026-04-18/carousel-neet-gemini.pdf"
   },
