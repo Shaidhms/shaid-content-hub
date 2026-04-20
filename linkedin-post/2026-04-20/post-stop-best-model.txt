@@ -1,0 +1,19 @@
+Anthropic's own advice: stop running everything through Opus.
+
+I had to sit with that for a minute. I've been treating Opus as the default and routing everything through it.
+
+The advisor strategy changes that. Opus thinks, Sonnet or Haiku does the actual execution. You get Opus-level reasoning where it actually matters — at a fraction of the cost and token burn.
+
+What testing showed me:
+
+Easy and medium tasks don't need Opus doing the heavy lifting. Sonnet handles them cleanly and the output quality difference is smaller than I expected.
+
+Hard tasks still benefit from Opus — but only as the advisor, not the one writing every line.
+
+Inside Claude Code specifically, this directly stretches your session limit further. And across a real build, the cost difference adds up fast.
+
+I was burning Opus tokens on tasks that didn't need it. This reframed how I think about model selection entirely.
+
+Slides walk through the dashboard test across easy, medium, and hard prompts. Worth checking before your next build.
+
+#ClaudeCode #Anthropic #AITools #GenAI #AIProductivity

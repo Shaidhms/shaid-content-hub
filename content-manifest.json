@@ -1,6 +1,18 @@
 [
   {
     "type": "carousel",
+    "date": "2026-04-20",
+    "title": "Stop Using Opus for Everything",
+    "pdf": "carousels/2026-04-20/carousel-stop-best-model.pdf"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-20",
+    "title": "Stop Using Opus for Everything",
+    "txt": "linkedin-post/2026-04-20/post-stop-best-model.txt"
+  },
+  {
+    "type": "carousel",
     "date": "2026-04-19",
     "title": "Claude Design",
     "pdf": "carousels/2026-04-19/carousel-claude-design.pdf"
