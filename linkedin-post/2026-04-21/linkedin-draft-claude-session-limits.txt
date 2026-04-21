@@ -1,0 +1,53 @@
+98.5% of your Claude tokens are doing nothing useful.
+
+
+
+
+
+
+They're just rereading what you already said.
+
+
+One developer tracked a 100+ message chat and found that only 1.5% of the tokens produced new output.
+The rest?
+Rereading history. Over and over and every single turn.
+
+That stat stopped me mid-session.
+
+I used to think hitting session limits was a plan problem.
+Upgrade the plan. Bigger window. Problem solved.
+Then I read Anthropic's own guidance and realised it's a hygiene problem.
+
+Claude rereads the entire conversation every message.
+So your cost doesn't add up.
+It compounds.
+
+Message 1 might cost 500 tokens.
+Message 30 costs 15,500.
+After a 30-message session you're already sitting on 232K cumulative tokens.
+
+And here's the part no one talks about.
+
+Retrieval accuracy drops from 92% at 256K tokens to 78% at 1M tokens.
+Bigger window does not mean better output.
+It just gives the model more room to get distracted.
+
+
+The 1M token window is insurance, not a goal.
+The first 20% of any session is prime time.
+That's where CLAUDE.md is freshest and the model is most primed.
+
+Treat context like a workspace, not a warehouse.
+
+I broke down every concept from a 25-minute deep dive into a visual breakdown. The full playbook is in the attachment.
+
+#ClaudeCode #AI #GenAI #DeveloperTools #ContextEngineering #AIProducts #BuildInPublic #CodingWithAI #AIAutomation
+
+---
+IMAGE PROMPT:
+Illustrative 16:9 composition in a dark navy and coral color palette. A stylised session window with message bubbles stacking up into a tall column, each one fading into a shadowy reread trail behind it, conveying the idea of tokens being spent on rereading history. Faint retro-grid background with subtle circuit texture. In the upper-left, a bold typography overlay reading the quote below in a modern sans-serif font (like Inter Black), color #d4826a coral on a dark #191923 background. Shaid's photorealistic face blended naturally into the lower-right of the illustration, styled as if he is watching the token stack, with his face retaining 100% photorealism while his body and surroundings dissolve into the illustrative style (fine line work + soft gradients). Overall mood: analytical, clean, high-contrast.
+
+QUOTE FOR IMAGE:
+98.5% of your Claude tokens are doing nothing useful.
+They're just rereading what you already said.
+---

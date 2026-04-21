@@ -1,6 +1,18 @@
 [
   {
     "type": "carousel",
+    "date": "2026-04-21",
+    "title": "How to Never Hit Your Claude Session Limit",
+    "pdf": "carousels/2026-04-21/carousel-claude-session-limits.pdf"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-21",
+    "title": "How to Never Hit Your Claude Session Limit",
+    "txt": "linkedin-post/2026-04-21/linkedin-draft-claude-session-limits.txt"
+  },
+  {
+    "type": "carousel",
     "date": "2026-04-20",
     "title": "Stop Using Opus for Everything",
     "pdf": "carousels/2026-04-20/carousel-stop-best-model.pdf"
