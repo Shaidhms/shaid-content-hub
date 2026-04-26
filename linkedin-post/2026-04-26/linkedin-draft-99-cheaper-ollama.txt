@@ -1,0 +1,19 @@
+I use Claude Max and I'm not switching. That's my honest starting point.
+
+But when I saw this setup — Ollama running open source models locally, almost zero cost — I had to actually test it instead of dismissing it.
+
+What I found: it's not a replacement. But it's not a toy either.
+
+For certain types of work, open source models hold their own. For others, Opus is worth every rupee and the comparison isn't close.
+
+The more useful thing I figured out was where the line actually is. Because "use open source to save money" without knowing the tradeoffs is how you slow yourself down on work that matters.
+
+Two setups that work:
+- Ollama locally, if your hardware can handle it
+- Open Router for free cloud models when it can't
+
+Where they fall short compared to Opus is just as important as where they work.
+
+I walked through both setups and the real tradeoffs in the slides below.
+
+#ClaudeCode #Ollama #OpenSource #AITools #GenAI
