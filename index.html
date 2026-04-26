@@ -107,6 +107,7 @@
     .btn:hover { opacity: 0.8; }
     .btn-pdf { background: var(--accent); color: #fff; }
     .btn-txt { background: var(--green); color: #fff; }
+    .btn-link { background: #6c8ed6; color: #fff; }
     .btn-view { background: #3a3a52; color: var(--text); border: 1px solid rgba(255,255,255,0.12); }
     .btn-view:hover { background: #44445e; opacity: 1; }
     .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
@@ -375,7 +376,8 @@
   const ICONS = {
     download: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`,
     eye: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`,
-    expand: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>`
+    expand: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>`,
+    external: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`
   };
 
   let allItems = [];
@@ -424,6 +426,9 @@
     const txtBtn = item.txt
       ? `<a class="btn btn-txt" href="${item.txt}" download>${ICONS.download} Post</a>`
       : '';
+    const linkBtn = item.link
+      ? `<a class="btn btn-link" href="${item.link}" target="_blank" rel="noopener">${ICONS.external} Page</a>`
+      : '';
     const viewBtn = hasView
       ? `<button class="btn btn-view view-btn" data-index="${index}">${ICONS.eye} View</button>`
       : '';
@@ -432,7 +437,7 @@
       <div class="card">
         <span class="type-badge ${item.type}">${typeLabel}</span>
         <span class="card-title">${item.title}</span>
-        <div class="card-actions">${viewBtn}${pdfBtn}${txtBtn}</div>
+        <div class="card-actions">${viewBtn}${pdfBtn}${txtBtn}${linkBtn}</div>
       </div>`;
   }
 

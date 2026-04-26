@@ -1,0 +1,63 @@
+Attended a community AI session today.
+Left with a full notebook and a changed way of thinking.
+
+
+
+
+
+
+
+
+
+GDG Chennai hosted "Build with AI" at Freshworks.
+Three sessions. Three speakers. Each one landed differently.
+
+Somu opened with something I didn't see coming.
+"Stop Building AI Demos. Start Building AI Products."
+One line. Rearranged something in my head.
+I've been thinking about how I build with AI differently since.
+
+Sanju followed with Small Language Models.
+Patient, approachable, answered every question thrown at him.
+The demo was genuinely impressive.
+Small models doing things I didn't expect them to do.
+
+Varun took us deep into Web MCP.
+How to expose your own functions as MCP endpoints.
+New trend. Real direction.
+Closer than most people realise.
+
+I also met a lot of young developers in the room.
+Sharp. Curious. Already building things.
+Reminded me this space is in very good hands.
+
+[GROUP NAME] were especially interesting.
+They [participated in / presented / built] something around [THEIR IDEA].
+Thoughtful approach. Worth watching.
+
+This is what a good community event does.
+It doesn't just inform. It reorients.
+
+Here's what I'm carrying home:
+
+• SLMs are underrated — targeted fine-tuning unlocks serious real-world applications
+• The gap between an AI demo and an AI product is a mindset shift, not a technical one
+• Web MCP is a real trend — exposing your own functions as endpoints others can build on
+• Chennai's AI community is young, curious, and building seriously
+• The best learning rooms aren't always the biggest ones
+
+Thank you GDG Chennai for putting this together.
+Events like this matter more than they get credit for.
+
+Happy to be in the room.
+See you at the next one.
+
+#BuildWithAI #GDGChennai #WebMCP #SmallLanguageModels #GenerativeAI #AIProducts #DeveloperCommunity #BuildInPublic #AI #TechChennai
+
+---
+IMAGE PROMPT:
+An illustrative 16:9 LinkedIn banner. A warm, energetic community room setting — developers gathered around laptops, a speaker at the front with a glowing screen showing AI/MCP diagrams. The atmosphere is collaborative and curious. Color palette: deep teal, warm amber, and soft white — conveying energy and learning. Shaid's face is blended into the audience, photorealistic face but illustrated body and surroundings, looking engaged and inspired. Bold sans-serif text overlay in the upper third of the image. Illustrative art style, not photographic. Professional but community-warm.
+
+QUOTE FOR IMAGE:
+"The gap between an AI demo and an AI product is a mindset shift, not a technical one."
+---

@@ -1,0 +1,65 @@
+I just found out my Claude Code work cost $4,548.
+Before today, I had no clue.
+
+
+
+
+
+Found out you can read the JSONL files Claude Code writes to disk and turn them into spend, prompt, and project analytics.
+I pulled the code, customized it a bit, and stared at the screen.
+
+I used to think the Pro plan solved this.
+Pay the subscription. Use the tool. Move on.
+Then I saw what the actual API-equivalent number was.
+
+241 sessions.
+22,731 turns.
+1.9 BILLION cache-read tokens.
+$4,548 if I had paid by the token.
+
+Here's what stopped me cold.
+My fresh input was 332K tokens.
+My cache reads were 1.9B.
+That's the same content, re-read about 5,700 times.
+
+This is why Claude Code feels affordable.
+You're paying for a sliver of what you're actually reading.
+
+What looking at my own data revealed:
+
+• My most expensive prompts had huge tool results
+• One Bash call returning 80K tokens cost more than ten thoughtful prompts
+• One project alone burned 1.74B cache reads
+• Tool calls follow 80/20: Bash, Edit, Read are everything
+• Cache savings dwarf the actual fresh-input bill
+
+Then there's the Tips tab.
+It surfaces exactly where you're wasting tokens.
+Repeated file reads. Oversized tool results. Subagents going off the rails.
+It hands you the savings, not just the bill.
+
+Gave it a custom skin. Light mode. Header reads "Shaid's Claude Usage".
+It runs locally on my machine, refreshes every 30 seconds.
+100% local. No telemetry. Pure Python stdlib.
+
+You can't optimize what you can't measure.
+Most builders are flying blind on what AI actually costs them.
+
+Mine's no longer one of them.
+
+Repo and the full breakdown attached.
+
+
+https://github.com/Shaidhms/claude-token-dashboard.git
+
+Clone it. Run it. See your own numbers.Tell me what surprised you.
+
+#ClaudeCode #AI #GenAI #Anthropic #BuildInPublic #DeveloperTools #AIProducts #CodingWithAI #PromptEngineering #TechLeadership
+
+---
+IMAGE PROMPT:
+Editorial digital illustration in 16:9 aspect ratio. Shaid (face must remain 100% photorealistic) sits at a clean modern desk, looking at his laptop screen with a stunned expression. His body and clothing blend into a soft illustrative style. The laptop screen glows brightly and displays a dashboard interface with the figure "$4,548" displayed in large bold green text, surrounded by smaller charts, bar graphs, and a donut chart. Behind him: abstract tokens flowing like a river of light, billions of small particles streaming into a cache symbol. The room is warm and minimal, lit with soft daylight from a window on the left. Color palette: off-white background, warm beige walls, soft blue accents in the data viz, golden orange highlights. Typography overlay at the top of the image, large bold sans-serif: "$4,548. I had no idea." Style references: New York Times tech essay illustration, Christoph Niemann, Wired magazine cover art. Photorealistic face seamlessly composited into illustrative scene.
+
+QUOTE FOR IMAGE:
+$4,548. I had no idea.
+---

@@ -1,0 +1,50 @@
+OpenAI just dropped an image model that took #1 across every Image Arena board.
+A record +242 point lead in Text-to-Image.
+
+
+
+
+
+Biggest gap the leaderboards have ever seen.
+Huge news.
+
+But leaderboards aggregate.
+They don't tell you which model wins for YOUR use case.
+
+So I ran a spin-off.
+
+Same brief. Both models. Claude Opus 4.7 sitting in as the judge.
+Six prompts spanning vintage posters, product packaging, banking UIs, candid portraits, and character consistency.
+Each pair scored on realism, prompt adherence, detail, text rendering, and overall.
+
+
+Not the +242 point sweep the leaderboard implied.
+
+The pattern was clean once I saw the spread:
+
+• GPT owns clean UI mockups and structured layouts
+• GPT nails text rendering inside images (banking app, infographic, product label)
+• Nano owns authentic candids that don't read AI-perfect
+• Nano holds character identity better across multiple outfits
+• Both crushed the painted vintage poster brief
+
+The leaderboard is a single number.
+The truth is a distribution.
+
+The teams shipping the best AI products right now aren't picking "the best model".
+They're picking the right model for the job.
+
+If you're building anything with image generation, run your own spin-off before defaulting to whatever's #1 this week.
+
+Full breakdown with side-by-side images and verdicts is in the attachment.
+
+
+#GenerativeAI #AI #GPTImage2 #NanoBanana #ImageGeneration #ProductStrategy #BuildInPublic #ClaudeCode #AIProducts 
+
+---
+IMAGE PROMPT:
+A wide 16:9 illustrative composition in dark navy and warm coral tones, matching a modern AI tech aesthetic. Two large stylised model logos face off across the canvas — left side a sleek "GPT" mark with subtle OpenAI green-teal glow, right side a "Nano Banana" mark with playful yellow-banana accent and Google-blue glow. Between them, a referee/judge figure stands in a tailored blazer holding a scorecard — this is Shaid. His face must be 100% photorealistic with no stylisation, but his body, blazer, and surroundings blend into the painterly illustrated style of the rest of the composition. Above the scene, in bold modern sans-serif typography (off-white #ede8df), the quote overlay reads: "The leaderboard is a single number. The truth is a distribution." Subtle hand-drawn scoring marks (3 - 2 - 1) sketched faintly behind the figures. Atmospheric grain texture on a dark navy #191923 background. Cinematic lighting with coral accent highlights.
+
+QUOTE FOR IMAGE:
+The leaderboard is a single number. The truth is a distribution.
+---

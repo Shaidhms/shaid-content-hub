@@ -12,6 +12,49 @@
     "txt": "linkedin-post/2026-04-26/linkedin-draft-99-cheaper-ollama.txt"
   },
   {
+    "type": "post",
+    "date": "2026-04-25",
+    "title": "GDG Build with AI 2026",
+    "txt": "linkedin-post/2026-04-25/linkedin-draft-build-with-ai-gdg.txt",
+    "link": "https://shaidhms.github.io/gdg-build-with-ai-2026/"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-24",
+    "title": "Pet Shop Client Win",
+    "txt": "linkedin-post/2026-04-24/linkedin-draft-pet-shop-client-win.txt"
+  },
+  {
+    "type": "carousel",
+    "date": "2026-04-23",
+    "title": "OpenAI's New Image Model",
+    "pdf": "carousels/2026-04-23/carousel-gpt-vs-nano.pdf"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-23",
+    "title": "OpenAI's New Image Model",
+    "txt": "linkedin-post/2026-04-23/linkedin-draft-gpt-vs-nano.txt"
+  },
+  {
+    "type": "carousel",
+    "date": "2026-04-22",
+    "title": "GPT Image 2 is Here",
+    "pdf": "carousels/2026-04-22/carousel-gpt-image-2.pdf"
+  },
+  {
+    "type": "carousel",
+    "date": "2026-04-22",
+    "title": "Claude Code Token Dashboard",
+    "pdf": "carousels/2026-04-22/carousel-token-dashboard.pdf"
+  },
+  {
+    "type": "post",
+    "date": "2026-04-22",
+    "title": "Claude Code Token Dashboard",
+    "txt": "linkedin-post/2026-04-22/linkedin-draft-claude-token-dashboard.txt"
+  },
+  {
     "type": "carousel",
     "date": "2026-04-21",
     "title": "How to Never Hit Your Claude Session Limit",
